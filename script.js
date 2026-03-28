@@ -1,12 +1,28 @@
 let allApps = [];
-let isSortAscending = true; 
+let currentSort = { type: 'name', isAsc: true };
 let isAllExpanded = false;
 
-// --- Theme Toggle Logic ---
+// --- Initialization ---
+async function init() {
+    setupThemeToggle(); 
+    
+    try {
+        const response = await fetch('data.json');
+        allApps = await response.json();
+        
+        setupSearchAndSort(); 
+        updateDisplay();      
+        
+    } catch (error) {
+        console.error('Error loading app data:', error);
+        document.getElementById('app-list').innerHTML = '<p style="text-align:center; color: #FF5252;">Error: Failed to load data.json. Ensure you are running a local server.</p>';
+    }
+}
+
+// --- Theme Toggle ---
 function setupThemeToggle() {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
-
     const savedTheme = localStorage.getItem('charm-theme');
     
     if (savedTheme === 'light') {
@@ -16,7 +32,6 @@ function setupThemeToggle() {
 
     themeToggleBtn.addEventListener('click', () => {
         body.classList.toggle('light-mode');
-        
         if (body.classList.contains('light-mode')) {
             themeToggleBtn.textContent = '🌙';
             localStorage.setItem('charm-theme', 'light');
@@ -27,26 +42,7 @@ function setupThemeToggle() {
     });
 }
 
-// --- Initialization ---
-async function init() {
-    try {
-        setupThemeToggle(); 
-        
-        const response = await fetch('data.json');
-        allApps = await response.json();
-        
-        setupSearchAndSort(); 
-        updateDisplay();      
-        
-    } catch (error) {
-        console.error('Error loading app data:', error);
-        document.getElementById('app-list').innerHTML = '<p style="text-align:center;">Sorry, failed to load apps.</p>';
-    }
-}
-
-// --- Search, Sort, and Smart Toggle All Logic ---
-let currentSort = { type: 'name', isAsc: true };
-
+// --- Search & Dropdown Sorting ---
 function setupSearchAndSort() {
     const searchInput = document.getElementById('search-input');
     const sortDropdownBtn = document.getElementById('sort-dropdown-btn');
@@ -55,6 +51,7 @@ function setupSearchAndSort() {
     const sortPatchBtn = document.getElementById('sort-patch-btn');
     const toggleAllBtn = document.getElementById('toggle-all-btn');
 
+    // Dropdown Toggle
     sortDropdownBtn.addEventListener('click', (e) => {
         e.stopPropagation(); 
         sortDropdownContent.classList.toggle('show');
@@ -66,32 +63,31 @@ function setupSearchAndSort() {
         }
     });
 
+    // A-Z Sort Logic
     sortNameBtn.addEventListener('click', () => {
         currentSort.type = 'name';
-        
         currentSort.isAsc = sortNameBtn.textContent === 'A-Z';
 
         sortNameBtn.textContent = currentSort.isAsc ? 'Z-A' : 'A-Z';
         sortDropdownBtn.textContent = `Sort: ${currentSort.isAsc ? 'A-Z' : 'Z-A'} ▼`;
-
         sortPatchBtn.textContent = 'Patches Increasing';
         
         updateDisplay();
     });
 
+    // Patches Sort Logic
     sortPatchBtn.addEventListener('click', () => {
         currentSort.type = 'patch';
-        
         currentSort.isAsc = sortPatchBtn.textContent === 'Patches Increasing';
 
         sortPatchBtn.textContent = currentSort.isAsc ? 'Patches Decreasing' : 'Patches Increasing';
         sortDropdownBtn.textContent = `Sort: ${currentSort.isAsc ? 'Patches Increasing' : 'Patches Decreasing'} ▼`;
-
-        sortNameBtn.textContent = 'A-Z';
+        sortNameBtn.textContent = 'Z-A'; // Reset default
         
         updateDisplay();
     });
 
+    // Search and Expand All
     searchInput.addEventListener('input', () => updateDisplay());
 
     toggleAllBtn.addEventListener('click', () => {
@@ -103,14 +99,19 @@ function setupSearchAndSort() {
     });
 }
 
+// --- Filtering & Sorting ---
 function updateDisplay() {
     const searchTerm = document.getElementById('search-input').value.toLowerCase();
 
     let filteredApps = allApps.filter(app => {
         const nameMatch = app.name.toLowerCase().includes(searchTerm);
         const packageMatch = app.packageName && app.packageName.toLowerCase().includes(searchTerm);
+        
+        const secPackageMatch = app.secondaryPackageName && app.secondaryPackageName.toLowerCase().includes(searchTerm);
+        
         const versionMatch = app.versions.some(ver => ver.version.toLowerCase().includes(searchTerm));
-        return nameMatch || packageMatch || versionMatch;
+        
+        return nameMatch || packageMatch || secPackageMatch || versionMatch;
     });
 
     filteredApps.sort((a, b) => {
@@ -121,8 +122,8 @@ function updateDisplay() {
             if (nameA > nameB) return currentSort.isAsc ? 1 : -1;
             return 0;
         } else {
-            const patchA = a.patchCount || 0;
-            const patchB = b.patchCount || 0;
+            const patchA = Number(a.patchCount) || 0;
+            const patchB = Number(b.patchCount) || 0;
             return currentSort.isAsc ? (patchA - patchB) : (patchB - patchA);
         }
     });
@@ -130,7 +131,7 @@ function updateDisplay() {
     renderApps(filteredApps);
 }
 
-// --- Render Logic ---
+// --- Render Layout ---
 function renderApps(appsToDisplay) {
     const appListContainer = document.getElementById('app-list');
     const toggleAllBtn = document.getElementById('toggle-all-btn');
@@ -148,7 +149,6 @@ function renderApps(appsToDisplay) {
         let versionsHTML = '';
         app.versions.forEach(ver => {
             let buttonsHTML = '';
-            
             if (ver.links && ver.links.length > 0) {
                 if (ver.links.length === 1) {
                     buttonsHTML = `<a href="${ver.links[0]}" class="download-btn" target="_blank">Download</a>`;
@@ -177,23 +177,35 @@ function renderApps(appsToDisplay) {
         const expandClass = isAllExpanded ? 'open' : '';
         const showClass = isAllExpanded ? 'show' : '';
 
-        const pCount = app.patchCount || 0;
-        const patchText = pCount === 1 ? '(1 patch available)' : `(${pCount} patches available)`;
+        const pCount = Number(app.patchCount) || 0;
+        let patchText;
+        
+        if (pCount === 0) {
+            patchText = '<span style="color: #FF5252;">Error loading patches!</span>'; 
+        } else if (pCount === 1) {
+            patchText = '(1 patch available)';
+        } else {
+            patchText = `(${pCount} patches available)`;
+        }
 
-        // --- NEW LOGIC: Check for a warning message ---
         const warningHTML = app.warning ? `
             <div class="app-warning">
-                <strong>⚠️ Important:<br><br></strong> ${app.warning}
+                <strong>⚠️ Notice:</strong> ${app.warning}
             </div>
         ` : '';
+
+        let packageHTML = `<div class="package-name">${app.packageName || 'Unknown Package'}</div>`;
+        if (app.secondaryPackageName) {
+            packageHTML += `<div class="package-name">${app.secondaryPackageName}</div>`;
+        }
 
         card.innerHTML = `
             <div class="app-header" onclick="toggleVersions(this)">
                 <div class="app-header-left">
-                    <img src="${app.icon}" alt="${app.name} icon" class="app-icon">
+                    <img src="${app.icon}" alt="${app.name} icon" class="app-icon" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22><rect width=%2264%22 height=%2264%22 fill=%22%23263340%22/><text x=%2232%22 y=%2236%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23C4C7C5%22 text-anchor=%22middle%22>?</text></svg>'">
                     <div class="app-title">
                         <h2>${app.name} <span class="version-count">${patchText}</span></h2>
-                        <div class="package-name">${app.packageName || 'Unknown Package'}</div>
+                        ${packageHTML}
                     </div>
                 </div>
                 <button class="expand-btn ${expandClass}">▼</button>
@@ -211,7 +223,6 @@ function renderApps(appsToDisplay) {
     toggleAllBtn.textContent = anyOpen ? 'Collapse All' : 'Expand All';
 }
 
-// --- Toggle Individual App Card ---
 function toggleVersions(headerElement) {
     const versionList = headerElement.nextElementSibling;
     const expandBtn = headerElement.querySelector('.expand-btn');
@@ -221,14 +232,9 @@ function toggleVersions(headerElement) {
     expandBtn.classList.toggle('open');
 
     const anyOpen = document.querySelectorAll('.version-list.show').length > 0;
-    
-    if (anyOpen) {
-        toggleAllBtn.textContent = 'Collapse All';
-        isAllExpanded = true;
-    } else {
-        toggleAllBtn.textContent = 'Expand All';
-        isAllExpanded = false;
-    }
+    toggleAllBtn.textContent = anyOpen ? 'Collapse All' : 'Expand All';
+    isAllExpanded = anyOpen;
 }
 
+// Start the app
 init();

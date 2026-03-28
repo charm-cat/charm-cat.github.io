@@ -763,6 +763,7 @@
 		"name": "Relay for Reddit",
 		"icon": "icons/relay.png",
 		"packageName": "free.reddit.news",
+    "secondaryPackageName": "reddit.news",
 		"patchCount": "1",
     "warning": "You need to create a client ID from https://reddit.com/prefs/apps<br> Click on 'installed app', and type 'dbrady://relay' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
 		"versions": [
@@ -1039,6 +1040,7 @@
 		"name": "TikTok",
 		"icon": "icons/tiktok.png",
 		"packageName": "com.ss.android.ugc.trill",
+    "secondaryPackageName": "com.zhiliaoapp.musically",
 		"patchCount": "10",
 		"versions": [
 			{

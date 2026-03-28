@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARM - 404</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+    <style>
+        .error-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .error-title {
+            font-size: 6rem;
+            color: var(--md-sys-color-primary);
+            margin: 0;
+            line-height: 1;
+        }
+        .error-subtitle {
+            font-size: 1.5rem;
+            margin-top: 16px;
+            color: var(--md-sys-color-on-background);
+        }
+        .error-text {
+            color: var(--md-sys-color-on-surface);
+            margin-bottom: 32px;
+            max-width: 400px;
+            line-height: 1.5;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-app-bar">
+        <h1>CHARM</h1>
+        <p>Compatible Handpicked APKs for ReVanced Manager</p>
+    </header>
+
+    <main class="container error-container">
+        <h2 class="error-title">404</h2>
+        <h3 class="error-subtitle">Whoops! Looks like you're lost.</h3>
+        <p class="error-text">The page you are looking for doesn't exist, has been moved, or was typed incorrectly.</p>
+        
+        <a href="index.html" class="control-btn home-btn">Return to Home</a>
+    </main>
+    
+    <footer class="bottom-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://github.com/charm-cat/charm-cat.github.io" target="_blank">Source Code</a>
+                </div>
+                
+                <p class="footer-credits">Made with ❤️🧿 for the ReVanced Community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        if (localStorage.getItem('charm-theme') === 'light') {
+            document.body.classList.add('light-mode');
+        }
+    </script>
+</body>
+</html>

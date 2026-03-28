@@ -1,0 +1,1214 @@
+[
+	{
+		"id": "amazon-shopping",
+		"name": "Amazon Shopping",
+		"icon": "icons/amazon-shopping.png",
+		"packageName": "com.amazon.mShop.android.shopping",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "angulus",
+		"name": "Angulus Pro - Precision Angle",
+		"icon": "icons/angulus.png",
+		"packageName": "com.drinkplusplus.angulus",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "baconreader",
+		"name": "BaconReader for Reddit",
+		"icon": "icons/baconreader.png",
+		"packageName": "com.onelouder.baconreader",
+		"patchCount": "2",
+        "warning": "You need to create a client ID from https://reddit.com/prefs/apps<br> Click on 'installed app', and type 'http://baconreader.com/auth' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "bandcamp",
+		"name": "Bandcamp",
+		"icon": "icons/bandcamp.png",
+		"packageName": "com.bandcamp.android",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "boost",
+		"name": "Boost for Reddit",
+		"icon": "icons/boost.png",
+		"packageName": "com.rubenmayayo.reddit",
+		"patchCount": "5",
+    "warning": "You need to create a client ID from https://reddit.com/prefs/apps<br> Click on 'installed app', and type 'http://rubenmayo.com' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "cieid",
+		"name": "CieID",
+		"icon": "icons/cieid.png",
+		"packageName": "it.ipzs.cieid",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "cricbuzz",
+		"name": "Cricbuzz - Live Cricket Scores",
+		"icon": "icons/cricbuzz.png",
+		"packageName": "com.cricbuzz.android",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "6.24.01",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "crunchyroll",
+		"name": "Crunchyroll: Anime Streaming",
+		"icon": "icons/crunchyroll.png",
+		"packageName": "com.crunchyroll.crunchyroid",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "disneyplus",
+		"name": "Disney+",
+		"icon": "icons/disneyplus.png",
+		"packageName": "com.disney.disneyplus",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "duolingo",
+		"name": "Duolingo",
+		"icon": "icons/duolingo.png",
+		"packageName": "com.duolingo",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "6.54.5",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "facebook",
+		"name": "Facebook",
+		"icon": "icons/facebook.png",
+		"packageName": "com.facebook.katana",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "490.0.0.63.82",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "facebook-messenger",
+		"name": "Facebook Messenger",
+		"icon": "icons/facebook-messenger.png",
+		"packageName": "com.facebook.orca",
+		"patchCount": "4",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "fotmob",
+		"name": "FotMob - Soccer Live Scores",
+		"icon": "icons/fotmob.png",
+		"packageName": "com.mobilefootie.wc2010",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "gmx",
+		"name": "GMX - Mail & Cloud",
+		"icon": "icons/gmx.png",
+		"packageName": "de.gmx.mobile.android.mail",
+		"patchCount": "3",
+		"versions": [
+			{
+				"version": "9.4.1",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "google-news",
+		"name": "Google News - Daily Headlines",
+		"icon": "icons/google-news.png",
+		"packageName": "com.google.android.apps.magazines",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "5.108.0.644447823",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "google-photos",
+		"name": "Google Photos",
+		"icon": "icons/google-photos.png",
+		"packageName": "com.google.android.apps.photos",
+		"patchCount": "3",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "google-recorder",
+		"name": "Google Recorder",
+		"icon": "icons/google-recorder.png",
+		"packageName": "com.google.android.apps.recorder",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "hexeditor",
+		"name": "HEX Editor",
+		"icon": "icons/hexeditor.png",
+		"packageName": "com.myprog.hexedit",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "icon-pack-studio",
+		"name": "Icon Pack Studio",
+		"icon": "icons/icon-pack-studio.png",
+		"packageName": "ginlemon.iconpackstudio",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "2.2 build 016",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "id-austria",
+		"name": "ID Austria",
+		"icon": "icons/id-austria.png",
+		"packageName": "at.gv.oe.app",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "infinity",
+		"name": "Infinity for Reddit",
+		"icon": "icons/infinity.png",
+		"packageName": "ml.docilealligator.infinityforreddit",
+		"patchCount": "2",
+    "warning": "You need to create a client ID from https://reddit.com/prefs/apps<br> Click on 'installed app', and type 'infinity://localhost' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "inshorts",
+		"name": "Inshorts - News in 60 words",
+		"icon": "icons/inshorts.png",
+		"packageName": "com.nis.app",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "instagram",
+		"name": "Instagram",
+		"icon": "icons/instagram.png",
+		"packageName": "com.instagram.android",
+		"patchCount": "19",
+		"versions": [
+			{
+				"version": "401.0.0.48.79",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "irplus",
+		"name": "irplus - Infrared Remote",
+		"icon": "icons/irplus.png",
+		"packageName": "net.binarymode.android.irplus",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "joey",
+		"name": "Joey for Reddit",
+		"icon": "icons/joey.png",
+		"packageName": "o.o.joey",
+		"patchCount": "2",
+    "warning": "You need to create a client ID from https://reddit.com/prefs/apps<br> Click on 'installed app', and type 'https://127.0.0.1:65023/authorize_callback' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "kleinanzeigen",
+		"name": "Kleinanzeigen - without eBay",
+		"icon": "icons/kleinanzeigen.png",
+		"packageName": "com.ebay.kleinanzeigen",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "letterboxd",
+		"name": "Letterboxd",
+		"icon": "icons/letterboxd.png",
+		"packageName": "com.letterboxd.letterboxd",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "lightroom",
+		"name": "Lightroom Photo & Video Editor",
+		"icon": "icons/lightroom.png",
+		"packageName": "com.adobe.lrmobile",
+		"patchCount": "3",
+		"versions": [
+			{
+				"version": "9.3.0",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "memegenerator",
+		"name": "Meme Generator",
+		"icon": "icons/memegenerator.png",
+		"packageName": "com.zombodroid.MemeGenerator",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "4.6377",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "mi-fitness",
+		"name": "Mi Fitness",
+		"icon": "icons/mi-fitness.png",
+		"packageName": "com.xiaomi.wearable",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "microsoft-lens",
+		"name": "Microsoft Lens - PDF Scanner",
+		"icon": "icons/microsoft-lens.png",
+		"packageName": "com.microsoft.office.officelens",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "myexpenses",
+		"name": "My Expenses",
+		"icon": "icons/myexpenses.png",
+		"packageName": "org.totschnig.myexpenses",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "3.4.9",
+				"sha256": "",
+				"links": [
+					"https://f-droid.org/archive/org.totschnig.myexpenses_575.apk"
+				]
+			}
+		]
+	},
+	{
+		"id": "myfitnesspal",
+		"name": "MyFitnessPal: Calorie Counter",
+		"icon": "icons/myfitnesspal.png",
+		"packageName": "com.myfitnesspal.android",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "24.14.2",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "netguard",
+		"name": "NetGuard - no-root firewall",
+		"icon": "icons/netguard.png",
+		"packageName": "eu.faircode.netguard",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "nothing-x",
+		"name": "Nothing X",
+		"icon": "icons/nothing-x.png",
+		"packageName": "com.nothing.smartcenter",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "nu",
+		"name": "NU.nl - Nieuws, Sport & meer",
+		"icon": "icons/nu.png",
+		"packageName": "nl.sanomamedia.android.nu",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "orf",
+		"name": "ORF ON",
+		"icon": "icons/orf.png",
+		"packageName": "com.nousguide.android.orftvthek",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "pandora",
+		"name": "Pandora - Music & Podcasts",
+		"icon": "icons/pandora.png",
+		"packageName": "com.pandora.android",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "peacock",
+		"name": "Peacock TV: Stream TV & Movies",
+		"icon": "icons/peacock.png",
+		"packageName": "com.peacocktv.peacockandroid",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "photomath",
+		"name": "Photomath",
+		"icon": "icons/photomath.png",
+		"packageName": "com.microblank.photomath",
+		"patchCount": "3",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "photoshopmix",
+		"name": "Adobe Photoshop Mix - Cut-out",
+		"icon": "icons/photoshopmix.png",
+		"packageName": "com.adobe.photoshopmix",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "piccomaeurope",
+		"name": "piccoma - Mangas et Webtoons",
+		"icon": "icons/piccomaeurope.png",
+		"packageName": "com.piccomaeurope.fr",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "6.6.2",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "pixiv",
+		"name": "pixiv",
+		"icon": "icons/pixiv.png",
+		"packageName": "jp.pxv.android",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "6.141.1",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "proton-mail",
+		"name": "Proton Mail",
+		"icon": "icons/proton-mail.png",
+		"packageName": "ch.protonmail.android",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "4.15.0",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "proton-vpn",
+		"name": "Proton VPN",
+		"icon": "icons/proton-vpn.png",
+		"packageName": "ch.protonvpn.android",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "5.17.21.0",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "rarlab",
+		"name": "RAR",
+		"icon": "icons/rarlab.png",
+		"packageName": "com.rarlab.rar",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "reddit",
+		"name": "Reddit",
+		"icon": "icons/reddit.png",
+		"packageName": "com.reddit.frontpage",
+		"patchCount": "4",
+		"versions": [
+			{
+				"version": "2026.03.0",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "relay",
+		"name": "Relay for Reddit",
+		"icon": "icons/relay.png",
+		"packageName": "free.reddit.news",
+		"patchCount": "1",
+    "warning": "You need to create a client ID from https://reddit.com/prefs/apps<br> Click on 'installed app', and type 'dbrady://relay' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "rif",
+		"name": "rif is fun for Reddit",
+		"icon": "icons/rif.png",
+		"packageName": "com.andrewshu.android.reddit",
+		"patchCount": "1",
+    "warning": "You need to create a client ID from https://reddit.com/prefs/apps<br> Click on 'installed app', and type 'redditisfun://auth' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "samsung-radio",
+		"name": "Samsung Radio",
+		"icon": "icons/samsung-radio.png",
+		"packageName": "com.sec.android.app.fm",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "12.3.00.11",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "sbs",
+		"name": "SBS On Demand",
+		"icon": "icons/sbs.png",
+		"packageName": "com.sbs.ondemand.tv",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "slide",
+		"name": "Slide for Reddit",
+		"icon": "icons/slide.png",
+		"packageName": "me.ccrama.redditslide",
+		"patchCount": "1",
+    "warning": "You need to create a client ID from https://reddit.com/prefs/apps<br> Click on 'installed app', and type 'http://www.ccrama.me' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "solidexplorer2",
+		"name": "Solid Explorer File Manager",
+		"icon": "icons/solidexplorer2.png",
+		"packageName": "pl.solidexplorer2",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "sound-connect",
+		"name": "Sony | Sound Connect",
+		"icon": "icons/sound-connect.png",
+		"packageName": "com.sony.songpal.mdr",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "10.1.0",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "soundcloud",
+		"name": "SoundCloud: The Music You Love",
+		"icon": "icons/soundcloud.png",
+		"packageName": "com.soundcloud.android",
+		"patchCount": "3",
+		"versions": [
+			{
+				"version": "2025.05.27-release",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "spb",
+		"name": "SPB Serviceportal Bund",
+		"icon": "icons/spb.png",
+		"packageName": "at.gv.bka.serviceportal",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "spotify",
+		"name": "Spotify",
+		"icon": "icons/spotify.png",
+		"packageName": "com.spotify.music",
+		"patchCount": "5",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "stocard",
+		"name": "Stocard - Rewards Cards Wallet",
+		"icon": "icons/stocard.png",
+		"packageName": "de.stocard.stocard",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "strava",
+		"name": "Strava",
+		"icon": "icons/strava.png",
+		"packageName": "com.strava",
+		"patchCount": "8",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "swissid",
+		"name": "SwissID",
+		"icon": "icons/swissid.png",
+		"packageName": "com.swisssign.swissid.mobile",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "5.2.9",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "sync-for-lemmy",
+		"name": "Sync for Lemmy",
+		"icon": "icons/sync-for-lemmy.png",
+		"packageName": "io.syncapps.lemmy_sync",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "sync-for-reddit",
+		"name": "Sync for Reddit",
+		"icon": "icons/sync-for-reddit.png",
+		"packageName": "com.laurencedawson.reddit_sync",
+		"patchCount": "8",
+    "warning": "You need to create a client ID from https://reddit.com/prefs/apps<br> Click on 'installed app', and type 'http://redditsync/auth' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+		"versions": [
+			{
+				"version": "v23.06.30-13:39",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "threads",
+		"name": "Threads",
+		"icon": "icons/threads.png",
+		"packageName": "com.instagram.barcelona",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "382.0.0.51.85",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "ticktick",
+		"name": "TickTick:To Do List & Calendar",
+		"icon": "icons/ticktick.png",
+		"packageName": "com.ticktick.task",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "tiktok",
+		"name": "TikTok",
+		"icon": "icons/tiktok.png",
+		"packageName": "com.ss.android.ugc.trill",
+		"patchCount": "10",
+		"versions": [
+			{
+				"version": "36.5.4",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "trakt",
+		"name": "trakt.TV Shows & Movies",
+		"icon": "icons/trakt.png",
+		"packageName": "tv.trakt.trakt",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "1.1.1",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "tudortmund",
+		"name": "TU Dortmund",
+		"icon": "icons/tudortmund.png",
+		"packageName": "de.tudortmund.app",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "tumblr",
+		"name": "Tumblr",
+		"icon": "icons/tumblr.png",
+		"packageName": "com.tumblr",
+		"patchCount": "7",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "twitch",
+		"name": "Twitch",
+		"icon": "icons/twitch.png",
+		"packageName": "tv.twitch.android.app",
+		"patchCount": "7",
+		"versions": [
+			{
+				"version": "16.9.1",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "twitter/x",
+		"name": "Twitter / X",
+		"icon": "icons/twitter.png",
+		"packageName": "com.twitter.android",
+		"patchCount": "7",
+    "warning": "Twitter gives an error message when trying to log in/register on older versions of the app. <br> Password reset bypass is patched and no longer works.",
+		"versions": [
+			{
+				"version": "10.86.0-release.0",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "viber",
+		"name": "Rakuten Viber Messenger",
+		"icon": "icons/viber.png",
+		"packageName": "com.viber.voip",
+		"patchCount": "2",
+		"versions": [
+			{
+				"version": "26.1.2.0",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "warnwetter",
+		"name": "WarnWetter",
+		"icon": "icons/warnwetter.png",
+		"packageName": "de.dwd.warnapp",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "4.2.2",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "willhaben",
+		"name": "willhaben",
+		"icon": "icons/willhaben.png",
+		"packageName": "at.willhaben",
+		"patchCount": "1",
+		"versions": [
+			{
+				"version": "Any version",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "youtube",
+		"name": "YouTube",
+		"icon": "icons/youtube.png",
+		"packageName": "com.google.android.youtube",
+		"patchCount": "60",
+		"versions": [
+			{
+				"version": "20.40.45",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	},
+	{
+		"id": "youtube-music",
+		"name": "YouTube Music",
+		"icon": "icons/youtube-music.png",
+		"packageName": "com.android.apps.youtube.music",
+		"patchCount": "19",
+		"versions": [
+			{
+				"version": "8.40.54",
+				"sha256": "",
+				"links": [
+					""
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARM - HOME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+</head>
+<body>
+    <header class="top-app-bar">
+        <h1>CHARM</h1>
+        <p>Compatible Handpicked APKs for ReVanced Manager</p>
+        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">☀️</button>
+    </header>
+
+    <main class="container">
+
+        <div class="global-warning">
+            <strong>⚠️ Work in Progress!</strong><br>
+            CHARM is currently under active development. Some apps or links may still be missing.
+        </div>
+
+        <div class="search-container">
+            <div class="dropdown">
+                <button class="control-btn" id="sort-dropdown-btn">Sort: A-Z ▼</button>
+                <div class="dropdown-content" id="sort-dropdown-content">
+                    <button id="sort-name-btn" class="dropdown-item">Z-A</button>
+                    <button id="sort-patch-btn" class="dropdown-item">Patches Increasing</button>
+                </div>
+            </div>
+
+            <input type="text" id="search-input" placeholder="Search apps, packages, or versions...">
+            
+            <button id="toggle-all-btn" class="control-btn">Expand All</button>
+        </div>
+
+        <div id="app-list"></div>
+    </main>
+
+    <footer class="bottom-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://github.com/charm-cat/charm-cat.github.io" target="_blank">Source Code</a>
+                </div>
+                
+                <p class="footer-credits">Made with ❤️🧿 for the ReVanced Community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

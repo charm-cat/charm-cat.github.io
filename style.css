@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     --md-sys-color-background: #0F141A;
     --md-sys-color-surface: #1A2027;
@@ -26,6 +30,9 @@ body {
     background-color: var(--md-sys-color-background);
     color: var(--md-sys-color-on-background);
     transition: background-color 0.3s, color 0.3s;
+    
+    overflow-x: hidden; 
+    max-width: 100vw;
 }
 
 main {
@@ -237,29 +244,11 @@ body.light-mode .global-warning strong {
     transition: background-color 0.3s;
 }
 
-.app-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.app-header-left {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
 .app-icon {
     width: 64px;
     height: 64px;
     border-radius: var(--border-radius-medium);
     object-fit: contain;
-}
-
-.app-title h2 {
-    margin: 0;
-    color: var(--md-sys-color-on-background);
 }
 
 .version-count {
@@ -290,10 +279,63 @@ body.light-mode .global-warning strong {
     font-family: monospace;
     color: #FFFFFF; 
     margin-top: 2px;
+    
+    overflow-wrap: anywhere;
+}
+
+.patch-desc {
+    font-size: 0.85rem;
+    color: var(--md-sys-color-on-surface);
+    margin-top: 4px;
+    line-height: 1.4;
+    
+    overflow-wrap: anywhere;
+}
+
+.patch-desc a, 
+.app-warning a {
+    color: var(--md-sys-color-primary); 
+    text-decoration: underline;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.patch-desc a:hover, 
+.app-warning a:hover {
+    opacity: 0.8;
 }
 
 body.light-mode .package-name {
     color: #1A1C1E; 
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.app-header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    
+    min-width: 0; 
+    flex: 1; 
+}
+
+.app-title {
+    min-width: 0; 
+    flex: 1;
+}
+
+.app-title h2 {
+    margin: 0;
+    color: var(--md-sys-color-on-background);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .app-header-right {
@@ -382,25 +424,6 @@ body.light-mode .app-warning {
     max-width: 60%; 
 }
 
-.patch-desc {
-    font-size: 0.85rem;
-    color: var(--md-sys-color-on-surface);
-    margin-top: 4px;
-    line-height: 1.4;
-}
-
-.patch-desc a, 
-.app-warning a {
-    color: var(--md-sys-color-primary); 
-    text-decoration: underline;
-    font-weight: bold;
-    transition: opacity 0.2s;
-}
-
-.patch-desc a:hover, 
-.app-warning a:hover {
-    opacity: 0.8;
-}
 
 .version-hash {
     font-size: 0.75rem;

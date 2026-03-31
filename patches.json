@@ -1,0 +1,1201 @@
+{
+	"amazon-shopping": [
+		{
+			"name": "Always allow deep-linking",
+			"default": "true",
+			"description": "Open Amazon links, even if the apps is not set to handle Amazon links.",
+			"supported": "Any version"
+		}
+	],
+	"angulus": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"baconreader": [
+		{
+			"name": "Spoof client",
+			"default": "true",
+			"configurable": "true",
+			"description": "Restores functionality of the app by custom client ID.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Fix Redgifs API",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"bandcamp": [
+		{
+			"name": "Remove play limits",
+			"default": "true",
+			"description": "Disables purchase nagging and playback limits of not purchased tracks.",
+			"supported": "Any version"
+		}
+	],
+	"boost": [
+		{
+			"name": "Fix missing audio in video downloads",
+			"default": "true",
+			"description": "Fixes audio missing in videos downloaded from v.redd.it.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Fix Redgifs API",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable ads",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Spoof client",
+			"default": "true",
+			"configurable": "true",
+			"description": "Restores functionality of the app by custom client ID.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Fix /s/ links",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"cieid": [
+		{
+			"name": "Bypass root checks",
+			"default": "true",
+			"description": "Removes the restriction to use the app with root permissions or on a custom ROM.",
+			"supported": "Any version"
+		}
+	],
+	"cricbuzz": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "6.24.01"
+		}
+	],
+	"crunchyroll": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"disneyplus": [
+		{
+			"name": "Skip ads",
+			"default": "true",
+			"description": "Automatically skips ads.",
+			"supported": "Any version"
+		}
+	],
+	"duolingo": [
+		{
+			"name": "Skip energy recharge ads",
+			"default": "true",
+			"description": "Skips watching ads to recharge energy.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Enable debug menu",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable ads",
+			"default": "true",
+			"supported": "6.54.5"
+		}
+	],
+	"facebook": [
+		{
+			"name": "Hide 'Sponsored Stories'",
+			"default": "true",
+			"supported": "490.0.0.63.82"
+		},
+		{
+			"name": "Hide story ads",
+			"default": "true",
+			"description": "Hides the ads in the Facebook app stories",
+			"supported": "Any version"
+		}
+	],
+	"facebook-messenger": [
+		{
+			"name": "Hide Facebook button",
+			"default": "true",
+			"description": "Hides the Facebook button in the top toolbar.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Remove Meta AI",
+			"default": "true",
+			"description": "Removes UI elements related to Meta AI",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide inbox ads",
+			"default": "true",
+			"description": "Hides ads in inbox",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide inbox subtabs",
+			"default": "true",
+			"description": "Hides Home and Channels tabs between active now tray and chats.",
+			"supported": "Any version"
+		}
+	],
+	"finanzonline": [
+		{
+			"name": "Remove bootloader detection",
+			"default": "true",
+			"description": "Removes the check for an unlocked bootloader.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Remove root detection",
+			"default": "true",
+			"description": "Removes the check for root permissions and unlocked bootloader.",
+			"supported": "Any version"
+		}
+	],
+	"fotmob": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"gmx": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"description": "Hides sponsored ads.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Force enable FreePhone",
+			"default": "true",
+			"description": "Enables the FreePhone menu in the navigation drawer even on devices that don't support eSIM.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide Premium upgrade button",
+			"default": "true",
+			"description": "Hides the Premium upgrade button in the navigation drawer.",
+			"supported": "Any version"
+		}
+	],
+	"google-news": [
+		{
+			"name": "Enable CustomTabs",
+			"default": "true",
+			"description": "Enables CustomTabs to open articles in your default browser.",
+			"supported": "Any version"
+		},
+		{
+			"name": "GmsCore support",
+			"default": "true",
+			"description": "Allows the app to work without root by using a different package name when patched using a GmsCore instead of Google Play Services.",
+			"supported": "5.108.0.644447823"
+		}
+	],
+	"google-photos": [
+		{
+			"name": "GmsCore support",
+			"default": "true",
+			"configurable": "true",
+			"description": "Allows the app to work without root by using a different package name when patched using a GmsCore instead of Google Play Services.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Enable DCIM folders backup control",
+			"description": "Disables always on backup for the Camera and other DCIM folders, allowing you to control backup for each folder individually. This will make the app default to having no folders backed up.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Spoof features",
+			"default": "true",
+			"configurable": "true",
+			"description": "Spoofs the device to enable Google Pixel exclusive features, including unlimited storage.",
+			"supported": "Any version"
+		}
+	],
+	"google-recorder": [
+		{
+			"name": "Remove device restrictions",
+			"default": "true",
+			"description": "Removes restrictions from using the app on any device. Requires mounting patched app over original.",
+			"supported": "Any version"
+		}
+	],
+	"hexeditor": [
+		{
+			"name": "Disable ads",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"icon-pack-studio": [
+		{
+			"name": "Unlock pro",
+			"default": "true",
+			"supported": "2.2 build 016"
+		}
+	],
+	"id-austria": [
+		{
+			"name": "Remove device integrity checks",
+			"default": "true",
+			"description": "Removes the check for root permissions and unlocked bootloader.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Spoof signature",
+			"default": "true",
+			"description": "Spoofs the signature of the app.",
+			"supported": "Any version"
+		}
+	],
+	"infinity": [
+		{
+			"name": "Unlock subscription",
+			"default": "true",
+			"description": "Unlocks the subscription feature but requires a custom client ID.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Spoof client",
+			"default": "true",
+			"configurable": "true",
+			"description": "Restores functionality of the app by custom client ID.",
+			"supported": "Any version"
+		}
+	],
+	"inshorts": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"instagram": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable Reels auto-scroll",
+			"description": "Removes the auto-scroll toggle and prevents Reels from scrolling automatically.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Remove build expired popup",
+			"default": "true",
+			"description": "Removes the popup that appears after a while, when the app version ages.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide explore feed",
+			"description": "Hides posts and reels from the exploare/search page.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide Stories from Home",
+			"description": "Hides Stories from the main page, by removing the buttons.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable signature check",
+			"description": "Disables the signature check that can cause the app to crash on startup. Using this patch may cause issues withs sharing or opening external Instagram links.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Open links externally",
+			"description": "Changes links to always open in your external browser, instead of the in-app browser.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable analytics",
+			"default": "true",
+			"description": "Disables analytics that are sent periodically.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Limit feed to followed profiles",
+			"description": "Filters the home feed to display only content from profiles you follow.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Change link sharing domain",
+			"configurable": "true",
+			"description": "Replaces the domain name of shared links.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Anonymous story viewing",
+			"description": "View stories without sending any information to the server. <br> Your view will not appear in the story viewers list. <br> Note: Since no data is sent, a story you have already viewed may appear as new on another device.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide suggested content",
+			"description": "Hides suggested stories, reels, threads and survey from feed (Suggested posts will still be shown).",
+			"supported": "Any version"
+		},
+		{
+			"name": "Enable developer menu",
+			"description": "Enables the developer menu, which can be found at the bottom of settings menu with name 'Internal Settings'. <br><br> It is recommended to use this patch with an alpha/beta Instagram release. Patching a stable release works, but the developer menu shows the developer flags as numbers and does not show a human readable description.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable story auto flipping",
+			"description": "Disables stories automatically flipping/skipping after some seconds.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Sanitize sharing links",
+			"default": "true",
+			"description": "Removes the tracking query parameters from shared links",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide highlights tray",
+			"description": "Hides the highlights tray in profile section.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide navigation buttons",
+			"configurable": "true",
+			"description": "Hides navigation bar buttons, such as the Reels and Create button",
+			"supported": "401.0.0.48.79"
+		},
+		{
+			"name": "Enable location sticker redesign",
+			"description": "Unlocks the redesigned location sticker with additional style options.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable Reels scrolling",
+			"description": "Disables the endless scrolling behavior in Instagram Reels, preventing swiping to the next Reel. Note: On a clean install, the 'Tip' animation may appear but will stop on its own after a few seconds.",
+			"supported": "Any version"
+		}
+	],
+	"irplus": [
+		{
+			"name": "Remove ads",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"joey": [
+		{
+			"name": "Disable ads",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Spoof client",
+			"default": "true",
+			"configurable": "true",
+			"description": "Restores functionality of the app by custom client ID.",
+			"supported": "Any version"
+		}
+	],
+	"kleinanzeigen": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"description": "Hides sponsored ads and Google Ads. Also happens to disable Microsoft Clarity analytics.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide Pur",
+			"default": "true",
+			"description": "Hides Pur (Ad Free Subscription) from Settings Menu.",
+			"supported": "Any version"
+		}
+	],
+	"letterboxd": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Unlock app icons",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"lightroom": [
+		{
+			"name": "Unlock Premium",
+			"default": "true",
+			"supported": "9.3.0"
+		},
+		{
+			"name": "Disable version check",
+			"default": "true",
+			"description": "Disables the server-side version check that prevents the app from starting",
+			"supported": "9.3.0"
+		},
+		{
+			"name": "Disable mandatory login",
+			"default": "true",
+			"supported": "9.3.0"
+		}
+	],
+	"memegenerator": [
+		{
+			"name": "Unlock pro",
+			"default": "true",
+			"supported": "4.6364, 4.6371, 4.6375, 4.6377"
+		}
+	],
+	"mi-fitness": [
+		{
+			"name": "Fix login",
+			"default": "true",
+			"description": "Fixes login for uncertified Mi Fitness app",
+			"supported": "Any version"
+		},
+		{
+			"name": "Force English locale",
+			"default": "true",
+			"description": "Forces wearable devices to use the English locale",
+			"supported": "Any version"
+		}
+	],
+	"microsoft-lens": [
+		{
+			"name": "Hide OneDrive migration",
+			"default": "true",
+			"description": "Hides the OneDrive migration prompt when opening Microsoft Office Lens.",
+			"supported": "Any version"
+		}
+	],
+	"myexpenses": [
+		{
+			"name": "Unlock pro",
+			"default": "true",
+			"supported": "3.4.9"
+		}
+	],
+	"myfitnesspal": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"description": "Hides most of the ads across the app",
+			"supported": "24.14.2"
+		}
+	],
+	"netguard": [
+		{
+			"name": "Remove broadcasts restriction",
+			"default": "true",
+			"description": "Enables starting/stopping NetGuard via broadcasts.",
+			"supported": "Any version"
+		}
+	],
+	"nothing-x": [
+		{
+			"name": "Show K1 token(s)",
+			"default": "true",
+			"description": "Shows the K1 authentication token(s) in a dialog and logs it to logcat for pairing with GadgetBridge without requiring root access. <br> After installing this patch, pair your watch with the Nothing X app and use the token from the dialog or logcat.",
+			"supported": "Any version"
+		}
+	],
+	"nu": [
+		{
+			"name": "Spoof certificate",
+			"default": "true",
+			"description": "Spoofs the X-Android-Cert header to allow push messages.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"description": "Hide ads and sponsored articles in list pages and remove pre-roll ads on videos.",
+			"supported": "Any version"
+		}
+	],
+	"orf": [
+		{
+			"name": "Remove root detection",
+			"default": "true",
+			"description": "Removes the check for root permissions and unlocked bootloader.",
+			"supported": "Any version"
+		}
+	],
+	"pandora": [
+		{
+			"name": "Enable unlimited skips",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable Audio Ads",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"peacock": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"description": "Hides all video ads",
+			"supported": "Any version"
+		}
+	],
+	"photomath": [
+		{
+			"name": "Hide update popup",
+			"default": "true",
+			"description": "Prevents the update popup from showing up.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Unlock plus",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Spoof device ID",
+			"default": "true",
+			"description": "Spoofs device ID to mitigate manual bans by developers.",
+			"supported": "Any version"
+		}
+	],
+	"photoshopmix": [
+		{
+			"name": "Bypass login",
+			"default": "true",
+			"description": "Allows the use of the app after its discontinuation.",
+			"supported": "Any version"
+		}
+	],
+	"piccomaeurope": [
+		{
+			"name": "Spoof Android device ID",
+			"configurable": "true",
+			"description": "Spoofs the Android device ID used by the app for account authentication. This can be used to copy the account to another device.",
+			"supported": "6.4.0, 6.4.1, 6.4.2, 6.4.3, 6.4.4, 6.4.5, 6.5.0, 6.5.1, 6.5.2, 6.5.3, 6.5.4, 6.6.0, 6.6.1, 6.6.2"
+		},
+		{
+			"name": "Disable tracking",
+			"description": "Disables tracking by replacing tracking URLs with example.com",
+			"default": "true",
+			"supported": "6.4.0, 6.4.1, 6.4.2, 6.4.3, 6.4.4, 6.4.5, 6.5.0, 6.5.1, 6.5.2, 6.5.3, 6.5.4, 6.6.0, 6.6.1, 6.6.2"
+		}
+	],
+	"pixiv": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "6.141.1"
+		}
+	],
+	"proton-mail": [
+		{
+			"name": "Remove free accounts limit",
+			"default": "true",
+			"description": "Removes the limit for maximum free accounts logged in.",
+			"supported": "4.15.0"
+		},
+		{
+			"name": "Remove 'Sent from' signature",
+			"default": "true",
+			"description": "Removes the 'Sent from Proton Mail mobile' signature from emails.",
+			"supported": "4.15.0"
+		}
+	],
+	"proton-vpn": [
+		{
+			"name": "Unlock split tunneling",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Remove delay",
+			"default": "true",
+			"description": "Removes the delay when changing servers",
+			"supported": "Any version"
+		}
+	],
+	"prime-video": [
+		{
+			"name": "Skip ads",
+			"default": "true",
+			"description": "Automatically skips video stream ads.",
+			"supported": "3.0.4112.2947"
+		},
+		{
+			"name": "Playback speed",
+			"default": "true",
+			"description": "Adds playback speed contols to the video player.",
+			"supported": "3.0.4112.2947"
+		},
+		{
+			"name": "Rename shared permissions",
+			"description": "Rename certain permissions shared across Amazon apps. Applying this patch can fix installation errors, but can also break features in certain apps.",
+			"supported": "3.0.4112.2947"
+		}
+	],
+	"rarlab": [
+		{
+			"name": "Hide purchase reminder",
+			"default": "true",
+			"description": "Hides the popup that reminds you to purchase the app.",
+			"supported": "Any version"
+		}
+	],
+	"reddit": [
+		{
+			"name": "Sanitize sharing links",
+			"default": "true",
+			"description": "Removes the tracking query parameters from shared links.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Unlock Premium icons",
+			"default": "true",
+			"description": "Unlocks the Reddit Premium icons.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable screenshot popup",
+			"default": "true",
+			"description": "Disables the popup that shows up when taking a screenshot.",
+			"supported": "Any version"
+		}
+	],
+	"relay": [
+		{
+			"name": "Spoof client",
+			"default": "true",
+			"configurable": "true",
+			"description": "Restores functionality of the app by custom client ID.",
+			"supported": "Any version"
+		}
+	],
+	"rif": [
+		{
+			"name": "Spoof client",
+			"default": "true",
+			"configurable": "true",
+			"description": "Restores functionality of the app by custom client ID.",
+			"supported": "Any version"
+		}
+	],
+	"samsung-radio": [
+		{
+			"name": "Fix crashes",
+			"default": "true",
+			"description": "Prevents the app from crashing because of missing system permissions.",
+			"supported": "12.4.00.7, 12.3.00.13, 12.3.00.11"
+		},
+		{
+			"name": "Bypass device checks",
+			"default": "true",
+			"description": "Removes firmware and region blacklisting. This patch will still not allow the app to run on devices that do not have the required hardware.",
+			"supported": "12.4.00.7, 12.3.00.13, 12.3.00.11"
+		}
+	],
+	"sbs": [
+		{
+			"name": "Remove ads",
+			"default": "true",
+			"description": "Removes pre-roll, pause and on-demand advertisements from SBS On Demand TV",
+			"supported": "Any version"
+		}
+	],
+	"slide": [
+		{
+			"name": "Spoof client",
+			"default": "true",
+			"description": "Restores functionality of the app by custom client ID.",
+			"supported": "Any version"
+		}
+	],
+	"solidexplorer2": [
+		{
+			"name": "Remove file size limit",
+			"default": "true",
+			"description": "Allows opening files larger than 2 MB in the text editor.",
+			"supported": "Any version"
+		}
+	],
+	"sound-connect": [
+		{
+			"name": "Remove badge tab",
+			"default": "true",
+			"description": "Removes the badge tab from the activity tab.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Remove notification badge",
+			"default": "true",
+			"description": "Removes the red notification badge from the activity tab.",
+			"supported": "10.1.0"
+		}
+	],
+	"soundcloud": [
+		{
+			"name": "Enable offline sync",
+			"default": "true",
+			"supported": "2025.05.27-release"
+		},
+		{
+			"name": "Disable telemetry",
+			"default": "true",
+			"description": "Disable SoundCloud's telemetry system.",
+			"supported": "2025.05.27-release"
+		},
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "2025.05.27-release"
+		}
+	],
+	"spb": [
+		{
+			"name": "Remove root detection",
+			"default": "true",
+			"description": "Removes the check for root permissions and unlocked bootloader.",
+			"supported": "Any version"
+		}
+	],
+	"spotify": [
+		{
+			"name": "Change lyrics provider",
+			"configurable": "true",
+			"description": "Changes the lyrics provider to a custom one.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Custom theme",
+			"configurable": "true",
+			"description": "Applies a custom theme (defaults to amoled black).",
+			"supported": "Any version"
+		},
+		{
+			"name": "Sanitize sharing links",
+			"default": "true",
+			"description": "Removes the tracking query parameters from shared links",
+			"supported": "Any version"
+		},
+		{
+			"name": "Fix third party launchers widgets",
+			"default": "true",
+			"description": "Fixes Spotify widgets not working in third party launchers, like Nova Launcher.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Fix Facebook login",
+			"default": "true",
+			"description": "Fix logging in with Facebook when the app is patched by always opening the login in a web browser window.",
+			"supported": "Any version"
+		}
+	],
+	"stocard": [
+		{
+			"name": "Hide offers tab",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide story bubbles",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"strava": [
+		{
+			"name": "Enable password login",
+			"default": "true",
+			"description": "Re-enables password login after having used an OTP code.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide distractions",
+			"default": "true",
+			"configurable": "true",
+			"description": "Hides elements that are not essential.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Add 'Give Kudos' button to 'Group Activity'",
+			"default": "true",
+			"description": "Adds a button that triggers the same action as shaking your phone would.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable Quick Edit",
+			"default": "true",
+			"description": "Prevents the Quick Edit prompt from popping up.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Overwrite media upload parameters",
+			"default": "true",
+			"configurable": "true",
+			"description": "Overwrites the compression, resize and trim media (images and videos) parameters returned by Strava's server before upload.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Unlock subscription features",
+			"default": "true",
+			"description": "Unloacks 'Routes', 'Matched Runs' and 'Segment Efforts'.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Add media download",
+			"default": "true",
+			"description": "Extends the full-screen media viewer menu with items to copy or open their URLs or download them directly.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Block Snowplow tracking",
+			"default": "true",
+			"description": "Blocks Snowplow analytics. See <a href='https://snowplow.io'>https://snowplow.io</a> for more information.",
+			"supported": "Any version"
+		}
+	],
+	"swissid": [
+		{
+			"name": "Remove Google Play Integrity check",
+			"default": "true",
+			"description": "Removes the Google Play Integrity check. With this it's possible to use SwissID on custom ROMs. If the device is rooted, root permissions must be hidden from the app.",
+			"supported": "5.2.9"
+		}
+	],
+	"sync-for-lemmy": [
+		{
+			"name": "Disable ads",
+			"default": "true",
+			"supported": "Any version"
+		}
+	],
+	"sync-for-reddit": [
+		{
+			"name": "Fix Redgifs API",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Spoof client",
+			"default": "true",
+			"configurable": "true",
+			"description": "Restores functionality of the app by custom client ID.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Fix video downloads",
+			"default": "true",
+			"description": "Fixes a bug in Sync's MPD parser resulting in only the audio-track being saved.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable ads",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Fix post thumbnails",
+			"default": "true",
+			"description": "Fixes loading post thumbnails by correcting their URLs",
+			"supported": "Any version"
+		},
+		{
+			"name": "Fix /s/ links",
+			"default": "true",
+			"supported": "Any version"
+		},
+		{
+			"name": "Use /user/ endpoing",
+			"description": "Replaces the deprecated endpoint for viewing user profiles /u with /user, that used to fix a bug.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable Sync for Lemmy bottom sheet",
+			"default": "true",
+			"description": "Disables the bottom sheet at the startup that asks you to signup to 'Sync for Lemmy'.",
+			"supported": "v23.06.30-13:39"
+		}
+	],
+	"threads": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "382.0.0.51.85"
+		}
+	],
+	"ticktick": [
+		{
+			"name": "Unlock themes",
+			"default": "true",
+			"description": "Unlocks all themes that are inaccessible until a certain level is reached.",
+			"supported": "Any version"
+		}
+	],
+	"tiktok": [
+		{
+			"name": "Remember clear display",
+			"default": "true",
+			"description": "Remembers the clear display configurations in between videos.",
+			"supported": "36.5.4"
+		},
+		{
+			"name": "Downloads",
+			"default": "true",
+			"description": "Removes download restrictions and changes the default path to download to",
+			"supported": "36.5.4"
+		},
+		{
+			"name": "Feed filter",
+			"default": "true",
+			"description": "Removes ads, livestrams, stories, image videos and videos with a specific amount of views or likes from the feed.",
+			"supported": "36.5.4"
+		},
+		{
+			"name": "Fix Google login",
+			"default": "true",
+			"description": "Allows loggin in with a Google account.",
+			"supported": "36.5.4"
+		},
+		{
+			"name": "Settings",
+			"default": "true",
+			"description": "Adds ReVanced settings to TikTok",
+			"supported": "36.5.4"
+		},
+		{
+			"name": "Show seekbar",
+			"default": "true",
+			"description": "Shows progress bar for all video.",
+			"supported": "36.5.4"
+		},
+		{
+			"name": "Playback speed",
+			"default": "true",
+			"description": "Enables the playback speed option for all videos and retains the speed configurations in between videos.",
+			"supported": "36.5.4"
+		},
+		{
+			"name": "Sanitize sharing links.",
+			"default": "true",
+			"description": "Removes the tracking query parameters from shared links.",
+			"supported": "36.5.4"
+		},
+		{
+			"name": "Disable login requirement",
+			"default": "true",
+			"description": "",
+			"supported": "Any version"
+		},
+		{
+			"name": "SIM spoof",
+			"description": "Spoofs the information which is retrieved from the SIM card.",
+			"supported": "Any version"
+		}
+	],
+	"trakt": [
+		{
+			"name": "Unlock pro",
+			"default": "true",
+			"supported": "1.1.1"
+		}
+	],
+	"tudortmund": [
+		{
+			"name": "Show on lockscreen",
+			"default": "true",
+			"description": "Shows student id and student ticket on lockscreen.",
+			"supported": "Any version"
+		}
+	],
+	"tumblr": [
+		{
+			"name": "Disable gift message popup",
+			"default": "true",
+			"description": "Disables the popup suggesting to buy TumblrMart items for other people.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable Ad-Free Banner",
+			"default": "true",
+			"description": "Disables the banner with a frog, prompting you to buy Tumblr Ad-Free.",
+			"supported": "Any version"
+		},
+		{
+			"default": "true",
+			"name": "Disable Tumblr TV",
+			"description": "Removes the Tumblr TV navigation button from the bottom navigation bar.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Fix old versions",
+			"description": "Fixes old versions of the app (v33.2 and earlier) breaking due to Tumblr removing remmants of Tumblr Live from the API, which causes many requests to fail. This Patch has no effects on newer versions of the app.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable blog notification reminder",
+			"default": "true",
+			"description": "Disables the reminder to enable notifications for blogs you visit.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable in-app update",
+			"default": "true",
+			"description": "Disables the in-app update check and update prompt.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Disable dashboard ads",
+			"default": "true",
+			"description": "Disables ads in the dashboard.",
+			"supported": "Any version"
+		}
+	],
+	"twitch": [
+		{
+			"name": "Settings",
+			"default": "true",
+			"description": "Adds settings menu to Twitch.",
+			"supported": "16.9.1"
+		},
+		{
+			"name": "Auto claim channel points",
+			"default": "true",
+			"description": "Automatically claim Channel Points.",
+			"supported": "16.9.1, 25.3.0"
+		},
+		{
+			"name": "Debug mode",
+			"description": "Enables Twitch's internal debugging mode.",
+			"supported": "16.9.1, 25.3.0"
+		},
+		{
+			"name": "Show deleted messages",
+			"default": "true",
+			"description": "Shows deleted chat messages behind a clickable spoiler.",
+			"supported": "16.9.1, 25.3.0"
+		},
+		{
+			"name": "Block embedded ads",
+			"default": "true",
+			"description": "Blocks embedded stream ads using services like Luminous or PurpleAdBlocker.",
+			"supported": "16.9.1, 25.3.0"
+		},
+		{
+			"name": "Block video ads",
+			"default": "true",
+			"description": "Blocks video ads in streams and VODs.",
+			"supported": "16.9.1, 25.3.0"
+		},
+		{
+			"name": "Block audio ads",
+			"default": "true",
+			"description": "Blocks audio ads in streams and VODs.",
+			"supported": "16.9.1, 25.3.0"
+		}
+	],
+	"twitter/x": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"supported": "10.86.0-release.0, 10.60.0-release.0"
+		},
+		{
+			"name": "Sanitize sharing links",
+			"default": "true",
+			"description": "Removes the tracking query parameters from shared links",
+			"supported": "10.86.0-release.0, 10.60.0-release.0"
+		},
+		{
+			"name": "Change link sharing domain",
+			"configurable": "true",
+			"description": "Replaces the domain name of shared links. Using this patch can prevent making posts that quate other posts.",
+			"supported": "10.86.0-release.0, 10.60.0-release.0"
+		},
+		{
+			"name": "Dynamic color",
+			"default": "true",
+			"description": "Replaces the default X (Formerly Twitter) Blue with the user's Material You palette.",
+			"supported": "10.86.0-release.0, 10.60.0-release.0"
+		},
+		{
+			"name": "Hide view count",
+			"description": "Hides the view count of Posts.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Unlock downloads",
+			"default": "true",
+			"description": "Unlocks the ability to download any video. GIFs can be downloaded via the menu on long press.",
+			"supported": "Any version"
+		},
+		{
+			"name": "Hide recommended users",
+			"default": "true",
+			"supported": "10.86.0-release.0, 10.60.0-release.0"
+		}
+	],
+	"viber": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"description": "Hide ad banners between chats.",
+			"supported": "25.9.2.0, 26.1.2.0"
+		},
+		{
+			"name": "Hide navigation buttons",
+			"configurable": "true",
+			"description": "Permanently hides navigation bar buttons, such as Explore and Marketplace",
+			"supported": "Any version"
+		}
+	],
+	"warnwetter": [
+		{
+			"name": "Promo code unlock",
+			"default": "true",
+			"description": "Disables the validation of promo code. Any code will work to unlock all features.",
+			"supported": "4.2.2"
+		}
+	],
+	"willhaben": [
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"description": "Hide all in-app ads",
+			"supported": "Any version"
+		}
+	],
+	"youtube": [
+		{
+			"name": "",
+			"description": "",
+			"supported": "20.40.45"
+		}
+	],
+	"youtube-music": [
+		{
+			"name": "",
+			"description": "",
+			"supported": "8.40.54"
+		}
+	]
+}

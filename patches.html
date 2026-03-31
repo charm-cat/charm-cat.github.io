@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARM - Patches</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+</head>
+<body>
+    <header class="top-app-bar">
+        <h1>CHARM</h1>
+        <p>Available Patches Directory</p>
+        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">☀️</button>
+    </header>
+
+    <main class="container">
+
+        <div class="global-warning">
+            <strong>⚠️ Work in Progress!</strong><br>
+            CHARM is currently under active development. Some apps or patches may still be missing.
+        </div>
+
+        <div class="app-card" id="app-global-patches" style="border: 2px solid var(--md-sys-color-primary); margin-bottom: 32px;">
+            <div class="app-header" onclick="toggleVersions(this)">
+                <div class="app-header-left">
+                    <img class="app-icon" src="icons/revanced.png" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22><rect width=%2264%22 height=%2264%22 fill=%22%23263340%22 rx=%2216%22/><text x=%2232%22 y=%2240%22 font-family=%22sans-serif%22 font-size=%2232%22 fill=%22%23A1C9FF%22 text-anchor=%22middle%22 font-weight=%22bold%22>G</text></svg>'">
+                    <div class="app-title">
+                        <h2>ReVanced Universal Patches <span class="version-count" style="color: var(--md-sys-color-primary); font-weight: bold;">(27 patches available)</span></h2>
+                        <div class="package-name">Applies to Any Apps</div>
+                    </div>
+                </div>
+                <div class="app-header-right">
+                    <button class="share-btn" onclick="copyAppLink(event, 'global-patches')" title="Copy Link" aria-label="Copy Link">🔗</button>
+                    <button class="expand-btn">▼</button>
+                </div>
+            </div>
+            <div class="version-list">
+                <div class="app-warning">
+                    <strong>⚠️ Notice:</strong> Universal patches are more general-purpose, and may not be as reliable as app-specific patches. You may face issues using them. To use it anyway, turn on "Allow using universal patches" in Advanced settings.
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Disable Pairip license check</strong></span>
+                        <div class="patch-desc">Disables Play Integrity API (Pairip) client-side license check.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Spoof Wi-Fi connection</strong></span>
+                        <div class="patch-desc">Spoofs an existing Wi-Fi connection.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Prevent screenshot detection</strong></span>
+                        <div class="patch-desc">Removes the registration of all screen capture callbacks. This prevents the app from detecting screenshots.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Enable ROM signature spoofing</strong><span class="patch-tag config-tag">(Configurable)</span></span>
+                        <div class="patch-desc">Spoofs the signature via the manifest meta-data "fake-signature". This patch only works with ROMs that support signature spoofing.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Override certificate pinning</strong></span>
+                        <div class="patch-desc">Overrides certificate pinning, allowing to inspect traffic via a proxy.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Remove screen capture restriction</strong></span>
+                        <div class="patch-desc">Removes the restriction of capturing audio from apps that normally wouldn't allow it.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Set target SDK version 34</strong></span>
+                        <div class="patch-desc">Changes the target SDK to version 34 (Android 14). For devices running Android 15+, this will disable edge-to-edge display.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Enable Android debugging</strong></span>
+                        <div class="patch-desc">Enables Android debugging capabilities. <br> This can slow down the app.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Disable Sentry telementry</strong></span>
+                        <div class="patch-desc">Disables Sentry telemetry. See <a href="https://sentry.io/for/android/">https://sentry.io/for/android/</a> for more information.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Spoof Play Age Signals</strong><span class="patch-tag config-tag">(Configurable)</span></span>
+                        <div class="patch-desc">Spoofs Google Play data about the user's age and verification status.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Change version code</strong><span class="patch-tag config-tag">(Configurable)</span></span>
+                        <div class="patch-desc">Changes the version code of the app. <br> This will turn off app store updates and allows downgrading an existing app install to an older app version.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Predictive back gesture</strong></span>
+                        <div class="patch-desc">Enables the predictive back gesture introduced on Android 13.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Spoof SIM provider</strong><span class="patch-tag config-tag">(Configurable)</span></span> 
+                        <div class="patch-desc">Spoofs information about the SIM card provider.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Hex</strong><span class="patch-tag config-tag">(Configurable)</span></span>
+                        <div class="patch-desc">Replaces a hexadecimal patterns of bytes of files in an APK.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Disable Play Integrity</strong></span>
+                        <div class="patch-desc">Prevents apps from using Play Integrity by pretending it is not available.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Remove share targets</strong></span>
+                        <div class="patch-desc">Removes share targets like directly sharing to a frequent contact.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Spoof root of trust</strong></span>
+                        <div class="patch-desc">Spoofs device integrity states (Locked Bootloader, Verified OS) for apps that perform local certificate attestation.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Spoof build info</strong><span class="patch-tag config-tag">(Configurable)</span></span>
+                        <div class="patch-desc">Spoofs the information about the current build.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Spoof keystore security level</strong></span>
+                        <div class="patch-desc">Forces apps to see Keymaster and Attestation security levels as 'StrongBox' (Level 2).</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Hide ADB status</strong></span>
+                        <div class="patch-desc">Hides enabled development settings and/or ADB.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Export internal data documents provider</strong></span>
+                        <div class="patch-desc">Exports a document provider that grants access to the internal data directory of this app to file managers and other apps that support the Storage Access Framework.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Export all activities</strong></span>
+                        <div class="patch-desc">Makes all app activities exportable.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Change package name</strong><span class="patch-tag config-tag">(Configurable)</span></span>
+                        <div class="patch-desc">Appends ".revanced" to the package name by default. Changing the package name of the app can lead to unexpected issues. </div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Hide app icon</strong></span>
+                        <div class="patch-desc">Hides the app icon from the Android launcher.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Hide mock location</strong></span>
+                        <div class="patch-desc">Prevents the app from knowing the device location is being mocked by a third party app.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Custom network security</strong><span class="patch-tag config-tag">(Configurable)</span></span>
+                        <div class="patch-desc">Allows trusting custom certificate authorities for a specific domain.</div>
+                    </div>
+                </div>
+                <div class="version-item">
+                    <div class="version-details" style="max-width: 100%;">
+                        <span class="version-number"><strong>Remove screenshot restriction</strong></span>
+                        <div class="patch-desc">Removes the restriction of taking screenshots in apps that normally wouldn't allow it.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="dropdown">
+                <button class="control-btn" id="sort-dropdown-btn">Sort: A-Z ▼</button>
+                <div class="dropdown-content" id="sort-dropdown-content">
+                    <button id="sort-name-btn" class="dropdown-item">Z-A</button>
+                    <button id="sort-patch-btn" class="dropdown-item">Patches Increasing</button>
+                </div>
+            </div>
+
+            <div class="search-input-wrapper">
+                <input type="text" id="search-input" placeholder="Search apps, packages, or specific patches...">
+                <button id="clear-search-btn" class="clear-btn" aria-label="Clear Search" title="Clear Search">⨯</button>
+            </div>
+            
+            <button id="toggle-all-btn" class="control-btn">Expand All</button>
+        </div>
+
+        <div id="app-list"></div>
+    </main>
+
+    <footer class="bottom-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Go Back to Home</a>
+                    <a href="https://github.com/charm-cat/charm-cat.github.io" target="_blank">Source Code</a>
+                </div>
+                
+                <p class="footer-credits">Made with ❤️🧿 for the ReVanced Community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

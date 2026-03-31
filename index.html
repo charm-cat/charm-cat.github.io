@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHARM - HOME</title>
+    <title>CHARM - Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
 </head>
@@ -21,6 +21,35 @@
             CHARM is currently under active development. Some apps or links may still be missing.
         </div>
 
+        <div class="app-card" id="app-microg" style="border: 2px solid var(--md-sys-color-primary); margin-bottom: 32px;">
+            <div class="app-header" onclick="toggleVersions(this)">
+                <div class="app-header-left">
+                    <img class="app-icon" src="icons/microg.png">
+                    <div class="app-title">
+                        <h2>ReVanced MicroG <span class="version-count" style="color: var(--md-sys-color-primary); font-weight: bold;">(Required for non-root)</span></h2>
+                        <div class="package-name">app.revanced.android.gms</div>
+                    </div>
+                </div>
+                <div class="app-header-right">
+                    <button class="share-btn" onclick="copyAppLink(event, 'microg')" title="Copy Link" aria-label="Copy Link">🔗</button>
+                    <button class="expand-btn">▼</button>
+                </div>
+            </div>
+            <div class="version-list">
+                <div class="app-warning">
+                    <strong>⚠️ Notice:</strong> MicroG is required to sign into your Google Account on patched apps like YouTube and YouTube Music.<br><br>If your device is rooted and choose the "Mount" option, you do not need to install MicroG, and make sure to untick "GmsCore support" patch.</div>
+                <div class="version-item">
+                    <div class="version-details">
+                        <span class="version-number">Version: <strong>0.3.13.2.250932</strong></span>
+                    </div>
+                    <div class="button-group">
+                        <a href="https://github.com/ReVanced/GmsCore/releases/download/v0.3.13.2.250932/app.revanced.android.gms-250932004-signed.apk" class="download-btn" target="_blank">Android Version (GitHub Link)</a>
+                        <a href="https://github.com/ReVanced/GmsCore/releases/download/v0.3.13.2.250932/app.revanced.android.gms-250932004-hw-signed.apk" class="download-btn" target="_blank">Huawei Version (GitHub Link)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="search-container">
             <div class="dropdown">
                 <button class="control-btn" id="sort-dropdown-btn">Sort: A-Z ▼</button>
@@ -30,7 +59,10 @@
                 </div>
             </div>
 
-            <input type="text" id="search-input" placeholder="Search apps, packages, or versions...">
+            <div class="search-input-wrapper">
+                <input type="text" id="search-input" placeholder="Search apps, packages, or versions...">
+                <button id="clear-search-btn" class="clear-btn" aria-label="Clear Search" title="Clear Search">⨯</button>
+            </div>
             
             <button id="toggle-all-btn" class="control-btn">Expand All</button>
         </div>
@@ -42,6 +74,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-links">
+                    <a href="patches.html">View Available Patches</a>
                     <a href="https://github.com/charm-cat/charm-cat.github.io" target="_blank">Source Code</a>
                 </div>
                 

@@ -1,1173 +1,1933 @@
 [
-	{
-		"id": "amazon-shopping",
-		"name": "Amazon Shopping",
-		"icon": "icons/amazon-shopping.png",
-		"packageName": "com.amazon.mShop.android.shopping",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "angulus",
-		"name": "Angulus Pro - Precision Angle",
-		"icon": "icons/angulus.png",
-		"packageName": "com.drinkplusplus.angulus",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "baconreader",
-		"name": "BaconReader for Reddit",
-		"icon": "icons/baconreader.png",
-		"packageName": "com.onelouder.baconreader",
-		"warning": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://baconreader.com/auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "bandcamp",
-		"name": "Bandcamp",
-		"icon": "icons/bandcamp.png",
-		"packageName": "com.bandcamp.android",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "boost",
-		"name": "Boost for Reddit",
-		"icon": "icons/boost.png",
-		"packageName": "com.rubenmayayo.reddit",
-		"warning": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://rubenmayo.com</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "cieid",
-		"name": "CieID",
-		"icon": "icons/cieid.png",
-		"packageName": "it.ipzs.cieid",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "cricbuzz",
-		"name": "Cricbuzz - Live Cricket Scores",
-		"icon": "icons/cricbuzz.png",
-		"packageName": "com.cricbuzz.android",
-		"versions": [
-			{
-				"version": "6.24.01",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "crunchyroll",
-		"name": "Crunchyroll: Anime Streaming",
-		"icon": "icons/crunchyroll.png",
-		"packageName": "com.crunchyroll.crunchyroid",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "disneyplus",
-		"name": "Disney+",
-		"icon": "icons/disneyplus.png",
-		"packageName": "com.disney.disneyplus",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "duolingo",
-		"name": "Duolingo",
-		"icon": "icons/duolingo.png",
-		"packageName": "com.duolingo",
-		"versions": [
-			{
-				"version": "6.54.5",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "facebook",
-		"name": "Facebook",
-		"icon": "icons/facebook.png",
-		"packageName": "com.facebook.katana",
-		"versions": [
-			{
-				"version": "490.0.0.63.82",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "facebook-messenger",
-		"name": "Facebook Messenger",
-		"icon": "icons/facebook-messenger.png",
-		"packageName": "com.facebook.orca",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "finanzonline",
-		"name": "FinanzOnline [+]",
-		"icon": "icons/finanzonline.png",
-		"packageName": "at.gv.bmf.bmf2go",
-		"versions": [
-			{
-				"version": "4.0.5",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "fotmob",
-		"name": "FotMob - Soccer Live Scores",
-		"icon": "icons/fotmob.png",
-		"packageName": "com.mobilefootie.wc2010",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "gmx",
-		"name": "GMX - Mail & Cloud",
-		"icon": "icons/gmx.png",
-		"packageName": "de.gmx.mobile.android.mail",
-		"versions": [
-			{
-				"version": "9.4.1",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "google-news",
-		"name": "Google News - Daily Headlines",
-		"icon": "icons/google-news.png",
-		"packageName": "com.google.android.apps.magazines",
-		"versions": [
-			{
-				"version": "5.108.0.644447823",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "google-photos",
-		"name": "Google Photos",
-		"icon": "icons/google-photos.png",
-		"packageName": "com.google.android.apps.photos",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "google-recorder",
-		"name": "Google Recorder",
-		"icon": "icons/google-recorder.png",
-		"packageName": "com.google.android.apps.recorder",
-		"warning": "Requires root to mount it.",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "hexeditor",
-		"name": "HEX Editor",
-		"icon": "icons/hexeditor.png",
-		"packageName": "com.myprog.hexedit",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "icon-pack-studio",
-		"name": "Icon Pack Studio",
-		"icon": "icons/icon-pack-studio.png",
-		"packageName": "ginlemon.iconpackstudio",
-		"versions": [
-			{
-				"version": "2.2 build 016",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "id-austria",
-		"name": "ID Austria",
-		"icon": "icons/id-austria.png",
-		"packageName": "at.gv.oe.app",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "infinity",
-		"name": "Infinity for Reddit",
-		"icon": "icons/infinity.png",
-		"packageName": "ml.docilealligator.infinityforreddit",
-		"warning": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>infinity://localhost</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "inshorts",
-		"name": "Inshorts - News in 60 words",
-		"icon": "icons/inshorts.png",
-		"packageName": "com.nis.app",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "instagram",
-		"name": "Instagram",
-		"icon": "icons/instagram.png",
-		"packageName": "com.instagram.android",
-		"patchCount": "19",
-		"versions": [
-			{
-				"version": "401.0.0.48.79",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "irplus",
-		"name": "irplus - Infrared Remote",
-		"icon": "icons/irplus.png",
-		"packageName": "net.binarymode.android.irplus",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "joey",
-		"name": "Joey for Reddit",
-		"icon": "icons/joey.png",
-		"packageName": "o.o.joey",
-		"warning": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>https://127.0.0.1:65023/authorize_callback</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "kleinanzeigen",
-		"name": "Kleinanzeigen - without eBay",
-		"icon": "icons/kleinanzeigen.png",
-		"packageName": "com.ebay.kleinanzeigen",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "letterboxd",
-		"name": "Letterboxd",
-		"icon": "icons/letterboxd.png",
-		"packageName": "com.letterboxd.letterboxd",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "lightroom",
-		"name": "Lightroom Photo & Video Editor",
-		"icon": "icons/lightroom.png",
-		"packageName": "com.adobe.lrmobile",
-		"versions": [
-			{
-				"version": "9.3.0",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "memegenerator",
-		"name": "Meme Generator",
-		"icon": "icons/memegenerator.png",
-		"packageName": "com.zombodroid.MemeGenerator",
-		"versions": [
-			{
-				"version": "4.6377",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "mi-fitness",
-		"name": "Mi Fitness",
-		"icon": "icons/mi-fitness.png",
-		"packageName": "com.xiaomi.wearable",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "microsoft-lens",
-		"name": "Microsoft Lens - PDF Scanner",
-		"icon": "icons/microsoft-lens.png",
-		"packageName": "com.microsoft.office.officelens",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "myexpenses",
-		"name": "My Expenses",
-		"icon": "icons/myexpenses.png",
-		"packageName": "org.totschnig.myexpenses",
-		"versions": [
-			{
-				"version": "3.4.9",
-				"sha256": "",
-				"links": [
-					{
-						"url": "https://f-droid.org/archive/org.totschnig.myexpenses_575.apk",
-						"name": "F-Droid Link"
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": "myfitnesspal",
-		"name": "MyFitnessPal: Calorie Counter",
-		"icon": "icons/myfitnesspal.png",
-		"packageName": "com.myfitnesspal.android",
-		"versions": [
-			{
-				"version": "24.14.2",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "netguard",
-		"name": "NetGuard - no-root firewall",
-		"icon": "icons/netguard.png",
-		"packageName": "eu.faircode.netguard",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "nothing-x",
-		"name": "Nothing X",
-		"icon": "icons/nothing-x.png",
-		"packageName": "com.nothing.smartcenter",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "nu",
-		"name": "NU.nl - Nieuws, Sport & meer",
-		"icon": "icons/nu.png",
-		"packageName": "nl.sanomamedia.android.nu",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "orf",
-		"name": "ORF ON",
-		"icon": "icons/orf.png",
-		"packageName": "com.nousguide.android.orftvthek",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "pandora",
-		"name": "Pandora - Music & Podcasts",
-		"icon": "icons/pandora.png",
-		"packageName": "com.pandora.android",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "peacock",
-		"name": "Peacock TV: Stream TV & Movies",
-		"icon": "icons/peacock.png",
-		"packageName": "com.peacocktv.peacockandroid",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "photomath",
-		"name": "Photomath",
-		"icon": "icons/photomath.png",
-		"packageName": "com.microblank.photomath",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "photoshopmix",
-		"name": "Adobe Photoshop Mix",
-		"icon": "icons/photoshopmix.png",
-		"packageName": "com.adobe.photoshopmix",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "piccomaeurope",
-		"name": "piccoma - Mangas et Webtoons",
-		"icon": "icons/piccomaeurope.png",
-		"packageName": "com.piccomaeurope.fr",
-		"versions": [
-			{
-				"version": "6.6.2",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "pixiv",
-		"name": "pixiv",
-		"icon": "icons/pixiv.png",
-		"packageName": "jp.pxv.android",
-		"versions": [
-			{
-				"version": "6.141.1",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "prime-video",
-		"name": "Prime Video",
-		"icon": "icons/prime-video.png",
-		"packageName": "com.amazon.avod.thirdpartyclient",
-		"versions": [
-			{
-				"version": "3.0.412.2947",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "proton-mail",
-		"name": "Proton Mail",
-		"icon": "icons/proton-mail.png",
-		"packageName": "ch.protonmail.android",
-		"versions": [
-			{
-				"version": "4.15.0",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "proton-vpn",
-		"name": "Proton VPN",
-		"icon": "icons/proton-vpn.png",
-		"packageName": "ch.protonvpn.android",
-		"versions": [
-			{
-				"version": "5.17.21.0",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "rarlab",
-		"name": "RAR",
-		"icon": "icons/rarlab.png",
-		"packageName": "com.rarlab.rar",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "reddit",
-		"name": "Reddit",
-		"icon": "icons/reddit.png",
-		"packageName": "com.reddit.frontpage",
-		"versions": [
-			{
-				"version": "2026.03.0",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "relay",
-		"name": "Relay for Reddit",
-		"icon": "icons/relay.png",
-		"packageName": "free.reddit.news",
-		"secondaryPackageName": "reddit.news",
-		"warning": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>dbrady://relay</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "rif",
-		"name": "rif is fun for Reddit",
-		"icon": "icons/rif.png",
-		"packageName": "com.andrewshu.android.reddit",
-		"warning": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>redditisfun://auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "samsung-radio",
-		"name": "Samsung Radio",
-		"icon": "icons/samsung-radio.png",
-		"packageName": "com.sec.android.app.fm",
-		"versions": [
-			{
-				"version": "12.3.00.11",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "sbs",
-		"name": "SBS On Demand",
-		"icon": "icons/sbs.png",
-		"packageName": "com.sbs.ondemand.tv",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "slide",
-		"name": "Slide for Reddit",
-		"icon": "icons/slide.png",
-		"packageName": "me.ccrama.redditslide",
-		"warning": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://www.ccrama.me</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "solidexplorer2",
-		"name": "Solid Explorer File Manager",
-		"icon": "icons/solidexplorer2.png",
-		"packageName": "pl.solidexplorer2",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "sound-connect",
-		"name": "Sony | Sound Connect",
-		"icon": "icons/sound-connect.png",
-		"packageName": "com.sony.songpal.mdr",
-		"versions": [
-			{
-				"version": "10.1.0",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "soundcloud",
-		"name": "SoundCloud: The Music You Love",
-		"icon": "icons/soundcloud.png",
-		"packageName": "com.soundcloud.android",
-		"versions": [
-			{
-				"version": "2025.05.27-release",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "spb",
-		"name": "SPB Serviceportal Bund",
-		"icon": "icons/spb.png",
-		"packageName": "at.gv.bka.serviceportal",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "spotify",
-		"name": "Spotify",
-		"icon": "icons/spotify.png",
-		"packageName": "com.spotify.music",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "stocard",
-		"name": "Stocard - Rewards Cards Wallet",
-		"icon": "icons/stocard.png",
-		"packageName": "de.stocard.stocard",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "strava",
-		"name": "Strava",
-		"icon": "icons/strava.png",
-		"packageName": "com.strava",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "swissid",
-		"name": "SwissID",
-		"icon": "icons/swissid.png",
-		"packageName": "com.swisssign.swissid.mobile",
-		"versions": [
-			{
-				"version": "5.2.9",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "sync-for-lemmy",
-		"name": "Sync for Lemmy",
-		"icon": "icons/sync-for-lemmy.png",
-		"packageName": "io.syncapps.lemmy_sync",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "sync-for-reddit",
-		"name": "Sync for Reddit",
-		"icon": "icons/sync-for-reddit.png",
-		"packageName": "com.laurencedawson.reddit_sync",
-		"warning": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a><br> Click on 'installed app', and type '<b>http://redditsync/auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
-		"versions": [
-			{
-				"version": "v23.06.30-13:39",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "threads",
-		"name": "Threads",
-		"icon": "icons/threads.png",
-		"packageName": "com.instagram.barcelona",
-		"versions": [
-			{
-				"version": "382.0.0.51.85",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "ticktick",
-		"name": "TickTick:To Do List & Calendar",
-		"icon": "icons/ticktick.png",
-		"packageName": "com.ticktick.task",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "tiktok",
-		"name": "TikTok",
-		"icon": "icons/tiktok.png",
-		"packageName": "com.ss.android.ugc.trill",
-		"secondaryPackageName": "com.zhiliaoapp.musically",
-		"versions": [
-			{
-				"version": "36.5.4",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "trakt",
-		"name": "trakt.TV Shows & Movies",
-		"icon": "icons/trakt.png",
-		"packageName": "tv.trakt.trakt",
-		"versions": [
-			{
-				"version": "1.1.1",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "tudortmund",
-		"name": "TU Dortmund",
-		"icon": "icons/tudortmund.png",
-		"packageName": "de.tudortmund.app",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "tumblr",
-		"name": "Tumblr",
-		"icon": "icons/tumblr.png",
-		"packageName": "com.tumblr",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "twitch",
-		"name": "Twitch",
-		"icon": "icons/twitch.png",
-		"packageName": "tv.twitch.android.app",
-		"versions": [
-			{
-				"version": "16.9.1",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "twitter/x",
-		"name": "Twitter / X",
-		"icon": "icons/twitter.png",
-		"packageName": "com.twitter.android",
-		"warning": "Twitter gives an error message when trying to log in/register on older versions of the app. <br> Password reset bypass is patched and no longer works.",
-		"versions": [
-			{
-				"version": "10.86.0-release.0",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "viber",
-		"name": "Rakuten Viber Messenger",
-		"icon": "icons/viber.png",
-		"packageName": "com.viber.voip",
-		"versions": [
-			{
-				"version": "26.1.2.0",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "warnwetter",
-		"name": "WarnWetter",
-		"icon": "icons/warnwetter.png",
-		"packageName": "de.dwd.warnapp",
-		"versions": [
-			{
-				"version": "4.2.2",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "willhaben",
-		"name": "willhaben",
-		"icon": "icons/willhaben.png",
-		"packageName": "at.willhaben",
-		"versions": [
-			{
-				"version": "Any version",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "youtube",
-		"name": "YouTube",
-		"icon": "icons/youtube.png",
-		"packageName": "com.google.android.youtube",
-		"versions": [
-			{
-				"version": "20.40.45",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	},
-	{
-		"id": "youtube-music",
-		"name": "YouTube Music",
-		"icon": "icons/youtube-music.png",
-		"packageName": "com.android.apps.youtube.music",
-		"versions": [
-			{
-				"version": "8.40.54",
-				"sha256": "",
-				"links": [
-					""
-				]
-			}
-		]
-	}
+  {
+    "id": "adobe-photoshopmix",
+    "name": "Adobe Photoshop Mix",
+    "icon": "icons/adobe-photoshopmix.png",
+    "packageName": "com.adobe.photoshopmix",
+    "versions": [
+      {
+        "version": "3.0.412.2947",
+        "size": "49.3MB",
+        "sha1": "e74273c6fa4cd06552bf7651a626dde805a1fe96",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/fzgqclflax6f",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "amazon-shopping",
+    "name": "Amazon Shopping",
+    "icon": "icons/amazon-shopping.png",
+    "packageName": "com.amazon.mShop.android.shopping",
+    "versions": [
+      {
+        "version": "32.6.0.100",
+		    "size": "106.9MB",
+        "sha1": "94634ba6124b42d62b56e3b28be549d8aa1f5e10",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/u8sjp900ltth",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+	  {
+        "version": "32.6.0.100",
+		    "size": "101.9MB",
+        "sha1": "d49861aede688d7b0571f91520f014f7b7b8fc4e",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/vgphcmd01cel",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "angulus",
+    "name": "Angulus Pro - Precision Angle",
+    "icon": "icons/angulus.png",
+    "packageName": "com.drinkplusplus.angulus",
+    "versions": [
+      {
+        "version": "5.1.0",
+        "size": "49.3MB",
+        "sha1": "241e94bc5b0069ef62167602d40e22b405a0647e",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/ko79alq819fo",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+	  {
+        "version": "5.1.0",
+        "size": "54.5MB",
+        "sha1": "90948fb1481ce3204a152dde28399d19770b6302",
+		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/ko79alq819fo",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "baconreader",
+    "name": "BaconReader for Reddit",
+    "icon": "icons/baconreader.png",
+    "packageName": "com.onelouder.baconreader",
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://baconreader.com/auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
+      {
+        "version": "6.1.4",
+        "size": "16.9MB",
+        "sha1": "1436cf7980706530cb960754d5f005774c853c93",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/9jasmbbdparj",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bandcamp",
+    "name": "Bandcamp",
+    "icon": "icons/bandcamp.png",
+    "packageName": "com.bandcamp.android",
+    "versions": [
+      {
+        "version": "3.3.4",
+        "size": "13.1MB",
+        "sha1": "388f4c16c074d6626ac20fb9f523718145485fc6",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/b0ir4vyh7jue",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "boost",
+    "name": "Boost for Reddit",
+    "icon": "icons/boost.png",
+    "packageName": "com.rubenmayayo.reddit",
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://rubenmayo.com</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
+      {
+        "version": "1.12.12",
+        "size": "15.9MB",
+        "sha1": "b4e440ab35823205e521ae3762acba4971fb9a90",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/6bzmie55chl2",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cieid",
+    "name": "CieID",
+    "icon": "icons/cieid.png",
+    "packageName": "it.ipzs.cieid",
+    "versions": [
+      {
+        "version": "1.7.23",
+		    "size": "",
+        "sha1": "",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "1.7.23",
+        "size": "12.8MB",
+        "sha1": "d0b134b03e5798bc24018fa153a540879e729b3c",
+		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck files but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/m2qu63hkgdc2",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cricbuzz",
+    "name": "Cricbuzz - Live Cricket Scores",
+    "icon": "icons/cricbuzz.png",
+    "packageName": "com.cricbuzz.android",
+    "versions": [
+      {
+        "version": "6.24.01",
+        "size": "24.6MB",
+        "sha1": "a56b85679b7b3fa827510d7c645a681a45f0a42b",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck files but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/rmpazhdakymi",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "crunchyroll",
+    "name": "Crunchyroll: Anime Streaming",
+    "icon": "icons/crunchyroll.png",
+    "packageName": "com.crunchyroll.crunchyroid",
+    "versions": [
+      {
+        "version": "3.104.0",
+        "size": "90.7MB",
+        "sha1": "d80eb41eb08ed7744b1dcf5f8ad1c8ac5cfa601b",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/1qxco6w0hh2t",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "disneyplus",
+    "name": "Disney+",
+    "icon": "icons/disneyplus.png",
+    "packageName": "com.disney.disneyplus",
+    "versions": [
+      {
+        "version": "26.4.0_rc4-2026.03.25",
+		    "size": "58.5MB",
+        "sha1": "6e0acdcd03f60422c41650b4c3750c54abd40f72",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/2f48vsu7y8cu",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "26.4.0+rc4-2026.03.25",
+        "size": "48.0MB",
+        "sha1": "2c5236c25d1d94dfa7b032cedcd1e3b283e20a47",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/1vzdogt93qnz",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "duolingo",
+    "name": "Duolingo",
+    "icon": "icons/duolingo.png",
+    "packageName": "com.duolingo",
+    "versions": [
+      {
+        "version": "6.54.5",
+		    "size": "97.6MB",
+        "sha1": "f3679572acbd8ee3400c6b61c1bebfaef68efec7",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/tocg13p6fydk",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "6.54.5",
+        "size": "76.3MB",
+        "sha1": "42d47c4429a10240ea7d30bebdfeb54efd169b17",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/g1kcql7n8upn",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "facebook",
+    "name": "Facebook",
+    "icon": "icons/facebook.png",
+    "packageName": "com.facebook.katana",
+    "versions": [
+      {
+        "version": "490.0.0.63.82",
+        "size": "146.9MB",
+        "sha1": "e9f909dff6bb54645e15eb87a769c62f06678825",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/izsgzuij0lhm",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "facebook-messenger",
+    "name": "Facebook Messenger",
+    "icon": "icons/facebook-messenger.png",
+    "packageName": "com.facebook.orca",
+    "versions": [
+      {
+        "version": "555.0.0.0.43",
+        "size": "132.1MB",
+        "sha1": "8ae2839b277c50fb73c4d1730ae95e199e6ac80a",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/6g9xpsjc3imu",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "finanzonline",
+    "name": "FinanzOnline [+]",
+    "icon": "icons/finanzonline.png",
+    "packageName": "at.gv.bmf.bmf2go",
+    "versions": [
+      {
+        "version": "4.0.5",
+        "size": "17.2MB",
+        "sha1": "8efdd1d45af093d8018e300d1462c70bb8c4d6be",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/o8w2sjfenhau",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fotmob",
+    "name": "FotMob - Soccer Live Scores",
+    "icon": "icons/fotmob.png",
+    "packageName": "com.mobilefootie.wc2010",
+    "versions": [
+      {
+        "version": "228.16264.20260326",
+		    "size": "31.0MB",
+        "sha1": "1483b84cd5f28d9c33be146c297717605e359373",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/2dumgdra7iev",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "228.16264.20260326",
+        "size": "26.4MB",
+        "sha1": "c75c59a74a63261a776f0b48b4d2ba705f67e5e0",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/rv252e4cxkyt",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gmx",
+    "name": "GMX - Mail & Cloud",
+    "icon": "icons/gmx.png",
+    "packageName": "de.gmx.mobile.android.mail",
+    "versions": [
+      {
+        "version": "9.4.1",
+		    "size": "51.5MB",
+        "sha1": "25b3f3c5b2cc982fb516e72bffe0f4700328bd96",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not function properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/b26xk6wem3vc",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "9.4.1",
+        "size": "50.8MB",
+        "sha1": "5ff4eec8f753f96536d6db02b20263d83788f7d5",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/sph2lc5gk4oj",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "google-news",
+    "name": "Google News - Daily Headlines",
+    "icon": "icons/google-news.png",
+    "packageName": "com.google.android.apps.magazines",
+    "versions": [
+      {
+        "version": "5.108.0.644447823",
+        "size": "16.8MB",
+        "sha1": "212c6ce574e9c74b8620ece21511b87c339acd10",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/hsq56so9xfla",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "google-photos",
+    "name": "Google Photos",
+    "icon": "icons/google-photos.png",
+    "packageName": "com.google.android.apps.photos",
+    "versions": [
+      {
+        "version": "7.69.0.890655694",
+        "size": "204.7MB",
+        "sha1": "ebb91184ac0306c14e1a0d94aa7abb4cae2fe812",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/z4oe5xmuy8uu",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "google-recorder",
+    "name": "Google Recorder",
+    "icon": "icons/google-recorder.png",
+    "packageName": "com.google.android.apps.recorder",
+    "important": "Requires root to mount it.",
+    "versions": [
+      {
+        "version": "4.2.20260307.885964187",
+		    "size": "51.0MB",
+        "sha1": "ea3109da6df2c4ec78e571dc83497645927e1a40",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not function properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/zhvnn1m38s2i",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "4.2.20260307.885964187",
+        "size": "47.7MB",
+        "sha1": "b399b5c503dc10629f1201f86ff1deec8f90d201",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/dharz5cc0ibs",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hexeditor",
+    "name": "HEX Editor",
+    "icon": "icons/hexeditor.png",
+    "packageName": "com.myprog.hexedit",
+    "versions": [
+      {
+        "version": "2.8.5",
+        "size": "3.5MB",
+        "sha1": "9249658baf9e907a718c86b09f6a01858fa773ea",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/voyw0kcbc61l",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "icon-pack-studio",
+    "name": "Icon Pack Studio",
+    "icon": "icons/icon-pack-studio.png",
+    "packageName": "ginlemon.iconpackstudio",
+    "versions": [
+      {
+        "version": "2.2 build 016",
+        "size": "52.2MB",
+        "sha1": "9939045f69dfde522e2f4d94fe8850e1f31f756f",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/9wuubq8b412d",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "id-austria",
+    "name": "ID Austria",
+    "icon": "icons/id-austria.png",
+    "packageName": "at.gv.oe.app",
+    "versions": [
+      {
+        "version": "5.3.0",
+        "size": "75.6MB",
+        "sha1": "a911c87f964d234e73339726b222d7f4bfe6dded",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/gjls3hhlt5di",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "infinity",
+    "name": "Infinity for Reddit",
+    "icon": "icons/infinity.png",
+    "packageName": "ml.docilealligator.infinityforreddit",
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>infinity://localhost</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
+      {
+        "version": "8.14",
+        "size": "16.4MB",
+        "sha1": "3d0976f22d999b0902adfc3fe2c8c98f09f9e27b",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/edhz55qtyny5",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+	  {
+        "version": "8.14",
+        "size": "16.4 MB",
+        "sha256": "89e5f0cc1a6063ba468d522359f65499d66490fa533b0dedc3b7b7929ac4213b",
+        "links": [
+          {
+            "url": "https://github.com/Docile-Alligator/Infinity-For-Reddit/releases/download/v8.1.4/Infinity+-v8.1.4.apk",
+            "name": "GitHub link"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "inshorts",
+    "name": "Inshorts - News in 60 words",
+    "icon": "icons/inshorts.png",
+    "packageName": "com.nis.app",
+    "versions": [
+      {
+        "version": "6.12.7",
+        "size": "33.7MB",
+        "sha1": "dc22101feae096a65ca048a4924c374cc288b724",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/fozt3sjocwtw",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "instagram",
+    "name": "Instagram",
+    "icon": "icons/instagram.png",
+    "packageName": "com.instagram.android",
+    "patchCount": "19",
+    "versions": [
+      {
+        "version": "401.0.0.48.79",
+		    "size": "206.2MB",
+        "sha1": "35b71f9738cdadb896edc9442b624fb607aa503e",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not function properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/nktqsjkls6fk",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "401.0.0.48.79",
+        "size": "182.8MB",
+        "sha1": "fe0eb74c3168fc094acd5f6c73b64d25324309b7",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/zk2tu4aqpwy4",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "irplus",
+    "name": "irplus - Infrared Remote",
+    "icon": "icons/irplus.png",
+    "packageName": "net.binarymode.android.irplus",
+    "versions": [
+      {
+        "version": "1.9.13",
+        "size": "6.1MB",
+        "sha1": "51c492bb9a5ad3c76d17207a9e022737d6b6c090",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/6eleykniyrqn",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "joey",
+    "name": "Joey for Reddit",
+    "icon": "icons/joey.png",
+    "packageName": "o.o.joey",
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>https://127.0.0.1:65023/authorize_callback</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
+      {
+        "version": "2.1.6.5",
+        "size": "18.2MB",
+        "sha1": "24631741f085d4ee06bec69f0d0a83fb67e7dfa0",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/c7qbvbitv81a",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kleinanzeigen",
+    "name": "Kleinanzeigen - without eBay",
+    "icon": "icons/kleinanzeigen.png",
+    "packageName": "com.ebay.kleinanzeigen",
+    "versions": [
+      {
+        "version": "2026.13.2",
+		    "size": "32.9MB",
+        "sha1": "03fd76db5ed7d584f9885f19e28bcb1c8c1d23ac",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/vjxgxfl225fy",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "2026.13.2",
+        "size": "30.5MB",
+        "sha1": "975fa23edef4e130d08ed78e98ee643b05433912",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/sjsjqxy6615p",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "letterboxd",
+    "name": "Letterboxd",
+    "icon": "icons/letterboxd.png",
+    "packageName": "com.letterboxd.letterboxd",
+    "versions": [
+      {
+        "version": "3.5.0",
+		    "size": "94.5MB",
+        "sha1": "34b7ece8dae51b7fd5b742bc62c0e89c48ac35ae",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/38uozaxg0bci",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "3.5.0",
+        "size": "91.6MB",
+        "sha1": "eb147880f23bed869dc1bf4b83672af674f1b6fe",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/6cy1h4z3zpg4",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lightroom",
+    "name": "Lightroom Photo & Video Editor",
+    "icon": "icons/lightroom.png",
+    "packageName": "com.adobe.lrmobile",
+    "versions": [
+      {
+        "version": "9.3.0",
+        "size": "127.0MB",
+        "sha1": "5c08173d78d30f6f92fc31f2d3d94e128ddef56d",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/ck02pj4f7n8s",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "memegenerator",
+    "name": "Meme Generator",
+    "icon": "icons/memegenerator.png",
+    "packageName": "com.zombodroid.MemeGenerator",
+    "versions": [
+      {
+        "version": "4.6377",
+        "size": "105.7MB",
+        "sha1": "df3e698be03812a45de5c3ad52c6bc5b9e5f0a57",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/djhd5mqj592c",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mi-fitness",
+    "name": "Mi Fitness (Xiaomi Wear)",
+    "icon": "icons/mi-fitness.png",
+    "packageName": "com.xiaomi.wearable",
+    "important": "Do not confuse it with <b>com.mi.health</b> since the apps share the same name and icons. <br> You need to find the one that says <b>'(Xiaomi Wear)'</b>",
+    "versions": [
+      {
+        "version": "3.52.0i",
+		    "size": "94.6MB",
+        "sha1": "2ec5d5e9b38a195856ebfbcb9cce0c43a52140fa",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/ef9ojiy41emh",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "3.52.0i",
+        "size": "119.3MB",
+        "sha1": "32c6f7fdfa02462d47c2b260ad433767f32c6053",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/ti7kcc6vaehh",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "microsoft-lens",
+    "name": "Microsoft Lens - PDF Scanner",
+    "icon": "icons/microsoft-lens.png",
+    "packageName": "com.microsoft.office.officelens",
+    "versions": [
+      {
+        "version": "16.0.19628.20008",
+        "size": "66.9MB",
+        "sha1": "8149192fc48fd2b4023d2cba607eda787968863b",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/cbpyrwyd5xa8",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "myexpenses",
+    "name": "My Expenses",
+    "icon": "icons/myexpenses.png",
+    "packageName": "org.totschnig.myexpenses",
+    "versions": [
+      {
+        "version": "3.4.9",
+		    "size": "17.3MB",
+        "sha1": "9d5004545cf5f858cbb8f3e4777dc99c8f881fe2",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/umgfhp7ga15p",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "3.4.9",
+        "size": "17.3MB",
+        "sha1": "9d5004545cf5f858cbb8f3e4777dc99c8f881fe2",
+        "links": [
+          {
+            "url": "https://f-droid.org/archive/org.totschnig.myexpenses_575.apk",
+            "name": "F-Droid Link"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "myfitnesspal",
+    "name": "MyFitnessPal: Calorie Counter",
+    "icon": "icons/myfitnesspal.png",
+    "packageName": "com.myfitnesspal.android",
+    "versions": [
+      {
+        "version": "24.14.2",
+        "size": "96.8MB",
+        "sha1": "014b4523b0e5847a10cd73ef81ba3de26d6625bf",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/uvpgn3k2fuwl",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "netguard",
+    "name": "NetGuard - no-root firewall",
+    "icon": "icons/netguard.png",
+    "packageName": "eu.faircode.netguard",
+    "versions": [
+      {
+        "version": "2.333",
+        "size": "3.0MB",
+        "sha1": "2b1adece64db5b3f80c9897e41227da9e9fb0a0a",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/n3c5ux5gfrpn",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nothing-x",
+    "name": "Nothing X",
+    "icon": "icons/nothing-x.png",
+    "packageName": "com.nothing.smartcenter",
+    "versions": [
+      {
+        "version": "3.5.1",
+		    "size": "233.0MB",
+        "sha1": "ce72321258892a642526cf0de6845b2a8fc4afb5",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/q75tg50dgz3n",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "3.5.1",
+        "size": "228.7MB",
+        "sha1": "531e25bc6dfc1be11c460f9ce254d8ac31070967",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/rk9pv0i7bkcg",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nu",
+    "name": "NU.nl - Nieuws, Sport & meer",
+    "icon": "icons/nu.png",
+    "packageName": "nl.sanomamedia.android.nu",
+    "versions": [
+      {
+        "version": "26.2.1",
+		    "size": "40.2MB",
+        "sha1": "841358ad6f7741e7c78fa3a3334c7867d73351c2",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/6gq9ysu23ynh",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "26.2.1",
+        "size": "109.5MB",
+        "sha1": "ba0d699b00981401ba41cf40cf33b25c4b1ece50",
+		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/m4ruzcb71sxf",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "orf",
+    "name": "ORF ON",
+    "icon": "icons/orf.png",
+    "packageName": "com.nousguide.android.orftvthek",
+    "versions": [
+      {
+        "version": "6.11.9",
+		    "size": "22.2MB ",
+        "sha1": "0b1f288c7a6cce0ac7dfeda753d0f02201d5ea6b",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/ip7j01iqfqho",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "6.11.9",
+        "size": "20.1MB",
+        "sha1": "fea9a02f303a9db82d0dd6812f0ed931f654d9fa",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/5ocvw586n5ts",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pandora",
+    "name": "Pandora - Music & Podcasts",
+    "icon": "icons/pandora.png",
+    "packageName": "com.pandora.android",
+    "versions": [
+      {
+        "version": "2602.1",
+        "size": "71.3MB",
+        "sha1": "8a29ae3913c29c671be8db54a9736665edfbd313",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/r65qx4tzcoyt",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "peacock",
+    "name": "Peacock TV: Stream TV & Movies",
+    "icon": "icons/peacock.png",
+    "packageName": "com.peacocktv.peacockandroid",
+    "versions": [
+      {
+        "version": "7.4.10",
+		    "size": "61.8MB",
+        "sha1": "f9d0616cb88890d60c5e5312d35409e9cf866ee0",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/09045pvvhwyo",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "7.4.10",
+        "size": "59.1MB",
+        "sha1": "cc1cf209d21876cd62a389d2b58711086b4c77f9",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/bjzdmd5x8vl6",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "photomath",
+    "name": "Photomath",
+    "icon": "icons/photomath.png",
+    "packageName": "com.microblank.photomath",
+    "versions": [
+      {
+        "version": "8.47.1",
+		    "size": "15.0MB",
+        "sha1": "f1f9803f658e8c3d049ca0e254d928452074b16e",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/g1xrle50trjh",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "8.47.1",
+        "size": "13.1MB",
+        "sha1": "d8662cddac37529b342cb8214e19a010c5dfa956",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/90iw8qn5isuc",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "piccomaeurope",
+    "name": "piccoma - Mangas et Webtoons",
+    "icon": "icons/piccomaeurope.png",
+    "packageName": "com.piccomaeurope.fr",
+    "versions": [
+      {
+        "version": "6.6.2",
+        "size": "21.6MB",
+        "sha1": "55a0cc4017040e600e090447bad421b249be8e25",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/qznc64ytzu83",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pixiv",
+    "name": "pixiv",
+    "icon": "icons/pixiv.png",
+    "packageName": "jp.pxv.android",
+    "versions": [
+      {
+        "version": "6.141.1",
+        "size": "45.6MB",
+        "sha1": "b2145fb6d582f770a013ff968da96629acd594af",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/g3cd9qgkl2d8",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prime-video",
+    "name": "Prime Video",
+    "icon": "icons/prime-video.png",
+    "packageName": "com.amazon.avod.thirdpartyclient",
+    "versions": [
+      {
+        "version": "3.0.412.2947",
+		    "size": "60.9MB",
+        "sha1": "b89f642ea2672c14ef4620223d45d135d6a195b9",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/0lllssq8ieev",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "proton-mail",
+    "name": "Proton Mail",
+    "icon": "icons/proton-mail.png",
+    "packageName": "ch.protonmail.android",
+    "versions": [
+      {
+        "version": "4.15.0",
+        "size": "89.9MB",
+        "sha1": "5b8768575d88c2b67804d73283f9f69a93cee224",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/spa089c5hy8o",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "proton-vpn",
+    "name": "Proton VPN",
+    "icon": "icons/proton-vpn.png",
+    "packageName": "ch.protonvpn.android",
+    "versions": [
+      {
+        "version": "5.17.21.0",
+        "size": "5.17.21.0",
+        "sha1": "098ab42d78fba91d92e011573ae0c1b214a58161",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/0xp0k4c6n6rz",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rakuten-viber",
+    "name": "Rakuten Viber Messenger",
+    "icon": "icons/rakuten-viber.png",
+    "packageName": "com.viber.voip",
+    "versions": [
+      {
+        "version": "26.1.2.0",
+        "size": "198.5MB",
+        "sha1": "d2f51f4373b234fb03b4712785b7be754bff580a",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/firafpkj575x",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rarlab",
+    "name": "RAR",
+    "icon": "icons/rarlab.png",
+    "packageName": "com.rarlab.rar",
+    "versions": [
+      {
+        "version": "7.20.build131",
+		    "size": "6.7MB",
+        "sha1": "ca3b46aeea8e11cc0e0fa2d26f25814c32a8da26",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/98jy0ayh4bfp",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "7.20.build131",
+        "size": "6.1MB",
+        "sha1": "dadf32b0bff1ebcbe0ba8c234a0106e30e1fe4e2",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/36a2jeswwp8s",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reddit",
+    "name": "Reddit",
+    "icon": "icons/reddit.png",
+    "packageName": "com.reddit.frontpage",
+    "versions": [
+      {
+        "version": "2026.03.0",
+		    "size": "86.7MB",
+        "sha1": "f4e9db7afa5dd203bd7e531cdfa78e3cbffab264",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/942oxd9n3gtj",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "2026.03.0",
+        "size": "70.3MB",
+        "sha1": "a9be4dbb809fb43021c0b8c7f5e550f94d5bff36",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/llmllhojfuhw",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "relay",
+    "name": "Relay for Reddit",
+    "icon": "icons/relay.png",
+    "packageName": "free.reddit.news",
+    "secondaryPackageName": "reddit.news",
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>dbrady://relay</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
+      {
+        "version": "13.0.46",
+        "size": "26.9MB",
+        "sha1": "83ee87934436b47cb5e594f14edfc7cdd3b14af9",
+        "warning": "This app uses Pairip/Google Integrity to protect it from modification, so it is not possible to use AntiSplit M to convert it into an APK file without a patch to prevent the app from crashing. <br> (There isn't a patch have made for it yet.)",
+		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/th0690gce08n",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rif",
+    "name": "rif is fun for Reddit",
+    "icon": "icons/rif.png",
+    "packageName": "com.andrewshu.android.reddit",
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>redditisfun://auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
+      {
+        "version": "5.6.22",
+        "size": "12.2MB",
+        "sha1": "a56498b8bd5c44bb1ac94da03b51998736ef085f",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/fnz2etkcgau2",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "samsung-radio",
+    "name": "Samsung Radio",
+    "icon": "icons/samsung-radio.png",
+    "packageName": "com.sec.android.app.fm",
+    "versions": [
+      {
+        "version": "12.3.00.11",
+        "size": "5.5MB ",
+        "sha1": "03470dee2cfb238f8a875d6b3f39ebe6dd4158f7",
+        "warning": "<b>'Bypass device checks'</b> patch will still not allow the app to run on devices that do not have the required hardware.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/6eu5cmlzc4u6",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sbs",
+    "name": "SBS On Demand",
+    "icon": "icons/sbs.png",
+    "packageName": "com.sbs.ondemand.tv",
+    "versions": [
+      {
+        "version": "5.0.2",
+		    "size": "36.7MB",
+        "sha1": "e875717509f2a3515711ca5cbe4ca8fe9558778f",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/pwio4yoluuna",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "5.0.2",
+        "size": "34.8MB",
+        "sha1": "4c72c5aa3c36ba7018d3e5cd95da7aa9aa2d578f",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/tsr0txvgvspz",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "slide",
+    "name": "Slide for Reddit",
+    "icon": "icons/slide.png",
+    "packageName": "me.ccrama.redditslide",
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://www.ccrama.me</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
+      {
+        "version": "7.4.4",
+        "size": "32.9 MB",
+        "sha1": "e3bd3e5b12f88f9d667cdb0eb864241dd0abb940",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/tromtnxhtrud",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+	  {
+        "version": "7.4.4",
+        "size": "32.9 MB",
+        "sha256": "b239716209301d0401e80927c7deaf60b4256fa8b26989b4e9983f4aed238d90",
+        "links": [
+          {
+            "url": "https://github.com/cygnusx-1-org/Slide/releases/download/7.4.4/slide-7.4.4.apk",
+            "name": "GitHub link"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "solidexplorer2",
+    "name": "Solid Explorer File Manager",
+    "icon": "icons/solidexplorer2.png",
+    "packageName": "pl.solidexplorer2",
+    "versions": [
+      {
+        "version": "3.4.4",
+		    "size": "25.5MB",
+        "sha1": "f9ef48b7949243e25e2926bfe3037d63a2338f7d",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/v8obe81d8n3p",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "3.4.4",
+        "size": "21.3MB",
+        "sha1": "28ed73c24ff9dff5aa2053cfec7c121ba25a6c93",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/m688jjmcrgx3",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sound-connect",
+    "name": "Sony | Sound Connect",
+    "icon": "icons/sound-connect.png",
+    "packageName": "com.sony.songpal.mdr",
+    "versions": [
+      {
+        "version": "10.1.0",
+        "size": "60.7MB ",
+        "sha1": "96c1cf9e48dd55b050cb8e7ae51b80a457b0d23d",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/vx92oivk83qd",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "soundcloud",
+    "name": "SoundCloud: The Music You Love",
+    "icon": "icons/soundcloud.png",
+    "packageName": "com.soundcloud.android",
+    "versions": [
+      {
+        "version": "2025.05.27-release",
+		    "size": "69.3MB",
+        "sha1": "46ff35917d9584a98f374b861f81a567df552e3b",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/xaqkbidh1l0l",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "2025.05.27-release",
+        "size": "65.7MB",
+        "sha1": "705b13a14cfbb571542de0a4b85da3bd6c394994",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/t9z9m9batvl2",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spb",
+    "name": "SPB Serviceportal Bund",
+    "icon": "icons/spb.png",
+    "packageName": "at.gv.bka.serviceportal",
+    "versions": [
+      {
+        "version": "1.8.2",
+        "size": "41.3MB",
+        "sha1": "7a4af743c1002388dfc0bcebc3b7b19d5d5fc766",
+        "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/yv79xbxjywog",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "1.8.2",
+        "size": "84.6MB",
+        "sha1": "5a6cf81653c75bd47bc461b418da9324f65d7c35",
+		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/rffz86kastzh",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spotify",
+    "name": "Spotify",
+    "icon": "icons/spotify.png",
+    "packageName": "com.spotify.music",
+    "versions": [
+      {
+        "version": "9.1.38.635",
+		    "size": "49.9MB",
+        "sha1": "679d72fb8be83be9bcfd68566d8f06465f2508c9",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/6r9wc1uc4en8",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "9.1.38.635",
+        "size": "45.3MB",
+        "sha1": "58998c49f84c3b70da569cd9c870abfb9a0b4257",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/5ic2c5xu050v",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stocard",
+    "name": "Stocard - Rewards Cards Wallet",
+    "icon": "icons/stocard.png",
+    "packageName": "de.stocard.stocard",
+    "versions": [
+      {
+        "version": "10.68.0",
+		    "size": "46.9MB",
+        "sha1": "af5ee53ebabb02c3ff1bc59c2ccc0a48405d44e9",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/d2811m1mix48",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "10.68.0",
+        "size": "45.2MB",
+        "sha1": "7d7eaa6302cd29526fba516b1b0b08c7d900a16f",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/gh1nshlvt1qd",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "strava",
+    "name": "Strava",
+    "icon": "icons/strava.png",
+    "packageName": "com.strava",
+    "versions": [
+      {
+        "version": "456.10",
+		    "size": "95.4MB",
+        "sha1": "582ccdec173b14ea289092b75016a97201051141",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/wgcq83pcef8o",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "456.10",
+        "size": "145.9MB",
+        "sha1": "85c9ea415a2766a999847cb5ff6a260969fcba2a",
+		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/ba6r5lk0u71m",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "swissid",
+    "name": "SwissID",
+    "icon": "icons/swissid.png",
+    "packageName": "com.swisssign.swissid.mobile",
+    "versions": [
+      {
+        "version": "5.2.9",
+		    "size": "91.0MB",
+        "sha1": "ecc6c9dcc684ceb47cc4cbdb5a5196785f28e16d",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/vhtpx2flqoog",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "5.2.9",
+        "size": "158.8MB",
+        "sha1": "ce8db21ce276adfb382e3078773458f006ac1681",
+		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/w0docjpki3s8",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sync-for-lemmy",
+    "name": "Sync for Lemmy",
+    "icon": "icons/sync-for-lemmy.png",
+    "packageName": "io.syncapps.lemmy_sync",
+    "versions": [
+      {
+        "version": "v24.03.26",
+        "size": "72.4MB",
+        "sha1": "c409d8d6a5a34b7064c6bb7ad127fb63fa6cf12f",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/p9twxa4yy6j2",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sync-for-reddit",
+    "name": "Sync for Reddit",
+    "icon": "icons/sync-for-reddit.png",
+    "packageName": "com.laurencedawson.reddit_sync",
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a><br> Click on 'installed app', and type '<b>http://redditsync/auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
+      {
+        "version": "v23.06.30-13:39",
+        "size": "68.0MB",
+        "sha1": "c62613bd95345ff23930deb88f34f4dcc1bd89d0",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/gg8tiz1n05iu",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "threads",
+    "name": "Threads",
+    "icon": "icons/threads.png",
+    "packageName": "com.instagram.barcelona",
+    "versions": [
+      {
+        "version": "382.0.0.51.85",
+		    "size": "75.8MB",
+        "sha1": "cc66cafa54c7a117126dd1c3f8971cbee993e2a7",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/ulxf5dk8jckg",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "382.0.0.51.85",
+        "size": "65.2MB",
+        "sha1": "b4b1c6e4fea0d0129cbd2a391fd7bfd1fa47aa37",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/7zzpy3jcg6wc",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ticktick",
+    "name": "TickTick:To Do List & Calendar",
+    "icon": "icons/ticktick.png",
+    "packageName": "com.ticktick.task",
+    "versions": [
+      {
+        "version": "8.0.5.0",
+		    "size": "54.4MB",
+        "sha1": "4384865c7521cbd0f6375c6cc98295488fd7af3f",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/2u6c19a7jsgf",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "8.0.5.0",
+        "size": "51.1MB",
+        "sha1": "728add7e52e05bb22fdca4e6311d77888355afdd",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/uj0kc3tjanhb",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tiktok",
+    "name": "TikTok",
+    "icon": "icons/tiktok.png",
+    "packageName": "com.ss.android.ugc.trill",
+    "secondaryPackageName": "com.zhiliaoapp.musically",
+    "versions": [
+      {
+        "version": "36.5.4",
+		    "size": "378.7MB",
+        "sha1": "da01c856cae31b9dfac0814316c6df6fa8995549",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/a2n3hosc9pmy",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "trakt",
+    "name": "trakt.TV Shows & Movies",
+    "icon": "icons/trakt.png",
+    "packageName": "tv.trakt.trakt",
+    "versions": [
+      {
+        "version": "1.1.1",
+        "size": "39.2MB",
+        "sha1": "5ba30cb358684e1071c8a0b17ecc4ebab66d7420",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/o6k8ia19tow9",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tudortmund",
+    "name": "TU Dortmund",
+    "icon": "icons/tudortmund.png",
+    "packageName": "de.tudortmund.app",
+    "versions": [
+      {
+        "version": "5.10.1",
+		    "size": "14.3MB",
+        "sha1": "626bc36eb7bb0d8e163096542ab4e39358af32b3",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/7i2lgkvlt97j",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "5.10.1",
+        "size": "14.6MB",
+        "sha1": "990fbfca6ffc7aaf9e276cdb5373d9c4b8f58e56",
+		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/7vzen44h2e0t",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tumblr",
+    "name": "Tumblr",
+    "icon": "icons/tumblr.png",
+    "packageName": "com.tumblr",
+    "versions": [
+      {
+        "version": "43.9.0.109",
+		    "size": "42.8MB",
+        "sha1": "6ccb4a6ad53ccccc202734cc7af4b0ced9af646c",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/neymywnktjku",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "43.9.0.109",
+        "size": "37.5MB",
+        "sha1": "eba382a246b6c408f3eb2b0955a317232486d84f",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/cbdhvueay9ia",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "twitch",
+    "name": "Twitch",
+    "icon": "icons/twitch.png",
+    "packageName": "tv.twitch.android.app",
+    "versions": [
+      {
+        "version": "16.9.1",
+        "size": "16.9.1",
+        "sha1": "54ba98a9d317ef0e9e5865d247faf0268d6070b9",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/idk0a2cfv7y3",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "twitter/x",
+    "name": "Twitter / X",
+    "icon": "icons/twitter.png",
+    "packageName": "com.twitter.android",
+    "important": "Twitter gives an error message when trying to log in/register on older versions of the app. <br> Password reset bypass is patched and no longer works.",
+    "versions": [
+      {
+        "version": "10.86.0-release.0",
+		    "size": "105.7MB",
+        "sha1": "4cfea552823258b414d9158e4870598ea6edbbe1",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/y2iye7u6b07z",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "10.86.0-release.0",
+        "size": "91.3MB",
+        "sha1": "42e5edbd06c21fcd42152c0c1020ae7204bd56b1",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/zdh76u0u3dq3",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "warnwetter",
+    "name": "WarnWetter",
+    "icon": "icons/warnwetter.png",
+    "packageName": "de.dwd.warnapp",
+    "versions": [
+      {
+        "version": "4.2.2",
+        "size": "59.1MB",
+        "sha1": "d53a59983770081d67db216601fab02399e94f28",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/30flhzrq6k7j",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "willhaben",
+    "name": "willhaben",
+    "icon": "icons/willhaben.png",
+    "packageName": "at.willhaben",
+    "versions": [
+      {
+        "version": "8.37.0",
+        "size": "14.9MB",
+        "sha1": "b2633f6b4f17e172a378d810d19a8ca26cec7512",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/eqituvy7s9f7",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "youtube",
+    "name": "YouTube",
+    "icon": "icons/youtube.png",
+    "packageName": "com.google.android.youtube",
+    "versions": [
+      {
+        "version": "20.40.45",
+        "size": "161.7MB ",
+        "sha1": "57615d731564be85905da2fda948491a22fc2118",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/i3uffo53jgs8",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "youtube-music",
+    "name": "YouTube Music",
+    "icon": "icons/youtube-music.png",
+    "packageName": "com.android.apps.youtube.music",
+    "versions": [
+      {
+        "version": "8.40.54",
+        "size": "63.0MB",	
+        "sha1": "6335247b93f05cfdf6d6ea6fd42645439e829c49",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/y8jpqgufb0b8",
+            "name": "EU Mirror"
+          }
+        ]
+      }
+    ]
+  }
 ]

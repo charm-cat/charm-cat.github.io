@@ -363,7 +363,7 @@
 		{
 			"name": "Sanitize sharing links",
 			"default": "true",
-			"description": "Removes the tracking query parameters from shared links",
+			"description": "Removes the tracking query parameters from shared links.",
 			"supported": "Any version"
 		},
 		{
@@ -574,7 +574,7 @@
 			"supported": "Any version"
 		}
 	],
-	"photoshopmix": [
+	"adobe-photoshopmix": [
 		{
 			"name": "Bypass login",
 			"default": "true",
@@ -794,7 +794,7 @@
 		{
 			"name": "Sanitize sharing links",
 			"default": "true",
-			"description": "Removes the tracking query parameters from shared links",
+			"description": "Removes the tracking query parameters from shared links.",
 			"supported": "Any version"
 		},
 		{
@@ -1122,7 +1122,7 @@
 		{
 			"name": "Sanitize sharing links",
 			"default": "true",
-			"description": "Removes the tracking query parameters from shared links",
+			"description": "Removes the tracking query parameters from shared links.",
 			"supported": "10.86.0-release.0, 10.60.0-release.0"
 		},
 		{
@@ -1154,7 +1154,7 @@
 			"supported": "10.86.0-release.0, 10.60.0-release.0"
 		}
 	],
-	"viber": [
+	"rakuten-viber": [
 		{
 			"name": "Hide ads",
 			"default": "true",
@@ -1186,16 +1186,487 @@
 	],
 	"youtube": [
 		{
-			"name": "",
-			"description": "",
-			"supported": "20.40.45"
+			"name": "Custon branding",
+			"default": "true",
+			"configurable": "true",
+			"description": "Adds options to change the app icon and app name. Branding cannot be changed for mounted (root) installations.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Exit fullscreen",
+			"default": "true",
+			"description": "Adds options to automatically exit fullscreen mode when a video reaches the end",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Enable debugging",
+			"default": "true",
+			"description": "Adds options for debugging and exporting ReVanced logs to the clipboard.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Disable video codecs",
+			"default": "true",
+			"description": "Adds options to disable HDR and VP9 codecs.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Open Shorts in regular player",
+			"default": "true",
+			"description": "Adds options to open Shorts in  the regular video player.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide timestamp",
+			"default": "true",
+			"description": "Adds an option to hide the timestamp in the bottom left of the video player.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide ads",
+			"default": "true",
+			"description": "Adds options to remove general ads.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide autoplay previev",
+			"default": "true",
+			"description": "Adds an option to hide the autoplay preview at the end of videos.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Change start page",
+			"default": "true",
+			"description": "Adds an option to set which page the app opens in instead of the homepage.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide player flyout menu items",
+			"default": "true",
+			"description": "Adds options to hide menu items that appear when pressing the gear icon in the video player.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Disable haptic feedback",
+			"default": "true",
+			"description": "Adds an option to disable haptic feedback in the player for various actions.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Custom player overlay opacity",
+			"default": "true",
+			"description": "Adds an option to change the opacity of the video player background when player controls are visible.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Announcement",
+			"default": "true",
+			"description": "Adds an option to show accouncements from ReVanced on app startup.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Disable player popup panels",
+			"default": "true",
+			"description": "Adds an option to disable panels (such as live chat) from opening automatically.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Spoof video streams",
+			"default": "true",
+			"description": "Adds options to spoof the client video streams to fix playback.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide layout components",
+			"default": "true",
+			"description": "Adds options to hide general layout components.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Vidde quality",
+			"default": "true",
+			"description": "Adds options to set default video qualities and always use the advanced video quality menu.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Bypass URl redirects",
+			"default": "true",
+			"description": "Adds an option to bypass URL redirects and open the original URL directly.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Pause on audio interrupt",
+			"default": "true",
+			"description": "Adds an option to pause playback instead of lowering volume when other audio plays.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Theme",
+			"default": "true",
+			"configurable": "true",
+			"description": "Adds options for theming and applies a custom background theme (dark background theme defaults to pure black).",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Open videos fulscreen",
+			"default": "true",
+			"description": "Adds an topion to open videos in full screen portrait mode.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Loop video",
+			"default": "true",
+			"description": "Adds an option to loop videos and display loop video button in the video player.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Sanitize sharing links",
+			"default": "true",
+			"description": "Removes the tracking query parameters from shared links.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "SponsorBlock",
+			"default": "true",
+			"description": "ADds options to enable and configure SponsorBlock, which can skip undesired video segments such as sponsored content.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Change header",
+			"default": "true",
+			"configurable": "true",
+			"description": "Adds an option to change the header logo in the top left corner of the app.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Downloads",
+			"default": "true",
+			"description": "Adds support to download videos with an external downloader app using the in-app download button or a video player action button.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "GmsCore support",
+			"default": "true",
+			"configurable": "true",
+			"description": "Allows the app to work without root by using a different package name when patched using a GmsCore instead of Google Play Services.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide Shorts components",
+			"default": "true",
+			"configurable": "true",
+			"description": "Adds options to hide components related to Shorts. Patching version <b>20.21.37</b> or lower can hide more Shorts player button types.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Return YouTube Dislike",
+			"default": "true",
+			"description": "Adds an option to show the dislike count of videos with Return YouTube Dislike.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Alternative thumbnails",
+			"default": "true",
+			"description": "Adds option to replace video thumbnails using the DeArrow API or image captures from the video.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Copy video URL",
+			"default": "true",
+			"description": "Adds options to display buttons in the video player to copy video URLs.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Spoof device dimensions",
+			"default": "true",
+			"description": "Adds an option to spoof the device dimensions which can unlock higher video qualities.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Add more double tap to seek length options",
+			"default": "true",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Disable auto captions",
+			"default": "true",
+			"description": "Adds an option to disable captions from being automatically enabled.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Bypass image region restrictions",
+			"default": "true",
+			"description": "Adds an option to use a different host for user avatar and channel images and can fix missing images that are blocked in some countries.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Remove viewer discretion dialog",
+			"default": "true",
+			"description": "Adds an option to remove the dialog that appears when opening a video that has been age-restricted by accepting it automatically. This does not bypass the age restriction.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide video action buttons",
+			"default": "true",
+			"description": "Adds options to hide action buttons (such as the Download button) under videos. Patching version <b>20.21.37</b> or lower can hide more player button types.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Spoof app version",
+			"default": "true",
+			"description": "Adds an option to trick YouTube into thinking you are running an older version of the app. This can be used to restore old UI elements and features.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Disable fullscreen ambient mode",
+			"default": "true",
+			"description": "Adds an option to disable the ambient mode when in fullscreen.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Navigation bar",
+			"default": "true",
+			"description": "Adds options to hide and change the bottom navigation bar (such as the Shorts button) and the upper navigarion toolbar. Patching version <b>20.21.37</b> and lower also adds a setting to use a wide searchbar.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Open links externally",
+			"default": "true",
+			"description": "Adds an option to always open links in your browser instead of the in-app browser.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Disable sign in to TV popup",
+			"default": "true",
+			"description": "Adds an option to disable the popup asking to sign into a TV on the same local network.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Seekbar",
+			"default": "true",
+			"description": "Adds options to disable precise seeking when swiping up on the seekbar, slide to seek instead of playing at 2x speed when pressing and holding, tapping the player seekbar to seek, and hiding the video player seekbar.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Video ads",
+			"default": "true",
+			"description": "Adds an option to remove ads in the video player.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Disable rolling number animations",
+			"default": "true",
+			"description": "Adds an option to disable rolling number animations of video view count, user likes, and upload time.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Disable resuming Shorts on startup",
+			"default": "true",
+			"description": "Adss an option to disable the Shorts player from resuming on app startup when Shorts were last being watched.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Playback speed",
+			"default": "true",
+			"description": "Adds options to customize available playback speeds, set a default playback speed, and show a speed dialog button in the video player.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Miniplayer",
+			"default": "true",
+			"description": "Adds options to change the in-app minimized player.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Check watch history domain name resolution",
+			"default": "true",
+			"description": "Checks if the device DNS server is preventing user watch history from being saved.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide info cards",
+			"default": "true",
+			"description": "Adds an option to hide info cards that creators add in the video player.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide related video overlay",
+			"default": "true",
+			"description": "Adds an option to hide the related video overlay shown when swiping up in fullscreen.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide end screen suggested video",
+			"default": "true",
+			"description": "Adds an option to hide the suggested video at the end of videos",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Disable double tap actions",
+			"default": "true",
+			"description": "Adds an option to disable player double tap gestures.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Swipe controls",
+			"default": "true",
+			"description": "Adds options to enable and configure volume and brightness swipe controls.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide player overlay buttons",
+			"default": "true",
+			"description": "Adds options to hide the player Cast, Autoplay, Captions, Previous & Next buttons, and the player control buttons background.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Shorts autoplay",
+			"default": "true",
+			"description": "Adds options to automatically play the next Short.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Force original audio",
+			"default": "true",
+			"description": "Adds an option to always use the original audio track.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Change form factor",
+			"default": "true",
+			"description": "Adds an option to change the UI appearance to a phone, tablet, or automotive device.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Remove background playback restrictions",
+			"default": "true",
+			"description": "Removes restrictions on background playback, including playing kids videos in the background.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
+		},
+		{
+			"name": "Hide end screen cards",
+			"default": "true",
+			"description": "Adds an option to hide suggested video cards at the end of videos.",
+			"supported": "20.14.43, 20.21.37, 20.26.46, 20.31.42, 20.37.48, 20.40.45"
 		}
 	],
 	"youtube-music": [
 		{
-			"name": "",
-			"description": "",
-			"supported": "8.40.54"
+			"name": "Enable exclusive audio playback",
+			"default": "true",
+			"description": "Enables the option to play audio without video.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Hide music video ads",
+			"default": "true",
+			"description": "Adds an option to hide ads that appear while listening to or streaming music videos, podcasts, or songs.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Navigation bar",
+			"default": "true",
+			"description": "Adds options to hide navigation bar, labels and buttons.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Check watch history domain name resolution",
+			"default": "true",
+			"description": "Checks if the device DNS server is preventing user watch history from being saved.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Force original audio",
+			"default": "true",
+			"description": "Adds an option to always use the original audio track.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Enable debugging",
+			"default": "true",
+			"description": "Adds options for debugging and exporting ReVanced logs to the clipboard.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Change miniplayer color",
+			"default": "true",
+			"description": "Adds an option to change the miniplayer background to match the fullscreen player.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Spoof video streams",
+			"default": "true",
+			"description": "Adds options to spoof the client video streams to fix playback.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Hide category bar",
+			"default": "true",
+			"description": "Adds an option to hide the category bar at the top of the homepage.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Hide buttons",
+			"default": "true",
+			"description": "Adds options to hide the cast, history, notification, and search buttons.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Custon branding",
+			"default": "true",
+			"configurable": "true",
+			"description": "Adds options to change the app icon and app name. Branding cannot be changed for mounted (root) installations.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Hide layout components",
+			"default": "true",
+			"description": "Adds options to hide general layout.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Hide 'Get Music Premium'",
+			"default": "true",
+			"description": "Adds an option to hide the 'Get Music Premium' label in the settings and account menu.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Theme",
+			"default": "true",
+			"configurable": "true",
+			"description": "Adds options for theming and applies a custom background theme (dark background theme defaults to pure black).",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Permanent repeat",
+			"default": "true",
+			"description": "Adds an option to always repeat even if the playlist ends or another track is being played.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Remove background playback restrictions",
+			"default": "true",
+			"description": "Removes restrictions on background playback, including playing kids videos in the background.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Unlock Android Auto Media Browser",
+			"default": "true",
+			"description": "Unlock Android Auto Media Browser which enables the search function including speech to text.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "Sanitize sharing links",
+			"default": "true",
+			"description": "Removes the tracking query parameters from shared links.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
+		},
+		{
+			"name": "GmsCore support",
+			"default": "true",
+			"configurable": "true",
+			"description": "Allows the app to work without root by using a different package name when patched using a GmsCore instead of Google Play Services.",
+			"supported": "7.29.52, 8.10.52, 8.37.56, 8.40.54"
 		}
 	]
 }

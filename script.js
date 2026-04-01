@@ -1,7 +1,7 @@
 let allApps = [];
 let currentSort = { type: 'name', isAsc: true };
 let isAllExpanded = false;
-let expandedApps = new Set(); // Memory for tracking individual opened apps
+let expandedApps = new Set(); 
 
 async function init() {
     setupThemeToggle(); 
@@ -22,7 +22,6 @@ async function init() {
                 });
             }
         } catch (e) {
-            console.warn(e);
         }
 
         setupSearchAndSort(); 
@@ -33,7 +32,6 @@ async function init() {
         }, 100);
 
     } catch (error) {
-        console.error(error);
         document.getElementById('app-list').innerHTML = '<p style="text-align:center; color: #FF5252;">Error: Failed to load data.json. Ensure you are running a local server.</p>';
     }
 }
@@ -216,11 +214,23 @@ function renderApps(appsToDisplay) {
                             buttonsHTML += `<a href="${linkUrl}" class="download-btn" target="_blank">${linkText}</a>`;
                         });
                     }
-                    const sha256HTML = ver.sha256 ? `<span class="version-hash">SHA-256: <code>${ver.sha256}</code></span>` : '';
+                    
+                    const sizeHTML = ver.size ? `<span class="version-size"><strong>Size:</strong> ${ver.size}</span>` : '';
+                    const sha1HTML = ver.sha1 ? `<span class="version-hash"><strong>SHA-1:</strong> <code>${ver.sha1}</code></span>` : '';
+                    
+                    const sha256HTML = ver.sha256 ? `<span class="version-hash"><strong>SHA-256:<br></strong> <code>${ver.sha256}</code></span>` : '';
+                    
+                    const warningHTML = ver.warning ? `<div class="version-warning"><strong>⚠️ Warning:</strong><br><br>${ver.warning}</div>` : '';
+                    const noteHTML = ver.note ? `<div class="version-note"><strong>ℹ️ Note:</strong><br><br>${ver.note}</div>` : '';
+                    
                     contentHTML += `
                         <div class="version-item">
+                            ${warningHTML}
+                            ${noteHTML}
                             <div class="version-details">
-                                <span class="version-number">Version: <strong>${ver.version}</strong></span>
+                                <span class="version-number"><strong>Version:</strong> ${ver.version}</span>
+                                ${sizeHTML}
+                                ${sha1HTML}
                                 ${sha256HTML}
                             </div>
                             <div class="button-group">
@@ -286,9 +296,9 @@ function renderApps(appsToDisplay) {
         const expandClass = isExpanded ? 'open' : '';
         const showClass = isExpanded ? 'show' : '';
 
-        const warningHTML = app.warning ? `
-            <div class="app-warning">
-                <strong>⚠️ Notice:</strong> ${app.warning}
+        const importantHTML = app.important ? `
+            <div class="app-important">
+                <strong>‼️ Important:</strong><br><br>${app.important}
             </div>
         ` : '';
 
@@ -312,7 +322,7 @@ function renderApps(appsToDisplay) {
                 </div>
             </div>
             <div class="version-list ${showClass}">
-                ${warningHTML}
+                ${importantHTML}
                 ${contentHTML}
             </div>
         `;

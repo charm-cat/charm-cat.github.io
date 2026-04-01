@@ -149,12 +149,12 @@
     "versions": [
       {
         "version": "1.7.23",
-		    "size": "",
-        "sha1": "",
+		    "size": "12.3MB",
+        "sha1": "39d52b00e5ee73692f228fcfdc174b2da318fcb4",
 		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
         "links": [
           {
-            "url": "",
+            "url": "https://buzzheavier.com/67jexauvtdvo",
             "name": "EU Mirror"
           }
         ]
@@ -181,6 +181,18 @@
     "versions": [
       {
         "version": "6.24.01",
+		    "size": "25.9MB",
+        "sha1": "e43cdbed07a0d9044e4fbe584743851e7d5801f7",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/ys2jwlilvx4t",
+            "name": "EU Mirror"
+          }
+        ]
+      },
+      {
+        "version": "6.24.01",
         "size": "24.6MB",
         "sha1": "a56b85679b7b3fa827510d7c645a681a45f0a42b",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck files but it's not.",
@@ -199,6 +211,18 @@
     "icon": "icons/crunchyroll.png",
     "packageName": "com.crunchyroll.crunchyroid",
     "versions": [
+      {
+        "version": "3.104.0",
+		    "size": "93.7MB",
+        "sha1": "30aea91289a90d6f0136f2e34ba8148e4000ff93",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "links": [
+          {
+            "url": "https://buzzheavier.com/oa0qs8tjk5pw",
+            "name": "EU Mirror"
+          }
+        ]
+      },
       {
         "version": "3.104.0",
         "size": "90.7MB",
@@ -441,7 +465,7 @@
     "name": "Google Recorder",
     "icon": "icons/google-recorder.png",
     "packageName": "com.google.android.apps.recorder",
-    "important": "Requires root to mount it.",
+    "important": "<b>'Remove device restrictions'</b> patch requires root to mount it.",
     "versions": [
       {
         "version": "4.2.20260307.885964187",

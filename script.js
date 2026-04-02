@@ -218,7 +218,7 @@ function renderApps(appsToDisplay) {
                     const sizeHTML = ver.size ? `<span class="version-size"><strong>Size:</strong> ${ver.size}</span>` : '';
                     const sha1HTML = ver.sha1 ? `<span class="version-hash"><strong>SHA-1:</strong> <code>${ver.sha1}</code></span>` : '';
                     
-                    const sha256HTML = ver.sha256 ? `<span class="version-hash"><strong>SHA-256:<br></strong> <code>${ver.sha256}</code></span>` : '';
+                    const sha256HTML = ver.sha256 ? `<span class="version-hash"><strong>SHA-256:</strong> <code>${ver.sha256}</code></span>` : '';
                     
                     const warningHTML = ver.warning ? `<div class="version-warning"><strong>⚠️ Warning:</strong><br><br>${ver.warning}</div>` : '';
                     const noteHTML = ver.note ? `<div class="version-note"><strong>ℹ️ Note:</strong><br><br>${ver.note}</div>` : '';
@@ -302,6 +302,12 @@ function renderApps(appsToDisplay) {
             </div>
         ` : '';
 
+        const appWarningHTML = app.warning ? `
+            <div class="app-warning">
+                <strong>⚠️ Warning:<br><br></strong><br><br>${app.warning}
+            </div>
+        ` : '';
+
         let packageHTML = `<div class="package-name">${app.packageName || 'Unknown Package'}</div>`;
         if (app.secondaryPackageName) {
             packageHTML += `<div class="package-name">${app.secondaryPackageName}</div>`;
@@ -323,7 +329,7 @@ function renderApps(appsToDisplay) {
             </div>
             <div class="version-list ${showClass}">
                 ${importantHTML}
-                ${contentHTML}
+                ${appWarningHTML} ${contentHTML}
             </div>
         `;
 

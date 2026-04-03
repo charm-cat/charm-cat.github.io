@@ -147,6 +147,8 @@ function updateDisplay() {
         const nameMatch = app.name.toLowerCase().includes(searchTerm);
         const packageMatch = app.packageName && app.packageName.toLowerCase().includes(searchTerm);
         const secPackageMatch = app.secondaryPackageName && app.secondaryPackageName.toLowerCase().includes(searchTerm);
+        const thirdPackageMatch = app.thirdPackageName && app.thirdPackageName.toLowerCase().includes(searchTerm); 
+        
         const versionMatch = app.versions && app.versions.some(ver => ver.version.toLowerCase().includes(searchTerm));
         
         const patchMatch = app.patches && app.patches.some(patch => {
@@ -163,7 +165,7 @@ function updateDisplay() {
                    pConf.includes(searchTerm);
         });
         
-        return nameMatch || packageMatch || secPackageMatch || versionMatch || patchMatch;
+        return nameMatch || packageMatch || secPackageMatch || thirdPackageMatch || versionMatch || patchMatch;
     });
 
     filteredApps.sort((a, b) => {
@@ -312,6 +314,10 @@ function renderApps(appsToDisplay) {
         if (app.secondaryPackageName) {
             packageHTML += `<div class="package-name">${app.secondaryPackageName}</div>`;
         }
+        
+        if (app.thirdPackageName) {
+            packageHTML += `<div class="package-name">${app.thirdPackageName}</div>`;
+        }
 
         card.innerHTML = `
             <div class="app-header" onclick="toggleVersions(this)">
@@ -379,7 +385,9 @@ function handleUrlHash() {
         let targetId = hash;
         
         const matchedApp = allApps.find(app => 
-            app.packageName === hash || app.secondaryPackageName === hash
+            app.packageName === hash || 
+            app.secondaryPackageName === hash || 
+            app.thirdPackageName === hash 
         );
         
         if (matchedApp) {

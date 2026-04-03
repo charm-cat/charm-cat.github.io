@@ -694,6 +694,7 @@ body.light-mode .config-tag {
         display: block;
         margin-top: 4px;
         width: fit-content; 
+        word-break: break-all;
     }
 }
 

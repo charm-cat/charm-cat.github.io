@@ -376,7 +376,17 @@ function copyAppLink(event, appId) {
 function handleUrlHash() {
     const hash = window.location.hash.substring(1);
     if (hash) {
-        const targetCard = document.getElementById(`app-${hash}`);
+        let targetId = hash;
+        
+        const matchedApp = allApps.find(app => 
+            app.packageName === hash || app.secondaryPackageName === hash
+        );
+        
+        if (matchedApp) {
+            targetId = matchedApp.id;
+        }
+
+        const targetCard = document.getElementById(`app-${targetId}`);
         if (targetCard) {
             const header = targetCard.querySelector('.app-header');
             const versionList = targetCard.querySelector('.version-list');

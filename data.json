@@ -9,6 +9,7 @@
         "version": "3.0.412.2947",
         "size": "49.3MB",
         "sha1": "e74273c6fa4cd06552bf7651a626dde805a1fe96",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/fzgqclflax6f",
@@ -29,6 +30,7 @@
 		    "size": "106.9MB",
         "sha1": "94634ba6124b42d62b56e3b28be549d8aa1f5e10",
 		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+		    "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/u8sjp900ltth",
@@ -41,6 +43,7 @@
 		    "size": "101.9MB",
         "sha1": "d49861aede688d7b0571f91520f014f7b7b8fc4e",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/vgphcmd01cel",
@@ -61,6 +64,7 @@
         "size": "49.3MB",
         "sha1": "241e94bc5b0069ef62167602d40e22b405a0647e",
 		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+		    "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/ko79alq819fo",
@@ -73,9 +77,10 @@
         "size": "54.5MB",
         "sha1": "90948fb1481ce3204a152dde28399d19770b6302",
 		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "xapk",
         "links": [
           {
-            "url": "https://buzzheavier.com/ko79alq819fo",
+            "url": "https://buzzheavier.com/ep72ml4t43cc",
             "name": "EU Mirror"
           }
         ]
@@ -94,6 +99,7 @@
         "version": "6.1.4",
         "size": "16.9MB",
         "sha1": "1436cf7980706530cb960754d5f005774c853c93",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/9jasmbbdparj",
@@ -113,6 +119,7 @@
         "version": "3.3.4",
         "size": "13.1MB",
         "sha1": "388f4c16c074d6626ac20fb9f523718145485fc6",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/b0ir4vyh7jue",
@@ -133,6 +140,7 @@
         "version": "1.12.12",
         "size": "15.9MB",
         "sha1": "b4e440ab35823205e521ae3762acba4971fb9a90",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/6bzmie55chl2",
@@ -152,7 +160,8 @@
         "version": "1.7.23",
 		    "size": "12.3MB",
         "sha1": "39d52b00e5ee73692f228fcfdc174b2da318fcb4",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/67jexauvtdvo",
@@ -164,7 +173,8 @@
         "version": "1.7.23",
         "size": "12.8MB",
         "sha1": "d0b134b03e5798bc24018fa153a540879e729b3c",
-		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck files but it's not.",
+		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+        "type": "xapk",
         "links": [
           {
             "url": "https://buzzheavier.com/m2qu63hkgdc2",
@@ -184,7 +194,8 @@
         "version": "6.24.01",
 		    "size": "25.9MB",
         "sha1": "e43cdbed07a0d9044e4fbe584743851e7d5801f7",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/ys2jwlilvx4t",
@@ -196,7 +207,8 @@
         "version": "6.24.01",
         "size": "24.6MB",
         "sha1": "a56b85679b7b3fa827510d7c645a681a45f0a42b",
-		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck files but it's not.",
+		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/rmpazhdakymi",
@@ -216,7 +228,8 @@
         "version": "3.104.0",
 		    "size": "93.7MB",
         "sha1": "30aea91289a90d6f0136f2e34ba8148e4000ff93",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+        "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/oa0qs8tjk5pw",
@@ -229,6 +242,7 @@
         "size": "90.7MB",
         "sha1": "d80eb41eb08ed7744b1dcf5f8ad1c8ac5cfa601b",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/1qxco6w0hh2t",
@@ -249,6 +263,7 @@
 		    "size": "58.5MB",
         "sha1": "6e0acdcd03f60422c41650b4c3750c54abd40f72",
 		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+		    "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/2f48vsu7y8cu",
@@ -261,6 +276,7 @@
         "size": "48.0MB",
         "sha1": "2c5236c25d1d94dfa7b032cedcd1e3b283e20a47",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/1vzdogt93qnz",
@@ -281,6 +297,7 @@
 		    "size": "97.6MB",
         "sha1": "f3679572acbd8ee3400c6b61c1bebfaef68efec7",
 		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+		    "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/tocg13p6fydk",
@@ -293,6 +310,7 @@
         "size": "76.3MB",
         "sha1": "42d47c4429a10240ea7d30bebdfeb54efd169b17",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/g1kcql7n8upn",
@@ -312,6 +330,7 @@
         "version": "490.0.0.63.82",
         "size": "146.9MB",
         "sha1": "e9f909dff6bb54645e15eb87a769c62f06678825",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/izsgzuij0lhm",
@@ -331,6 +350,7 @@
         "version": "555.0.0.0.43",
         "size": "132.1MB",
         "sha1": "8ae2839b277c50fb73c4d1730ae95e199e6ac80a",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/6g9xpsjc3imu",
@@ -350,6 +370,7 @@
         "version": "4.0.5",
         "size": "17.2MB",
         "sha1": "8efdd1d45af093d8018e300d1462c70bb8c4d6be",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/o8w2sjfenhau",
@@ -370,6 +391,7 @@
 		    "size": "31.0MB",
         "sha1": "1483b84cd5f28d9c33be146c297717605e359373",
 		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+		    "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/2dumgdra7iev",
@@ -382,6 +404,7 @@
         "size": "26.4MB",
         "sha1": "c75c59a74a63261a776f0b48b4d2ba705f67e5e0",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/rv252e4cxkyt",
@@ -401,7 +424,7 @@
         "version": "9.4.1",
 		    "size": "51.5MB",
         "sha1": "25b3f3c5b2cc982fb516e72bffe0f4700328bd96",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not function properly.",
+        "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
         "links": [
           {
             "url": "https://buzzheavier.com/b26xk6wem3vc",
@@ -414,6 +437,7 @@
         "size": "50.8MB",
         "sha1": "5ff4eec8f753f96536d6db02b20263d83788f7d5",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/sph2lc5gk4oj",
@@ -433,6 +457,7 @@
         "version": "5.108.0.644447823",
         "size": "16.8MB",
         "sha1": "212c6ce574e9c74b8620ece21511b87c339acd10",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/hsq56so9xfla",
@@ -452,6 +477,7 @@
         "version": "7.69.0.890655694",
         "size": "204.7MB",
         "sha1": "ebb91184ac0306c14e1a0d94aa7abb4cae2fe812",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/z4oe5xmuy8uu",
@@ -472,7 +498,8 @@
         "version": "4.2.20260307.885964187",
 		    "size": "51.0MB",
         "sha1": "ea3109da6df2c4ec78e571dc83497645927e1a40",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not function properly.",
+        "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/zhvnn1m38s2i",
@@ -485,6 +512,7 @@
         "size": "47.7MB",
         "sha1": "b399b5c503dc10629f1201f86ff1deec8f90d201",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/dharz5cc0ibs",
@@ -504,6 +532,7 @@
         "version": "2.8.5",
         "size": "3.5MB",
         "sha1": "9249658baf9e907a718c86b09f6a01858fa773ea",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/voyw0kcbc61l",
@@ -523,6 +552,7 @@
         "version": "2.2 build 016",
         "size": "52.2MB",
         "sha1": "9939045f69dfde522e2f4d94fe8850e1f31f756f",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/9wuubq8b412d",
@@ -542,6 +572,7 @@
         "version": "5.3.0",
         "size": "75.6MB",
         "sha1": "a911c87f964d234e73339726b222d7f4bfe6dded",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/gjls3hhlt5di",
@@ -564,6 +595,7 @@
         "version": "8.14",
         "size": "16.4MB",
         "sha1": "3d0976f22d999b0902adfc3fe2c8c98f09f9e27b",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/edhz55qtyny5",
@@ -575,6 +607,7 @@
         "version": "8.14",
         "size": "16.4 MB",
         "sha256": "89e5f0cc1a6063ba468d522359f65499d66490fa533b0dedc3b7b7929ac4213b",
+        "type": "apk",
         "links": [
           {
             "url": "https://github.com/Docile-Alligator/Infinity-For-Reddit/releases/download/v8.1.4/Infinity+-v8.1.4.apk",
@@ -594,6 +627,7 @@
         "version": "6.12.7",
         "size": "33.7MB",
         "sha1": "dc22101feae096a65ca048a4924c374cc288b724",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/fozt3sjocwtw",
@@ -614,7 +648,8 @@
         "version": "401.0.0.48.79",
 		    "size": "206.2MB",
         "sha1": "35b71f9738cdadb896edc9442b624fb607aa503e",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not function properly.",
+        "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/nktqsjkls6fk",
@@ -627,6 +662,7 @@
         "size": "182.8MB",
         "sha1": "fe0eb74c3168fc094acd5f6c73b64d25324309b7",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/zk2tu4aqpwy4",
@@ -646,6 +682,7 @@
         "version": "1.9.13",
         "size": "6.1MB",
         "sha1": "51c492bb9a5ad3c76d17207a9e022737d6b6c090",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/6eleykniyrqn",
@@ -666,6 +703,7 @@
         "version": "2.1.6.5",
         "size": "18.2MB",
         "sha1": "24631741f085d4ee06bec69f0d0a83fb67e7dfa0",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/c7qbvbitv81a",
@@ -685,7 +723,8 @@
         "version": "2026.13.2",
 		    "size": "32.9MB",
         "sha1": "03fd76db5ed7d584f9885f19e28bcb1c8c1d23ac",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/vjxgxfl225fy",
@@ -698,6 +737,7 @@
         "size": "30.5MB",
         "sha1": "975fa23edef4e130d08ed78e98ee643b05433912",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/sjsjqxy6615p",
@@ -717,7 +757,8 @@
         "version": "3.5.0",
 		    "size": "94.5MB",
         "sha1": "34b7ece8dae51b7fd5b742bc62c0e89c48ac35ae",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/38uozaxg0bci",
@@ -730,6 +771,7 @@
         "size": "91.6MB",
         "sha1": "eb147880f23bed869dc1bf4b83672af674f1b6fe",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/6cy1h4z3zpg4",
@@ -749,6 +791,7 @@
         "version": "9.3.0",
         "size": "127.0MB",
         "sha1": "5c08173d78d30f6f92fc31f2d3d94e128ddef56d",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/ck02pj4f7n8s",
@@ -768,6 +811,7 @@
         "version": "4.6377",
         "size": "105.7MB",
         "sha1": "df3e698be03812a45de5c3ad52c6bc5b9e5f0a57",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/djhd5mqj592c",
@@ -788,7 +832,8 @@
         "version": "3.52.0i",
 		    "size": "94.6MB",
         "sha1": "2ec5d5e9b38a195856ebfbcb9cce0c43a52140fa",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/ef9ojiy41emh",
@@ -801,6 +846,7 @@
         "size": "119.3MB",
         "sha1": "32c6f7fdfa02462d47c2b260ad433767f32c6053",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/ti7kcc6vaehh",
@@ -820,6 +866,7 @@
         "version": "16.0.19628.20008",
         "size": "66.9MB",
         "sha1": "8149192fc48fd2b4023d2cba607eda787968863b",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/cbpyrwyd5xa8",
@@ -839,6 +886,7 @@
         "version": "3.4.9",
 		    "size": "17.3MB",
         "sha1": "9d5004545cf5f858cbb8f3e4777dc99c8f881fe2",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/umgfhp7ga15p",
@@ -850,6 +898,7 @@
         "version": "3.4.9",
         "size": "17.3MB",
         "sha1": "9d5004545cf5f858cbb8f3e4777dc99c8f881fe2",
+        "type": "apk",
         "links": [
           {
             "url": "https://f-droid.org/archive/org.totschnig.myexpenses_575.apk",
@@ -869,6 +918,7 @@
         "version": "24.14.2",
         "size": "96.8MB",
         "sha1": "014b4523b0e5847a10cd73ef81ba3de26d6625bf",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/uvpgn3k2fuwl",
@@ -888,6 +938,7 @@
         "version": "2.333",
         "size": "3.0MB",
         "sha1": "2b1adece64db5b3f80c9897e41227da9e9fb0a0a",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/n3c5ux5gfrpn",
@@ -907,7 +958,8 @@
         "version": "3.5.1",
 		    "size": "233.0MB",
         "sha1": "ce72321258892a642526cf0de6845b2a8fc4afb5",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/q75tg50dgz3n",
@@ -920,6 +972,7 @@
         "size": "228.7MB",
         "sha1": "531e25bc6dfc1be11c460f9ce254d8ac31070967",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/rk9pv0i7bkcg",
@@ -939,7 +992,8 @@
         "version": "26.2.1",
 		    "size": "40.2MB",
         "sha1": "841358ad6f7741e7c78fa3a3334c7867d73351c2",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/6gq9ysu23ynh",
@@ -952,6 +1006,7 @@
         "size": "109.5MB",
         "sha1": "ba0d699b00981401ba41cf40cf33b25c4b1ece50",
 		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "xapk",
         "links": [
           {
             "url": "https://buzzheavier.com/m4ruzcb71sxf",
@@ -971,7 +1026,8 @@
         "version": "6.11.9",
 		    "size": "22.2MB ",
         "sha1": "0b1f288c7a6cce0ac7dfeda753d0f02201d5ea6b",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/ip7j01iqfqho",
@@ -984,6 +1040,7 @@
         "size": "20.1MB",
         "sha1": "fea9a02f303a9db82d0dd6812f0ed931f654d9fa",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/5ocvw586n5ts",
@@ -1003,6 +1060,7 @@
         "version": "2602.1",
         "size": "71.3MB",
         "sha1": "8a29ae3913c29c671be8db54a9736665edfbd313",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/r65qx4tzcoyt",
@@ -1022,7 +1080,8 @@
         "version": "7.4.10",
 		    "size": "61.8MB",
         "sha1": "f9d0616cb88890d60c5e5312d35409e9cf866ee0",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/09045pvvhwyo",
@@ -1035,6 +1094,7 @@
         "size": "59.1MB",
         "sha1": "cc1cf209d21876cd62a389d2b58711086b4c77f9",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/bjzdmd5x8vl6",
@@ -1054,7 +1114,8 @@
         "version": "8.47.1",
 		    "size": "15.0MB",
         "sha1": "f1f9803f658e8c3d049ca0e254d928452074b16e",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/g1xrle50trjh",
@@ -1067,6 +1128,7 @@
         "size": "13.1MB",
         "sha1": "d8662cddac37529b342cb8214e19a010c5dfa956",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/90iw8qn5isuc",
@@ -1086,6 +1148,7 @@
         "version": "6.6.2",
         "size": "21.6MB",
         "sha1": "55a0cc4017040e600e090447bad421b249be8e25",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/qznc64ytzu83",
@@ -1105,6 +1168,7 @@
         "version": "6.141.1",
         "size": "45.6MB",
         "sha1": "b2145fb6d582f770a013ff968da96629acd594af",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/g3cd9qgkl2d8",
@@ -1124,6 +1188,7 @@
         "version": "3.0.412.2947",
 		    "size": "60.9MB",
         "sha1": "b89f642ea2672c14ef4620223d45d135d6a195b9",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/0lllssq8ieev",
@@ -1143,6 +1208,7 @@
         "version": "4.15.0",
         "size": "89.9MB",
         "sha1": "5b8768575d88c2b67804d73283f9f69a93cee224",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/spa089c5hy8o",
@@ -1162,6 +1228,7 @@
         "version": "5.17.21.0",
         "size": "5.17.21.0",
         "sha1": "098ab42d78fba91d92e011573ae0c1b214a58161",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/0xp0k4c6n6rz",
@@ -1181,6 +1248,7 @@
         "version": "26.1.2.0",
         "size": "198.5MB",
         "sha1": "d2f51f4373b234fb03b4712785b7be754bff580a",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/firafpkj575x",
@@ -1200,7 +1268,8 @@
         "version": "7.20.build131",
 		    "size": "6.7MB",
         "sha1": "ca3b46aeea8e11cc0e0fa2d26f25814c32a8da26",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/98jy0ayh4bfp",
@@ -1213,6 +1282,7 @@
         "size": "6.1MB",
         "sha1": "dadf32b0bff1ebcbe0ba8c234a0106e30e1fe4e2",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/36a2jeswwp8s",
@@ -1232,7 +1302,8 @@
         "version": "2026.03.0",
 		    "size": "86.7MB",
         "sha1": "f4e9db7afa5dd203bd7e531cdfa78e3cbffab264",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/942oxd9n3gtj",
@@ -1245,6 +1316,7 @@
         "size": "70.3MB",
         "sha1": "a9be4dbb809fb43021c0b8c7f5e550f94d5bff36",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/llmllhojfuhw",
@@ -1268,6 +1340,7 @@
         "sha1": "83ee87934436b47cb5e594f14edfc7cdd3b14af9",
         "warning": "This app uses Pairip/Google Integrity to protect it from modification, so it is not possible to use AntiSplit M to convert it into an APK file without a patch to prevent the app from crashing. <br> (There isn't a patch have made for it yet.)",
 		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "xapk",
         "links": [
           {
             "url": "https://buzzheavier.com/th0690gce08n",
@@ -1289,6 +1362,7 @@
         "version": "5.6.22",
         "size": "12.2MB",
         "sha1": "a56498b8bd5c44bb1ac94da03b51998736ef085f",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/fnz2etkcgau2",
@@ -1309,6 +1383,7 @@
         "size": "5.5MB ",
         "sha1": "03470dee2cfb238f8a875d6b3f39ebe6dd4158f7",
         "warning": "<b>'Bypass device checks'</b> patch will still not allow the app to run on devices that do not have the required hardware.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/6eu5cmlzc4u6",
@@ -1328,7 +1403,8 @@
         "version": "5.0.2",
 		    "size": "36.7MB",
         "sha1": "e875717509f2a3515711ca5cbe4ca8fe9558778f",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/pwio4yoluuna",
@@ -1341,6 +1417,7 @@
         "size": "34.8MB",
         "sha1": "4c72c5aa3c36ba7018d3e5cd95da7aa9aa2d578f",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/tsr0txvgvspz",
@@ -1361,6 +1438,7 @@
         "version": "7.4.4",
         "size": "32.9 MB",
         "sha1": "e3bd3e5b12f88f9d667cdb0eb864241dd0abb940",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/tromtnxhtrud",
@@ -1372,6 +1450,7 @@
         "version": "7.4.4",
         "size": "32.9 MB",
         "sha256": "b239716209301d0401e80927c7deaf60b4256fa8b26989b4e9983f4aed238d90",
+        "type": "apk",
         "links": [
           {
             "url": "https://github.com/cygnusx-1-org/Slide/releases/download/7.4.4/slide-7.4.4.apk",
@@ -1391,7 +1470,8 @@
         "version": "3.4.4",
 		    "size": "25.5MB",
         "sha1": "f9ef48b7949243e25e2926bfe3037d63a2338f7d",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/v8obe81d8n3p",
@@ -1404,6 +1484,7 @@
         "size": "21.3MB",
         "sha1": "28ed73c24ff9dff5aa2053cfec7c121ba25a6c93",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/m688jjmcrgx3",
@@ -1423,6 +1504,7 @@
         "version": "10.1.0",
         "size": "60.7MB ",
         "sha1": "96c1cf9e48dd55b050cb8e7ae51b80a457b0d23d",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/vx92oivk83qd",
@@ -1442,7 +1524,8 @@
         "version": "2025.05.27-release",
 		    "size": "69.3MB",
         "sha1": "46ff35917d9584a98f374b861f81a567df552e3b",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/xaqkbidh1l0l",
@@ -1455,6 +1538,7 @@
         "size": "65.7MB",
         "sha1": "705b13a14cfbb571542de0a4b85da3bd6c394994",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/t9z9m9batvl2",
@@ -1475,6 +1559,7 @@
         "size": "41.3MB",
         "sha1": "7a4af743c1002388dfc0bcebc3b7b19d5d5fc766",
         "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+		    "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/yv79xbxjywog",
@@ -1487,6 +1572,7 @@
         "size": "84.6MB",
         "sha1": "5a6cf81653c75bd47bc461b418da9324f65d7c35",
 		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "xapk",
         "links": [
           {
             "url": "https://buzzheavier.com/rffz86kastzh",
@@ -1506,7 +1592,8 @@
         "version": "9.1.38.635",
 		    "size": "49.9MB",
         "sha1": "679d72fb8be83be9bcfd68566d8f06465f2508c9",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/6r9wc1uc4en8",
@@ -1519,6 +1606,7 @@
         "size": "45.3MB",
         "sha1": "58998c49f84c3b70da569cd9c870abfb9a0b4257",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/5ic2c5xu050v",
@@ -1538,7 +1626,8 @@
         "version": "10.68.0",
 		    "size": "46.9MB",
         "sha1": "af5ee53ebabb02c3ff1bc59c2ccc0a48405d44e9",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/d2811m1mix48",
@@ -1551,6 +1640,7 @@
         "size": "45.2MB",
         "sha1": "7d7eaa6302cd29526fba516b1b0b08c7d900a16f",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/gh1nshlvt1qd",
@@ -1570,7 +1660,8 @@
         "version": "456.10",
 		    "size": "95.4MB",
         "sha1": "582ccdec173b14ea289092b75016a97201051141",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/wgcq83pcef8o",
@@ -1583,6 +1674,7 @@
         "size": "145.9MB",
         "sha1": "85c9ea415a2766a999847cb5ff6a260969fcba2a",
 		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "xapk",
         "links": [
           {
             "url": "https://buzzheavier.com/ba6r5lk0u71m",
@@ -1602,7 +1694,8 @@
         "version": "5.2.9",
 		    "size": "91.0MB",
         "sha1": "ecc6c9dcc684ceb47cc4cbdb5a5196785f28e16d",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/vhtpx2flqoog",
@@ -1615,6 +1708,7 @@
         "size": "158.8MB",
         "sha1": "ce8db21ce276adfb382e3078773458f006ac1681",
 		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "xapk",
         "links": [
           {
             "url": "https://buzzheavier.com/w0docjpki3s8",
@@ -1634,6 +1728,7 @@
         "version": "v24.03.26",
         "size": "72.4MB",
         "sha1": "c409d8d6a5a34b7064c6bb7ad127fb63fa6cf12f",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/p9twxa4yy6j2",
@@ -1656,6 +1751,7 @@
         "version": "v23.06.30-13:39",
         "size": "68.0MB",
         "sha1": "c62613bd95345ff23930deb88f34f4dcc1bd89d0",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/gg8tiz1n05iu",
@@ -1675,7 +1771,8 @@
         "version": "382.0.0.51.85",
 		    "size": "75.8MB",
         "sha1": "cc66cafa54c7a117126dd1c3f8971cbee993e2a7",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/ulxf5dk8jckg",
@@ -1688,6 +1785,7 @@
         "size": "65.2MB",
         "sha1": "b4b1c6e4fea0d0129cbd2a391fd7bfd1fa47aa37",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/7zzpy3jcg6wc",
@@ -1707,7 +1805,8 @@
         "version": "8.0.5.0",
 		    "size": "54.4MB",
         "sha1": "4384865c7521cbd0f6375c6cc98295488fd7af3f",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/2u6c19a7jsgf",
@@ -1720,6 +1819,7 @@
         "size": "51.1MB",
         "sha1": "728add7e52e05bb22fdca4e6311d77888355afdd",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/uj0kc3tjanhb",
@@ -1740,6 +1840,7 @@
         "version": "36.5.4",
 		    "size": "378.7MB",
         "sha1": "da01c856cae31b9dfac0814316c6df6fa8995549",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/a2n3hosc9pmy",
@@ -1759,6 +1860,7 @@
         "version": "1.1.1",
         "size": "39.2MB",
         "sha1": "5ba30cb358684e1071c8a0b17ecc4ebab66d7420",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/o6k8ia19tow9",
@@ -1778,7 +1880,8 @@
         "version": "5.10.1",
 		    "size": "14.3MB",
         "sha1": "626bc36eb7bb0d8e163096542ab4e39358af32b3",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/7i2lgkvlt97j",
@@ -1791,6 +1894,7 @@
         "size": "14.6MB",
         "sha1": "990fbfca6ffc7aaf9e276cdb5373d9c4b8f58e56",
 		    "note": "This is an <b>(X)</b>APK file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "xapk",
         "links": [
           {
             "url": "https://buzzheavier.com/7vzen44h2e0t",
@@ -1810,7 +1914,8 @@
         "version": "43.9.0.109",
 		    "size": "42.8MB",
         "sha1": "6ccb4a6ad53ccccc202734cc7af4b0ced9af646c",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/neymywnktjku",
@@ -1823,6 +1928,7 @@
         "size": "37.5MB",
         "sha1": "eba382a246b6c408f3eb2b0955a317232486d84f",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/cbdhvueay9ia",
@@ -1842,6 +1948,7 @@
         "version": "16.9.1",
         "size": "16.9.1",
         "sha1": "54ba98a9d317ef0e9e5865d247faf0268d6070b9",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/idk0a2cfv7y3",
@@ -1862,7 +1969,8 @@
         "version": "10.86.0-release.0",
 		    "size": "105.7MB",
         "sha1": "4cfea552823258b414d9158e4870598ea6edbbe1",
-		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app might not functioning properly.",
+		    "warning": "This file is edited with <b>AntiSplit M</b> to convert it into an APK file. <br> Patching the edited APK file with ReVanced Manager might result in an error, or the app not function properly.",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/y2iye7u6b07z",
@@ -1875,6 +1983,7 @@
         "size": "91.3MB",
         "sha1": "42e5edbd06c21fcd42152c0c1020ae7204bd56b1",
 		    "note": "This is an APK<b>(M)</b> file. <br> Progress bar on ReVanced Manager might look like it's stuck but it's not.",
+		    "type": "apkm",
         "links": [
           {
             "url": "https://buzzheavier.com/zdh76u0u3dq3",
@@ -1894,6 +2003,7 @@
         "version": "4.2.2",
         "size": "59.1MB",
         "sha1": "d53a59983770081d67db216601fab02399e94f28",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/30flhzrq6k7j",
@@ -1913,6 +2023,7 @@
         "version": "8.37.0",
         "size": "14.9MB",
         "sha1": "b2633f6b4f17e172a378d810d19a8ca26cec7512",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/eqituvy7s9f7",
@@ -1932,6 +2043,7 @@
         "version": "20.40.45",
         "size": "161.7MB ",
         "sha1": "57615d731564be85905da2fda948491a22fc2118",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/i3uffo53jgs8",
@@ -1951,6 +2063,7 @@
         "version": "8.40.54",
         "size": "63.0MB",	
         "sha1": "6335247b93f05cfdf6d6ea6fd42645439e829c49",
+        "type": "apk",
         "links": [
           {
             "url": "https://buzzheavier.com/y8jpqgufb0b8",

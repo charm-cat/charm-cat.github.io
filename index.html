@@ -16,9 +16,35 @@
 
     <main class="container">
 
-        <div class="global-warning">
-            <strong>⚠️ Work in Progress!</strong><br>
-            CHARM is currently under active development. Some apps or links may still be missing.
+        <div class="app-card" id="app-microg" style="border: 2px solid var(--md-sys-color-primary); margin-bottom: 32px;">
+            <div class="app-header" onclick="toggleVersions(this)">
+                <div class="app-header-left">
+                    <img class="app-icon" src="icons/charm.png">
+                    <div class="app-title">
+                        <h2>Charm Downloader</h2>
+                        <div class="package-name">cat.charm.downloaders</div>
+                    </div>
+                </div>
+                <div class="app-header-right">
+                    <button class="share-btn" onclick="copyAppLink(event, 'microg')" title="Copy Link" aria-label="Copy Link">🔗</button>
+                    <button class="expand-btn">▼</button>
+                </div>
+            </div>
+            <div class="version-list">
+                <div class="app-warning">
+                    <strong>⚠️ Warning:</strong><br><br> Charm downloaders is still <b>experimental</b>.<br> If you find any problems with it, open an issue in here: <br><a href="https://github.com/charm-cat/charm-downloaders/issues">https://github.com/charm-cat/charm-downloaders/issues</a>
+                </div>
+                <div class="version-item">
+                    <div class="version-details">
+                        <span class="version-number"><strong>Version:</strong> 1.2.0</span>
+                        <span class="version-number"><strong>Size:</strong> 6.8MB</span>
+                        <span class="version-hash"><strong>SHA-256:</strong> <code>8cae64f5d3fedfffa563399db0023b5db29ec4a405c01392d8bc6b3da1eb9449</code></span>
+                    </div>
+                    <div class="button-group">
+                        <a href="https://github.com/charm-cat/charm-downloaders/releases/download/1.2.0/charm-downloaders-1.2.0.apk" class="download-btn" target="_blank">GitHub Link</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="app-card" id="app-microg" style="border: 2px solid var(--md-sys-color-primary); margin-bottom: 32px;">

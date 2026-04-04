@@ -1108,7 +1108,7 @@
     "id": "photomath",
     "name": "Photomath",
     "icon": "icons/photomath.png",
-    "packageName": "com.microblank.photomath",
+    "packageName": "com.microblink.photomath",
     "versions": [
       {
         "version": "8.47.1",

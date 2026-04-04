@@ -278,6 +278,34 @@ body.light-mode .global-warning strong {
     align-items: center;
 }
 
+.version-type {
+    font-size: 1rem;
+    color: var(--md-sys-color-on-background);
+}
+
+.type-apk {
+    color: var(--md-sys-color-primary); 
+    font-weight: bold;
+}
+
+.type-apkm {
+    color: #FFA726; 
+    font-weight: bold;
+}
+
+.type-xapk {
+    color: #66BB6A; 
+    font-weight: bold;
+}
+
+body.light-mode .type-apkm {
+    color: #F57C00; 
+}
+
+body.light-mode .type-xapk {
+    color: #388E3C; 
+}
+
 .version-count {
     font-size: 0.9rem;
     font-weight: normal; 
@@ -290,7 +318,7 @@ body.light-mode .global-warning strong {
     font-size: 0.9rem;
     font-weight: normal; 
     color: var(--md-sys-color-primary); 
-    margin-left: 5px; 
+    margin-left: 0px; 
     white-space: nowrap; 
     text-decoration: none;
     transition: opacity 0.2s, text-decoration 0.2s;
@@ -301,11 +329,16 @@ body.light-mode .global-warning strong {
     text-decoration: underline;
 }
 
+.patch-count-wrapper {
+    margin-top: 4px; 
+}
+
 .package-name {
     font-size: 0.8rem;
     font-family: monospace;
     color: #FFFFFF; 
     margin-top: 2px;
+    word-break: normal;
     overflow-wrap: anywhere;
 }
 
@@ -313,8 +346,17 @@ body.light-mode .package-name {
     color: #1A1C1E; 
 }
 
+.secondary-package-name {
+    margin-top: 10px;
+}
+
+.third-package-name {
+    margin-top: 10px;
+}
+
 .app-header-right {
     display: flex;
+    flex-direction: column; 
     align-items: center;
     gap: 8px;
 }
@@ -500,6 +542,7 @@ body.light-mode .version-note {
     user-select: all; 
     font-size: 0.9rem;
     display: inline-block;
+    word-break: break-all;
 }
 
 .button-group {

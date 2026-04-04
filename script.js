@@ -218,6 +218,27 @@ function renderApps(appsToDisplay) {
                     }
                     
                     const sizeHTML = ver.size ? `<span class="version-size"><strong>Size:</strong> ${ver.size}</span>` : '';
+                    
+                    let typeHTML = '';
+                    if (ver.type) {
+                        const typeUpper = ver.type.toUpperCase();
+                        let typeText = typeUpper;
+                        let typeClass = '';
+                        
+                        if (typeUpper === 'APK') {
+                            typeClass = 'type-apk';
+                            typeText = 'APK';
+                        } else if (typeUpper === 'APKM') {
+                            typeClass = 'type-apkm';
+                            typeText = 'APK(M)';
+                        } else if (typeUpper === 'XAPK') {
+                            typeClass = 'type-xapk';
+                            typeText = '(X)APK';
+                        }
+                        
+                        typeHTML = `<span class="version-type"><strong>Type:</strong> <span class="${typeClass}">${typeText}</span></span>`;
+                    }
+
                     const sha1HTML = ver.sha1 ? `<span class="version-hash"><strong>SHA-1:</strong> <code>${ver.sha1}</code></span>` : '';
                     
                     const sha256HTML = ver.sha256 ? `<span class="version-hash"><strong>SHA-256:</strong> <code>${ver.sha256}</code></span>` : '';
@@ -232,6 +253,7 @@ function renderApps(appsToDisplay) {
                             <div class="version-details">
                                 <span class="version-number"><strong>Version:</strong> ${ver.version}</span>
                                 ${sizeHTML}
+                                ${typeHTML}
                                 ${sha1HTML}
                                 ${sha256HTML}
                             </div>
@@ -310,13 +332,15 @@ function renderApps(appsToDisplay) {
             </div>
         ` : '';
 
-        let packageHTML = `<div class="package-name">${app.packageName || 'Unknown Package'}</div>`;
+        const formatPackageName = (pkg) => pkg ? pkg.replace(/\./g, '.<wbr>') : 'Unknown Package';
+
+        let packageHTML = `<div class="package-name">${formatPackageName(app.packageName)}</div>`;
         if (app.secondaryPackageName) {
-            packageHTML += `<div class="package-name">${app.secondaryPackageName}</div>`;
+            packageHTML += `<div class="package-name secondary-package-name">${formatPackageName(app.secondaryPackageName)}</div>`;
         }
         
         if (app.thirdPackageName) {
-            packageHTML += `<div class="package-name">${app.thirdPackageName}</div>`;
+            packageHTML += `<div class="package-name third-package-name">${formatPackageName(app.thirdPackageName)}</div>`;
         }
 
         card.innerHTML = `
@@ -324,8 +348,9 @@ function renderApps(appsToDisplay) {
                 <div class="app-header-left">
                     <img src="${app.icon}" alt="${app.name} icon" class="app-icon" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22><rect width=%2264%22 height=%2264%22 fill=%22%23263340%22/><text x=%2232%22 y=%2236%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23C4C7C5%22 text-anchor=%22middle%22>?</text></svg>'">
                     <div class="app-title">
-                        <h2>${app.name} ${subtitleHTML}</h2>
+                        <h2>${app.name}</h2>
                         ${packageHTML}
+                        <div class="patch-count-wrapper">${subtitleHTML}</div>
                     </div>
                 </div>
                 <div class="app-header-right">

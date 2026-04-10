@@ -105,8 +105,37 @@ body.light-mode .json-block-wrapper {
     color: var(--md-sys-color-on-primary);
 }
 
+.json-summary-content {
+    display: inline-flex;
+    width: calc(100% - 20px);
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.summary-title {
+    text-decoration: underline;
+}
+
+.batch-stats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9em;
+    color: var(--md-sys-color-primary);
+    font-weight: normal;
+    text-decoration: none;
+    text-align: right;
+}
+
 @media (max-width: 600px) {
     .version-hash code {
         word-break: break-all;
+    }
+
+    .batch-stats {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
     }
 }

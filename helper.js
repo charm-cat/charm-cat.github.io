@@ -8,6 +8,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     const loading = document.getElementById('loading-indicator');
     const resultsContainer = document.getElementById('results-container');
 
+    let originalTitle = document.title;
+    let isProcessing = false;
+
+    document.addEventListener('visibilitychange', () => {
+        if (isProcessing && document.hidden) {
+            document.title = "KEEP THIS TAB OPEN";
+        } else {
+            document.title = originalTitle;
+        }
+    });
+
     try {
         const response = await fetch('data.json');
         if (response.ok) {
@@ -36,6 +47,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    function escapeHTML(str) {
+        if (!str) return "";
+        return String(str)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
     dropZone.addEventListener('click', () => fileInput.click());
     dropZone.addEventListener('dragover', (e) => {
         e.preventDefault();
@@ -59,14 +80,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     async function handleFiles(files) {
-        resultsContainer.innerHTML = '';
+        if (files.length === 0) return;
+
+        isProcessing = true;
+        
+        resultsContainer.innerHTML = `
+            <div id="batch-card-container"></div>
+            <div id="error-cards-container" style="display: flex; flex-direction: column; gap: 24px;"></div>
+            <div id="success-cards-container" style="display: flex; flex-direction: column; gap: 24px;"></div>
+        `;
+        
         loading.style.display = 'block';
 
         let timerInterval;
         const batchStartTime = performance.now();
+        const rawFileCount = files.length;
 
-        if (files.length > 1) {
-            renderLoadingBatchJsonCard(files.length);
+        if (rawFileCount > 1) {
+            document.getElementById('batch-card-container').innerHTML = getLoadingBatchJsonCardHTML();
             
             timerInterval = setInterval(() => {
                 const elapsed = performance.now() - batchStartTime;
@@ -77,11 +108,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             }, 100);
         }
 
-        let batchData = {}; 
-        let processedHashes = new Set(); 
+        let state = {
+            validCount: 0,
+            batchData: {},
+            processedHashes: new Set()
+        };
 
-        for (let i = 0; i < files.length; i++) {
-            await processFile(files[i], batchData, processedHashes);
+        for (let i = 0; i < rawFileCount; i++) {
+            await processFile(files[i], state);
         }
 
         if (timerInterval) clearInterval(timerInterval);
@@ -90,30 +124,40 @@ document.addEventListener('DOMContentLoaded', async () => {
         const batchTimeMs = batchEndTime - batchStartTime;
         const batchTimeFormatted = batchTimeMs >= 1000 ? (batchTimeMs / 1000).toFixed(2) + 's' : Math.round(batchTimeMs) + 'ms';
 
-        const sortedBatch = Object.values(batchData).sort((a, b) => a.id.localeCompare(b.id));
-        const totalVersions = sortedBatch.reduce((sum, app) => sum + app.versions.length, 0);
-
-        const batchCard = document.getElementById('batch-json-card');
+        const sortedBatch = Object.values(state.batchData).sort((a, b) => a.id.localeCompare(b.id));
         
-        if (totalVersions > 1) {
-            if (batchCard) {
-                updateBatchJsonCard(batchCard, sortedBatch, batchTimeFormatted);
-            } else {
-                renderBatchJsonCard(sortedBatch, batchTimeFormatted); 
-            }
-        } else if (batchCard) {
-            batchCard.remove(); 
+        const batchCardContainer = document.getElementById('batch-card-container');
+        if (state.validCount > 1) {
+            batchCardContainer.innerHTML = getBatchJsonCardHTML(sortedBatch, batchTimeFormatted, state.validCount);
+            batchCardContainer.style.marginBottom = '24px';
+        } else {
+            batchCardContainer.innerHTML = ''; 
         }
 
+        const errorContainer = document.getElementById('error-cards-container');
+        const successContainer = document.getElementById('success-cards-container');
+        
+        if (errorContainer.children.length === 0) errorContainer.style.display = 'none';
+        if (successContainer.children.length === 0) successContainer.style.display = 'none';
+        if (errorContainer.children.length > 0 && successContainer.children.length > 0) {
+            successContainer.style.marginTop = '24px';
+        }
+
+        isProcessing = false;
+        if (!document.hidden) {
+            document.title = originalTitle;
+        }
+        
         loading.style.display = 'none';
     }
 
     function sanitizeString(str) {
         if (!str) return undefined;
-        return str.replace(/<br\s*\/?>/gi, ' ').replace(/[\r\n\t]+/g, ' ').replace(/\s\s+/g, ' ').trim();
+        if (Array.isArray(str)) str = str.join(' ');
+        return String(str).replace(/[\r\n\t]+/g, ' ').replace(/\s\s+/g, ' ').trim();
     }
 
-    async function processFile(file, batchData, processedHashes) {
+    async function processFile(file, state) {
         const appStartTime = performance.now();
 
         const ext = file.name.split('.').pop().toLowerCase();
@@ -130,10 +174,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             const hashArray = Array.from(new Uint8Array(hashBuffer));
             const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
-            if (processedHashes.has(hashHex)) {
+            if (state.processedHashes.has(hashHex)) {
                 return; 
             }
-            processedHashes.add(hashHex);
+            state.processedHashes.add(hashHex);
 
             const rawSizeMB = (file.size / (1024 * 1024)).toFixed(1);
             const fileSizeMB = rawSizeMB + 'MB';
@@ -181,6 +225,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (ext === 'xapk' || ext === 'apk') {
                 let targetApkBlob = file;
                 let xapkManifest = null;
+                let needsAppInfoParser = true;
 
                 if (ext === 'xapk') {
                     const manifestFile = zip.file('manifest.json');
@@ -204,51 +249,69 @@ document.addEventListener('DOMContentLoaded', async () => {
                         } catch(e) {}
                     }
 
-                    let baseApkFile = zip.file('base.apk'); 
-                    if (!baseApkFile && xapkManifest && xapkManifest.package_name) {
-                         baseApkFile = zip.file(`${xapkManifest.package_name}.apk`);
+                    const iconFile = zip.file('icon.png');
+                    if (iconFile) {
+                        iconSrc = URL.createObjectURL(await iconFile.async('blob'));
                     }
-                    if (!baseApkFile) {
-                        const apkFiles = Object.values(zip.files).filter(f => f.name.endsWith('.apk') && !f.dir);
-                        baseApkFile = apkFiles.find(f => !f.name.toLowerCase().includes('config') && !f.name.toLowerCase().includes('split'));
-                        if (!baseApkFile && apkFiles.length > 0) baseApkFile = apkFiles[0];
-                    }
-                    
-                    if (baseApkFile) {
-                        targetApkBlob = new File([await baseApkFile.async('arraybuffer')], 'base.apk', { type: 'application/vnd.android.package-archive' });
+
+                    if (packageName !== 'Unknown Package') {
+                        needsAppInfoParser = false;
                     }
                 }
 
-                try {
-                    const parser = new AppInfoParser(targetApkBlob);
-                    const result = await parser.parse();
-
-                    let pAppName = result.application?.label || result.application?.name || file.name;
-                    if (Array.isArray(pAppName)) pAppName = [...new Set(pAppName)][0]; 
-                    else if (typeof pAppName === 'string') {
-                        const half = pAppName.length / 2;
-                        if (pAppName.length % 2 === 0 && pAppName.substring(0, half) === pAppName.substring(half)) pAppName = pAppName.substring(0, half);
+                if (needsAppInfoParser) {
+                    if (ext === 'xapk') {
+                        let baseApkFile = zip.file('base.apk'); 
+                        if (!baseApkFile && xapkManifest && xapkManifest.package_name) {
+                             baseApkFile = zip.file(`${xapkManifest.package_name}.apk`);
+                        }
+                        if (!baseApkFile) {
+                            const apkFiles = Object.values(zip.files).filter(f => f.name.endsWith('.apk') && !f.dir);
+                            baseApkFile = apkFiles.find(f => !f.name.toLowerCase().includes('config') && !f.name.toLowerCase().includes('split'));
+                            if (!baseApkFile && apkFiles.length > 0) baseApkFile = apkFiles[0];
+                        }
+                        
+                        if (baseApkFile) {
+                            targetApkBlob = new File([await baseApkFile.async('arraybuffer')], 'base.apk', { type: 'application/vnd.android.package-archive' });
+                        }
                     }
-                    
-                    appName = (ext === 'xapk' && xapkManifest && xapkManifest.name) ? xapkManifest.name : pAppName;
-                    packageName = (ext === 'xapk' && xapkManifest && xapkManifest.package_name) ? xapkManifest.package_name : (result.package || packageName);
-                    versionName = (ext === 'xapk' && xapkManifest && xapkManifest.version_name) ? xapkManifest.version_name : (result.versionName || versionName);
-                    versionCode = (ext === 'xapk' && xapkManifest && xapkManifest.version_code) ? xapkManifest.version_code : (result.versionCode || versionCode);
-                    iconSrc = result.icon || iconSrc;
 
-                    const resultStr = JSON.stringify(result);
-                    if (resultStr.includes('"anyDensity":false') || resultStr.includes('"anyDensity":"false"')) isAnyDensity = false;
+                    try {
+                        const parser = new AppInfoParser(targetApkBlob);
+                        const result = await parser.parse();
 
-                    const manifestArchMatch = resultStr.match(/(?:^|[^a-z0-9])(arm64[_-]v8a|armeabi[_-]v7a|x86_64|x86)(?:[^a-z0-9]|$)/ig);
-                    if (manifestArchMatch) manifestArchMatch.forEach(m => archs.add(m.match(/(arm64[_-]v8a|armeabi[_-]v7a|x86_64|x86)/i)[0].toLowerCase()));
+                        let pAppName = result.application?.label || result.application?.name || file.name;
+                        if (Array.isArray(pAppName)) pAppName = [...new Set(pAppName)][0]; 
+                        else if (typeof pAppName === 'string') {
+                            const half = pAppName.length / 2;
+                            if (pAppName.length % 2 === 0 && pAppName.substring(0, half) === pAppName.substring(half)) pAppName = pAppName.substring(0, half);
+                        }
+                        
+                        appName = (ext === 'xapk' && xapkManifest && xapkManifest.name) ? xapkManifest.name : pAppName;
+                        packageName = (ext === 'xapk' && xapkManifest && xapkManifest.package_name) ? xapkManifest.package_name : (result.package || packageName);
+                        versionName = (ext === 'xapk' && xapkManifest && xapkManifest.version_name) ? xapkManifest.version_name : (result.versionName || versionName);
+                        versionCode = (ext === 'xapk' && xapkManifest && xapkManifest.version_code) ? xapkManifest.version_code : (result.versionCode || versionCode);
+                        iconSrc = result.icon || iconSrc;
 
-                    const manifestDpiMatch = resultStr.match(/(?:^|[^a-z])(xxxhdpi|xxhdpi|xhdpi|hdpi|mdpi|ldpi|tvdpi)(?:[^a-z]|$)/ig);
-                    if (manifestDpiMatch) manifestDpiMatch.forEach(m => dpis.add(m.match(/(xxxhdpi|xxhdpi|xhdpi|hdpi|mdpi|ldpi|tvdpi)/i)[0].toLowerCase()));
+                        const searchTarget = {};
+                        if (result.manifest) searchTarget.manifest = result.manifest;
+                        if (result.application) searchTarget.application = result.application;
+                        
+                        const resultStr = JSON.stringify(searchTarget);
 
-                    const densityNumMatch = resultStr.match(/(?:screenDensity|density)["']?\s*:\s*["']?(\d+)/ig);
-                    if (densityNumMatch) densityNumMatch.forEach(m => dpis.add(m.match(/\d+/)[0]));
+                        if (resultStr.includes('"anyDensity":false') || resultStr.includes('"anyDensity":"false"')) isAnyDensity = false;
 
-                } catch (err) {}
+                        const manifestArchMatch = resultStr.match(/(?:^|[^a-z0-9])(arm64[_-]v8a|armeabi[_-]v7a|x86_64|x86)(?:[^a-z0-9]|$)/ig);
+                        if (manifestArchMatch) manifestArchMatch.forEach(m => archs.add(m.match(/(arm64[_-]v8a|armeabi[_-]v7a|x86_64|x86)/i)[0].toLowerCase()));
+
+                        const manifestDpiMatch = resultStr.match(/(?:^|[^a-z])(xxxhdpi|xxhdpi|xhdpi|hdpi|mdpi|ldpi|tvdpi)(?:[^a-z]|$)/ig);
+                        if (manifestDpiMatch) manifestDpiMatch.forEach(m => dpis.add(m.match(/(xxxhdpi|xxhdpi|xhdpi|hdpi|mdpi|ldpi|tvdpi)/i)[0].toLowerCase()));
+
+                        const densityNumMatch = resultStr.match(/(?:screenDensity|density)["']?\s*:\s*["']?(\d+)/ig);
+                        if (densityNumMatch) densityNumMatch.forEach(m => dpis.add(m.match(/\d+/)[0]));
+
+                    } catch (err) {}
+                }
             }
 
             Object.keys(zip.files).forEach(f => {
@@ -258,6 +321,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const dpiMatch = lowerF.match(dpiRegexZip);
                 if (dpiMatch) dpis.add(dpiMatch[1]);
             });
+
+            appName = appName || 'Unknown App';
+            packageName = packageName || 'Unknown Package';
+            versionName = versionName || 'Unknown Version';
 
             let hasArm64 = false;
             let hasArm32 = false;
@@ -315,6 +382,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 finalDpiText = isAnyDensity ? 'nodpi' : 'nodpi';
             }
 
+            state.validCount++;
+
             let jsonSnippet = '';
             let uiImportantMsgHTML = '';
             let uiWarningMsgHTML = '';
@@ -338,11 +407,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                 let jsonAny = "no";
                 let jsonWarning = undefined;
                 let jsonNote = undefined;
-                let jsonLinks = [{ "url": "", "url-name": "" }];
+                let jsonLinks = [];
+                let preservedVersions = [];
 
                 if (matchedApp) {
                     jsonId = matchedApp.id || "";
                     jsonName = matchedApp.name || appName;
+                    
+                    appName = jsonName; 
+                    
                     jsonIcon = matchedApp.icon || jsonIcon;
                     jsonPackageName = matchedApp.packageName || packageName;
                     jsonSecondaryPackageName = matchedApp.secondaryPackageName;
@@ -351,20 +424,51 @@ document.addEventListener('DOMContentLoaded', async () => {
                     jsonImportant = sanitizeString(matchedApp.important);
                     
                     if (matchedApp.versions && matchedApp.versions.length > 0) {
-                        const matchedVersion = matchedApp.versions.find(v => v.version === versionName) || matchedApp.versions[0];
+                        const matchedVersion = matchedApp.versions.find(v => v.version === versionName);
+                        const templateVersion = matchedVersion || matchedApp.versions[0];
                         
-                        if (matchedVersion) {
-                            jsonAny = matchedVersion.any || "no";
-                            jsonWarning = sanitizeString(matchedVersion.warning);
-                            jsonNote = sanitizeString(matchedVersion.note);
+                        jsonAny = templateVersion.any || "no";
+                        jsonWarning = sanitizeString(templateVersion.warning);
+                        jsonNote = sanitizeString(templateVersion.note);
 
-                            if (matchedVersion.links && matchedVersion.links.length > 0) {
-                                jsonLinks = matchedVersion.links.map(link => ({
-                                    "url": link.url || "",
-                                    "url-name": link["url-name"] || link.name || ""
-                                }));
+                        if (templateVersion.links && templateVersion.links.length > 0) {
+                            let hasBuzzheavier = false;
+                            
+                            templateVersion.links.forEach(link => {
+                                const lName = link["url-name"] || link.name || "";
+                                const lUrl = link.url || "";
+                                const lowerName = lName.toLowerCase();
+                                
+                                if (lowerName.includes('buzzheavier')) {
+                                    hasBuzzheavier = true;
+                                    jsonLinks.push({
+                                        "url": (matchedVersion && (matchedVersion.sha256 === hashHex || matchedVersion.sha1 === hashHex)) ? lUrl : "",
+                                        "url-name": lName
+                                    });
+                                } else {
+                                    jsonLinks.push({
+                                        "url": lUrl,
+                                        "url-name": lName
+                                    });
+                                }
+                            });
+
+                            if (!hasBuzzheavier) {
+                                jsonLinks.unshift({ "url": "", "url-name": "Buzzheavier Link" });
                             }
+                        } else {
+                            jsonLinks = [{ "url": "", "url-name": "Buzzheavier Link" }];
                         }
+
+                        matchedApp.versions.forEach(v => {
+                            if (v.version !== versionName) {
+                                preservedVersions.push(v);
+                            }
+                        });
+                    }
+
+                    if (jsonLinks.length === 0) {
+                        jsonLinks = [{ "url": "", "url-name": "Buzzheavier Link" }];
                     }
 
                     if (jsonImportant) {
@@ -382,8 +486,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                         `;
                     }
 
-                } else if (packageName) {
-                    jsonIcon = `icons/${packageName.replace(/\./g, '-')}.png`;
+                } else {
+                    if (packageName !== 'Unknown Package') {
+                        jsonIcon = `icons/${packageName.replace(/\./g, '-')}.png`;
+                    }
+                    jsonLinks = [{ "url": "", "url-name": "Buzzheavier Link" }];
                 }
 
                 const versionObj = {
@@ -393,13 +500,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (jsonWarning) versionObj.warning = jsonWarning;
                 if (jsonNote) versionObj.note = jsonNote;
                 
-                versionObj.versionCode = versionCode ? versionCode.toString() : "";
+                versionObj.versioncode = versionCode ? versionCode.toString() : "";
                 versionObj.size = fileSizeMB;
                 versionObj.type = ext;
                 versionObj.arch = finalArch;
                 versionObj.dpi = finalDpiText; 
                 versionObj.sha256 = hashHex;
-                versionObj.links = jsonLinks;
+                versionObj.links = jsonLinks; 
 
                 const generatedJsonData = {
                     id: jsonId,
@@ -412,13 +519,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (jsonThirdPackageName) generatedJsonData.thirdPackageName = jsonThirdPackageName;
                 if (jsonImportant) generatedJsonData.important = jsonImportant;
                 
-                generatedJsonData.versions = [ versionObj ];
+                generatedJsonData.versions = [ versionObj, ...preservedVersions ];
 
                 jsonSnippet = JSON.stringify(generatedJsonData, null, 2);
 
                 let mapId = jsonId || packageName || appName;
-                if (!batchData[mapId]) {
-                    batchData[mapId] = {
+                if (!state.batchData[mapId]) {
+                    state.batchData[mapId] = {
                         id: jsonId,
                         name: jsonName,
                         icon: jsonIcon,
@@ -428,8 +535,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                         important: jsonImportant,
                         versions: []
                     };
+                    state.batchData[mapId].versions.push(...preservedVersions);
                 }
-                batchData[mapId].versions.push(versionObj);
+                
+                state.batchData[mapId].versions.unshift(versionObj);
             }
 
             const appEndTime = performance.now();
@@ -444,17 +553,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
         } catch (error) {
-            renderErrorCard(file.name, 'Error processing file. It may be corrupted or encrypted: ' + error.message);
+            renderErrorCard(file.name, 'Error processing file: ' + error.message);
         }
     }
 
-    function renderLoadingBatchJsonCard(fileCount) {
-        const cardHTML = `
-            <div id="batch-json-card" class="app-card" style="border: 2px solid var(--md-sys-color-tertiary); margin-bottom: 24px;">
+    function getLoadingBatchJsonCardHTML() {
+        return `
+            <div class="app-card" style="border: 2px solid var(--md-sys-color-tertiary);">
                 <div class="app-header">
                     <div class="app-title" style="width: 100%;">
                         <h2 style="color: var(--md-sys-color-tertiary);">Aggregated JSON Output</h2>
-                        <div class="package-name">Generating data from ${fileCount} files...</div>
+                        <div class="package-name">Generating aggregated data...</div>
                     </div>
                 </div>
                 <div class="version-list show">
@@ -465,10 +574,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             </div>
         `;
-        resultsContainer.insertAdjacentHTML('afterbegin', cardHTML);
     }
 
-    function updateBatchJsonCard(cardElement, batchArray, batchTimeFormatted) {
+    function getBatchJsonCardHTML(batchArray, batchTimeFormatted, totalFiles) {
         const cleanBatchArray = batchArray.map(app => {
             let cleanApp = { ...app };
             if (!cleanApp.secondaryPackageName) delete cleanApp.secondaryPackageName;
@@ -478,43 +586,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
         const batchSnippet = JSON.stringify(cleanBatchArray, null, 2);
-        cardElement.innerHTML = `
-            <div class="app-header">
-                <div class="app-title" style="width: 100%;">
-                    <h2 style="color: var(--md-sys-color-tertiary);">Aggregated JSON Output</h2>
-                    <div class="package-name">Contains all non-x86 files processed in this batch, grouped by app and sorted A-Z.</div>
-                </div>
-            </div>
-            <div class="version-list show">
-                <button class="download-json-btn" onclick="downloadJsonFile(this, 'aggregated_data.json')" style="margin-bottom: 12px; background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: inherit; transition: all 0.2s ease;">📥 Download JSON File</button>
-                <details class="json-details">
-                    <summary>
-                        <span style="display: inline-flex; width: calc(100% - 20px); justify-content: space-between; align-items: center; vertical-align: middle;">
-                            <span style="text-decoration: underline;">Show Aggregated JSON</span>
-                            <span style="font-size: 0.9em; color: var(--md-sys-color-primary); font-weight: normal; text-decoration: none;">⏱️ Processed in ${batchTimeFormatted}</span>
-                        </span>
-                    </summary>
-                    <div class="json-block-wrapper" style="border-radius: 12px; margin-top: 8px;">
-                        <button class="copy-json-btn" onclick="copyJsonCode(this)">Copy All JSON</button>
-                        <pre><code class="json-code">${batchSnippet}</code></pre>
-                    </div>
-                </details>
-            </div>
-        `;
-    }
-
-    function renderBatchJsonCard(batchArray, batchTimeFormatted) {
-        const cleanBatchArray = batchArray.map(app => {
-            let cleanApp = { ...app };
-            if (!cleanApp.secondaryPackageName) delete cleanApp.secondaryPackageName;
-            if (!cleanApp.thirdPackageName) delete cleanApp.thirdPackageName;
-            if (!cleanApp.important) delete cleanApp.important;
-            return cleanApp;
-        });
-
-        const batchSnippet = JSON.stringify(cleanBatchArray, null, 2);
-        const cardHTML = `
-            <div id="batch-json-card" class="app-card" style="border: 2px solid var(--md-sys-color-tertiary); margin-bottom: 24px;">
+        return `
+            <div class="app-card" style="border: 2px solid var(--md-sys-color-tertiary);">
                 <div class="app-header">
                     <div class="app-title" style="width: 100%;">
                         <h2 style="color: var(--md-sys-color-tertiary);">Aggregated JSON Output</h2>
@@ -522,23 +595,25 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                 </div>
                 <div class="version-list show">
-                    <button class="download-json-btn" onclick="downloadJsonFile(this, 'aggregated_data.json')" style="margin-bottom: 12px; background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: inherit; transition: all 0.2s ease;">📥 Download JSON File</button>
+                    <button class="download-json-btn" onclick="downloadJsonFile(this, 'data.json')" style="margin-bottom: 12px; background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: inherit; transition: all 0.2s ease;">📥 Download JSON File</button>
                     <details class="json-details">
                         <summary>
-                            <span style="display: inline-flex; width: calc(100% - 20px); justify-content: space-between; align-items: center; vertical-align: middle;">
-                                <span style="text-decoration: underline;">Show Aggregated JSON</span>
-                                <span style="font-size: 0.9em; color: var(--md-sys-color-primary); font-weight: normal; text-decoration: none;">⏱️ Processed in ${batchTimeFormatted}</span>
-                            </span>
+                            <div class="json-summary-content">
+                                <span class="summary-title">Show Aggregated JSON</span>
+                                <span class="batch-stats">
+                                    <span>📁 ${totalFiles} Files</span>
+                                    <span>⏱️ Processed in ${batchTimeFormatted}</span>
+                                </span>
+                            </div>
                         </summary>
                         <div class="json-block-wrapper" style="border-radius: 12px; margin-top: 8px;">
                             <button class="copy-json-btn" onclick="copyJsonCode(this)">Copy All JSON</button>
-                            <pre><code class="json-code">${batchSnippet}</code></pre>
+                            <pre><code class="json-code">${escapeHTML(batchSnippet)}</code></pre>
                         </div>
                     </details>
                 </div>
             </div>
         `;
-        resultsContainer.insertAdjacentHTML('afterbegin', cardHTML);
     }
 
     function renderSuccessCard(data) {
@@ -548,14 +623,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         const jsonHTML = data.isX86 ? '' : `
             <details class="json-details">
                 <summary>
-                    <span style="display: inline-flex; width: calc(100% - 20px); justify-content: space-between; align-items: center; vertical-align: middle;">
-                        <span style="text-decoration: underline;">Show JSON Output</span>
-                        <span style="font-size: 0.9em; color: var(--md-sys-color-primary); font-weight: normal; text-decoration: none;">⏱️ Processed in ${data.appTimeFormatted}</span>
-                    </span>
+                    <div class="json-summary-content">
+                        <span class="summary-title">Show JSON Output</span>
+                        <span class="batch-stats">
+                            <span>⏱️ Processed in ${data.appTimeFormatted}</span>
+                        </span>
+                    </div>
                 </summary>
                 <div class="json-block-wrapper">
                     <button class="copy-json-btn" onclick="copyJsonCode(this)">Copy JSON</button>
-                    <pre><code class="json-code">${data.jsonSnippet}</code></pre>
+                    <pre><code class="json-code">${escapeHTML(data.jsonSnippet)}</code></pre>
                 </div>
             </details>
         `;
@@ -589,7 +666,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             </div>
         `;
-        resultsContainer.insertAdjacentHTML('beforeend', cardHTML);
+        document.getElementById('success-cards-container').insertAdjacentHTML('beforeend', cardHTML);
     }
 
     function renderErrorCard(fileName, errorMessage) {
@@ -603,7 +680,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             </div>
         `;
-        resultsContainer.insertAdjacentHTML('beforeend', errorHTML);
+        document.getElementById('error-cards-container').insertAdjacentHTML('beforeend', errorHTML);
     }
 });
 

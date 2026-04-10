@@ -77,7 +77,8 @@
     "icon": "icons/baconreader.png",
     "packageName": "com.onelouder.baconreader",
     "secondaryPackageName": "com.onelouder.baconreader.premium",
-    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://baconreader.com/auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",    "versions": [
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://baconreader.com/auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
       {
         "version": "6.1.4",
         "any": "no",
@@ -125,7 +126,8 @@
     "name": "Boost for Reddit",
     "icon": "icons/boost.png",
     "packageName": "com.rubenmayayo.reddit",
-    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://rubenmayo.com</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",    "versions": [
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://rubenmayo.com</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
       {
         "version": "1.12.12",
         "any": "no",
@@ -536,7 +538,8 @@
     "packageName": "ml.docilealligator.infinityforreddit",
     "secondaryPackageName": "ml.docilealligator.infinityforreddit.plus",
     "thirdPackageName": "ml.docilealligator.infinityforreddit.patreon",
-    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>infinity://localhost</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",    "versions": [
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>infinity://localhost</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
       {
         "version": "8.1.4",
         "any": "no",
@@ -636,7 +639,8 @@
     "name": "Joey for Reddit",
     "icon": "icons/joey.png",
     "packageName": "o.o.joey",
-    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>https://127.0.0.1:65023/authorize_callback</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",    "versions": [
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>https://127.0.0.1:65023/authorize_callback</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
       {
         "version": "2.1.6.5",
         "any": "no",
@@ -1218,7 +1222,8 @@
     "icon": "icons/relay.png",
     "packageName": "free.reddit.news",
     "secondaryPackageName": "reddit.news",
-    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>dbrady://relay</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",    "versions": [
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>dbrady://relay</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
       {
         "version": "13.0.46",
         "any": "no",
@@ -1244,7 +1249,8 @@
     "icon": "icons/rif.png",
     "packageName": "com.andrewshu.android.reddit",
     "secondaryPackageName": "com.andrewshu.android.redditdonation",
-    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>redditisfun://auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",    "versions": [
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>redditisfun://auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",    
+    "versions": [
       {
         "version": "5.6.22",
         "any": "no",
@@ -1318,7 +1324,8 @@
     "icon": "icons/slide.png",
     "packageName": "me.ccrama.redditslide",
     "secondaryPackageName": "me.edgan.redditslide",
-    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://www.ccrama.me</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",    "versions": [
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>http://www.ccrama.me</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
       {
         "version": "7.4.4",
         "any": "no",
@@ -1564,7 +1571,8 @@
     "packageName": "com.laurencedawson.reddit_sync",
     "secondaryPackageName": "com.laurencedawson.reddit_sync.dev",
     "thirdPackageName": "com.laurencedawson.reddit_sync.pro",
-    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a><br> Click on 'installed app', and type '<b>http://redditsync/auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",    "versions": [
+    "important": "You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a><br> Click on 'installed app', and type '<b>http://redditsync/auth</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.",
+    "versions": [
       {
         "version": "v23.06.30-1339",
         "any": "no",

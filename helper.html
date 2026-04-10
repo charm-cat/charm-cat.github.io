@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARM Helper - File Inspector</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="helper.css">
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/app-info-parser@1.1.2/dist/app-info-parser.min.js"></script>
+</head>
+<body>
+    <header class="top-app-bar">
+        <h1>CHARM Helper</h1>
+        <p>Inspect APK, APKM, and XAPK files</p>
+        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">☀️</button>
+    </header>
+
+    <main class="container">
+        <div id="drop-zone" class="drop-zone">
+            <div class="drop-zone-content">
+                <span style="font-size: 48px; display: block; margin-bottom: 16px;">📂</span>
+                <h3>Drag & Drop your files here</h3>
+                <p>or click to browse</p>
+                <input type="file" id="file-input" accept=".apk,.apkm,.xapk" multiple style="display: none;">
+                <p style="font-size: 0.8em; opacity: 0.7; margin-top: 8px;">Supports multiple APK, APKM, and XAPK files.</p>
+                <p style="font-size: 0.8em; opacity: 0.7">File analysis is done entirely locally in your browser.</p>
+            </div>
+        </div>
+
+        <div id="loading-indicator" style="display: none; text-align: center; margin: 32px 0;">
+            <p>Analyzing files might take a few seconds depending on file sizes.</p>
+        </div>
+
+        <div id="results-container" style="margin-top: 32px; display: flex; flex-direction: column; gap: 24px;">
+            </div>
+    </main>
+
+    <footer class="bottom-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Go Back to Home</a>
+                    <a href="patches.html">View Available Patches</a>
+                    <a href="https://github.com/charm-cat/charm-cat.github.io" target="_blank">Source Code</a>
+                </div>
+                
+                <p class="footer-credits">Made with ❤️🧿 for the ReVanced Community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="helper.js"></script>
+</body>
+</html>

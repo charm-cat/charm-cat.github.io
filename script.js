@@ -212,12 +212,14 @@ function renderApps(appsToDisplay) {
                     if (ver.links && ver.links.length > 0) {
                         ver.links.forEach((linkItem, index) => {
                             let linkUrl = typeof linkItem === 'string' ? linkItem : linkItem.url;
-                            let linkText = typeof linkItem === 'object' && linkItem.name ? linkItem.name : (ver.links.length === 1 ? 'Download' : `Mirror ${index + 1}`);
+                            let linkText = typeof linkItem === 'object' && linkItem['url-name'] ? linkItem['url-name'] : (linkItem.name ? linkItem.name : (ver.links.length === 1 ? 'Download' : `Mirror ${index + 1}`));
                             buttonsHTML += `<a href="${linkUrl}" class="download-btn" target="_blank">${linkText}</a>`;
                         });
                     }
                     
                     const sizeHTML = ver.size ? `<span class="version-size"><strong>Size:</strong> ${ver.size}</span>` : '';
+                    const archHTML = ver.arch ? `<span class="version-architecture"><strong>Architecture:</strong> ${ver.arch}</span>` : '';
+                    const dpiHTML = ver.dpi ? `<span class="version-dpi"><strong>Screen DPI:</strong> ${ver.dpi}</span>` : '';
                     
                     let typeHTML = '';
                     if (ver.type) {
@@ -240,19 +242,22 @@ function renderApps(appsToDisplay) {
                     }
 
                     const sha1HTML = ver.sha1 ? `<span class="version-hash"><strong>SHA-1:</strong> <code>${ver.sha1}</code></span>` : '';
-                    
                     const sha256HTML = ver.sha256 ? `<span class="version-hash"><strong>SHA-256:</strong> <code>${ver.sha256}</code></span>` : '';
                     
                     const warningHTML = ver.warning ? `<div class="version-warning"><strong>⚠️ Warning:</strong><br><br>${ver.warning}</div>` : '';
                     const noteHTML = ver.note ? `<div class="version-note"><strong>ℹ️ Note:</strong><br><br>${ver.note}</div>` : '';
                     
+                    const versionCodeHTML = ver.versionCode ? ` <span style="font-size: 0.9em; opacity: 0.8;">(${ver.versionCode})</span>` : '';
+
                     contentHTML += `
                         <div class="version-item">
                             ${warningHTML}
                             ${noteHTML}
                             <div class="version-details">
-                                <span class="version-number"><strong>Version:</strong> ${ver.version}</span>
+                                <span class="version-number"><strong>Version:</strong> ${ver.version}${versionCodeHTML}</span>
                                 ${sizeHTML}
+                                ${archHTML}
+                                ${dpiHTML}
                                 ${typeHTML}
                                 ${sha1HTML}
                                 ${sha256HTML}
@@ -332,6 +337,13 @@ function renderApps(appsToDisplay) {
             </div>
         ` : '';
 
+        const hasAnyVersion = app.versions && app.versions.some(ver => ver.any === 'yes');
+        const anyVersionNoteHTML = hasAnyVersion && !isPatchesPage ? `
+            <div class="version-note" style="margin-bottom: 16px;">
+                <strong>ℹ️ Note:</strong><br><br> You can use <b>any version</b> of this app for ReVanced Manager.
+            </div>
+        ` : '';
+
         const formatPackageName = (pkg) => pkg ? pkg.replace(/\./g, '.<wbr>') : 'Unknown Package';
 
         let packageHTML = `<div class="package-name">${formatPackageName(app.packageName)}</div>`;
@@ -360,7 +372,9 @@ function renderApps(appsToDisplay) {
             </div>
             <div class="version-list ${showClass}">
                 ${importantHTML}
-                ${appWarningHTML} ${contentHTML}
+                ${appWarningHTML}
+                ${anyVersionNoteHTML}
+                ${contentHTML}
             </div>
         `;
 

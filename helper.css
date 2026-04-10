@@ -1,0 +1,112 @@
+.drop-zone {
+    border: 4px dotted var(--md-sys-color-on-surface-variant, #888888);
+    border-radius: 24px;
+    padding: 120px 32px;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--md-sys-color-surface-container, #171e27);
+    transition: all 0.3s ease;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop-zone:hover, .drop-zone.dragover {
+    background-color: var(--md-sys-color-surface-container-high, #212b38);
+    border-color: var(--md-sys-color-primary, #64B5F6);
+    transform: scale(1.02);
+}
+
+.drop-zone h3 {
+    margin: 0 0 8px 0;
+    color: var(--md-sys-color-on-surface, #e3e3e3);
+}
+
+.drop-zone p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant, #c4c7c5);
+}
+
+#results-container .app-card {
+    margin-bottom: 0;
+}
+
+.version-details {
+    max-width: 100%;
+}
+
+.version-hash code {
+    word-break: unset;
+}
+
+.version-list {
+    margin-top: 8px;
+}
+
+.json-details {
+    margin-top: 8px;
+    background-color: var(--md-sys-color-surface-container);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.json-details summary {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    outline: none;
+    background-color: var(--md-sys-color-surface-container-high);
+}
+
+.json-details summary:hover {
+    background-color: var(--md-sys-color-surface-container-highest);
+}
+
+.json-block-wrapper {
+    position: relative;
+    padding: 16px;
+    margin-top: 12px;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+}
+
+body.light-mode .json-block-wrapper {
+    background-color: #f5f5f5;
+    color: #24292e;
+}
+
+.json-block-wrapper pre {
+    margin: 0;
+    overflow-x: auto;
+    font-size: 0.85em;
+    font-family: monospace;
+}
+
+.copy-json-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 0.8em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.copy-json-btn:hover {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+@media (max-width: 600px) {
+    .version-hash code {
+        word-break: break-all;
+    }
+}

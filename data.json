@@ -6,14 +6,18 @@
     "packageName": "com.adobe.photoshopmix",
     "versions": [
       {
-        "version": "3.0.412.2947",
+        "version": "2.6.0",
+        "any": "no",
+        "versioncode": "",
         "size": "49.3MB",
-        "sha1": "e74273c6fa4cd06552bf7651a626dde805a1fe96",
         "type": "apk",
+        "arch": "arm64-v8a",
+        "dpi": "",
+        "sha1": "e74273c6fa4cd06552bf7651a626dde805a1fe96",
         "links": [
           {
             "url": "https://buzzheavier.com/fzgqclflax6f",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -27,13 +31,17 @@
     "versions": [
       {
         "version": "32.6.0.100",
+        "any": "yes",
+        "versionCode": "",
         "size": "101.9MB",
-        "sha1": "d49861aede688d7b0571f91520f014f7b7b8fc4e",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "120-640dpi",
+        "sha1": "d49861aede688d7b0571f91520f014f7b7b8fc4e",
         "links": [
           {
             "url": "https://buzzheavier.com/vgphcmd01cel",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -47,13 +55,17 @@
     "versions": [
       {
         "version": "5.1.0",
+        "any": "no",
+        "versioncode": "",
         "size": "54.5MB",
-        "sha1": "90948fb1481ce3204a152dde28399d19770b6302",
         "type": "xapk",
+        "arch": "arm64-v8a",
+        "dpi": "",
+        "sha1": "90948fb1481ce3204a152dde28399d19770b6302",
         "links": [
           {
             "url": "https://buzzheavier.com/ep72ml4t43cc",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -69,13 +81,17 @@
     "versions": [
       {
         "version": "6.1.4",
+        "any": "no",
+        "versioncode": "",
         "size": "16.9MB",
-        "sha1": "1436cf7980706530cb960754d5f005774c853c93",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "1436cf7980706530cb960754d5f005774c853c93",
         "links": [
           {
             "url": "https://buzzheavier.com/9jasmbbdparj",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -89,13 +105,17 @@
     "versions": [
       {
         "version": "3.3.4",
+        "any": "no",
+        "versioncode": "",
         "size": "13.1MB",
-        "sha1": "388f4c16c074d6626ac20fb9f523718145485fc6",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "388f4c16c074d6626ac20fb9f523718145485fc6",
         "links": [
           {
             "url": "https://buzzheavier.com/b0ir4vyh7jue",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -110,13 +130,17 @@
     "versions": [
       {
         "version": "1.12.12",
+        "any": "no",
+        "versioncode": "",
         "size": "15.9MB",
-        "sha1": "b4e440ab35823205e521ae3762acba4971fb9a90",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "b4e440ab35823205e521ae3762acba4971fb9a90",
         "links": [
           {
             "url": "https://buzzheavier.com/6bzmie55chl2",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -130,13 +154,17 @@
     "versions": [
       {
         "version": "1.7.23",
+        "any": "no",
+        "versioncode": "",
         "size": "12.8MB",
-        "sha1": "d0b134b03e5798bc24018fa153a540879e729b3c",
         "type": "xapk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "d0b134b03e5798bc24018fa153a540879e729b3c",
         "links": [
           {
             "url": "https://buzzheavier.com/m2qu63hkgdc2",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -150,13 +178,17 @@
     "versions": [
       {
         "version": "6.24.01",
+        "any": "no",
+        "versioncode": "",
         "size": "24.6MB",
-        "sha1": "a56b85679b7b3fa827510d7c645a681a45f0a42b",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "a56b85679b7b3fa827510d7c645a681a45f0a42b",
         "links": [
           {
             "url": "https://buzzheavier.com/rmpazhdakymi",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -170,13 +202,17 @@
     "versions": [
       {
         "version": "3.104.0",
+        "any": "no",
+        "versioncode": "",
         "size": "90.7MB",
-        "sha1": "d80eb41eb08ed7744b1dcf5f8ad1c8ac5cfa601b",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "d80eb41eb08ed7744b1dcf5f8ad1c8ac5cfa601b",
         "links": [
           {
             "url": "https://buzzheavier.com/1qxco6w0hh2t",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -190,13 +226,17 @@
     "versions": [
       {
         "version": "26.4.0+rc4-2026.03.25",
+        "any": "no",
+        "versioncode": "",
         "size": "48.0MB",
-        "sha1": "2c5236c25d1d94dfa7b032cedcd1e3b283e20a47",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "2c5236c25d1d94dfa7b032cedcd1e3b283e20a47",
         "links": [
           {
             "url": "https://buzzheavier.com/1vzdogt93qnz",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -210,13 +250,17 @@
     "versions": [
       {
         "version": "6.54.5",
+        "any": "no",
+        "versioncode": "",
         "size": "76.3MB",
-        "sha1": "42d47c4429a10240ea7d30bebdfeb54efd169b17",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "42d47c4429a10240ea7d30bebdfeb54efd169b17",
         "links": [
           {
             "url": "https://buzzheavier.com/g1kcql7n8upn",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -230,13 +274,17 @@
     "versions": [
       {
         "version": "490.0.0.63.82",
+        "any": "no",
+        "versioncode": "",
         "size": "146.9MB",
-        "sha1": "e9f909dff6bb54645e15eb87a769c62f06678825",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "e9f909dff6bb54645e15eb87a769c62f06678825",
         "links": [
           {
             "url": "https://buzzheavier.com/izsgzuij0lhm",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -250,13 +298,17 @@
     "versions": [
       {
         "version": "555.0.0.0.43",
+        "any": "no",
+        "versioncode": "",
         "size": "132.1MB",
-        "sha1": "8ae2839b277c50fb73c4d1730ae95e199e6ac80a",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "8ae2839b277c50fb73c4d1730ae95e199e6ac80a",
         "links": [
           {
             "url": "https://buzzheavier.com/6g9xpsjc3imu",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -270,13 +322,17 @@
     "versions": [
       {
         "version": "4.0.5",
+        "any": "no",
+        "versioncode": "",
         "size": "17.2MB",
-        "sha1": "8efdd1d45af093d8018e300d1462c70bb8c4d6be",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "8efdd1d45af093d8018e300d1462c70bb8c4d6be",
         "links": [
           {
             "url": "https://buzzheavier.com/o8w2sjfenhau",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -290,13 +346,17 @@
     "versions": [
       {
         "version": "228.16264.20260326",
+        "any": "no",
+        "versioncode": "",
         "size": "26.4MB",
-        "sha1": "c75c59a74a63261a776f0b48b4d2ba705f67e5e0",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "c75c59a74a63261a776f0b48b4d2ba705f67e5e0",
         "links": [
           {
             "url": "https://buzzheavier.com/rv252e4cxkyt",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -310,13 +370,17 @@
     "versions": [
       {
         "version": "9.4.1",
+        "any": "no",
+        "versioncode": "",
         "size": "50.8MB",
-        "sha1": "5ff4eec8f753f96536d6db02b20263d83788f7d5",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "5ff4eec8f753f96536d6db02b20263d83788f7d5",
         "links": [
           {
             "url": "https://buzzheavier.com/sph2lc5gk4oj",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -330,13 +394,17 @@
     "versions": [
       {
         "version": "5.108.0.644447823",
+        "any": "no",
+        "versioncode": "",
         "size": "16.8MB",
-        "sha1": "212c6ce574e9c74b8620ece21511b87c339acd10",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "212c6ce574e9c74b8620ece21511b87c339acd10",
         "links": [
           {
             "url": "https://buzzheavier.com/hsq56so9xfla",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -350,13 +418,17 @@
     "versions": [
       {
         "version": "7.69.0.890655694",
+        "any": "no",
+        "versioncode": "",
         "size": "204.7MB",
-        "sha1": "ebb91184ac0306c14e1a0d94aa7abb4cae2fe812",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "ebb91184ac0306c14e1a0d94aa7abb4cae2fe812",
         "links": [
           {
             "url": "https://buzzheavier.com/z4oe5xmuy8uu",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -371,13 +443,17 @@
     "versions": [
       {
         "version": "4.2.20260307.885964187",
+        "any": "no",
+        "versioncode": "",
         "size": "47.7MB",
-        "sha1": "b399b5c503dc10629f1201f86ff1deec8f90d201",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "b399b5c503dc10629f1201f86ff1deec8f90d201",
         "links": [
           {
             "url": "https://buzzheavier.com/dharz5cc0ibs",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -391,13 +467,17 @@
     "versions": [
       {
         "version": "2.8.5",
+        "any": "no",
+        "versioncode": "",
         "size": "3.5MB",
-        "sha1": "9249658baf9e907a718c86b09f6a01858fa773ea",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "9249658baf9e907a718c86b09f6a01858fa773ea",
         "links": [
           {
             "url": "https://buzzheavier.com/voyw0kcbc61l",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -411,13 +491,17 @@
     "versions": [
       {
         "version": "2.2 build 016",
+        "any": "no",
+        "versioncode": "",
         "size": "52.2MB",
-        "sha1": "9939045f69dfde522e2f4d94fe8850e1f31f756f",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "9939045f69dfde522e2f4d94fe8850e1f31f756f",
         "links": [
           {
             "url": "https://buzzheavier.com/9wuubq8b412d",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -431,13 +515,17 @@
     "versions": [
       {
         "version": "5.3.0",
+        "any": "no",
+        "versioncode": "",
         "size": "75.6MB",
-        "sha1": "a911c87f964d234e73339726b222d7f4bfe6dded",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "a911c87f964d234e73339726b222d7f4bfe6dded",
         "links": [
           {
             "url": "https://buzzheavier.com/gjls3hhlt5di",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -454,25 +542,33 @@
     "versions": [
       {
         "version": "8.14",
+        "any": "no",
+        "versioncode": "",
         "size": "16.4MB",
-        "sha1": "3d0976f22d999b0902adfc3fe2c8c98f09f9e27b",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "3d0976f22d999b0902adfc3fe2c8c98f09f9e27b",
         "links": [
           {
             "url": "https://buzzheavier.com/edhz55qtyny5",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       },
       {
         "version": "8.14",
+        "any": "no",
+        "versioncode": "",
         "size": "16.4 MB",
-        "sha256": "89e5f0cc1a6063ba468d522359f65499d66490fa533b0dedc3b7b7929ac4213b",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha256": "89e5f0cc1a6063ba468d522359f65499d66490fa533b0dedc3b7b7929ac4213b",
         "links": [
           {
             "url": "https://github.com/Docile-Alligator/Infinity-For-Reddit/releases/download/v8.1.4/Infinity+-v8.1.4.apk",
-            "name": "GitHub Link"
+            "url-name": "GitHub Link"
           }
         ]
       }
@@ -486,13 +582,17 @@
     "versions": [
       {
         "version": "6.12.7",
+        "any": "no",
+        "versioncode": "",
         "size": "33.7MB",
-        "sha1": "dc22101feae096a65ca048a4924c374cc288b724",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "dc22101feae096a65ca048a4924c374cc288b724",
         "links": [
           {
             "url": "https://buzzheavier.com/fozt3sjocwtw",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -507,13 +607,17 @@
     "versions": [
       {
         "version": "401.0.0.48.79",
+        "any": "no",
+        "versioncode": "",
         "size": "182.8MB",
-        "sha1": "fe0eb74c3168fc094acd5f6c73b64d25324309b7",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "fe0eb74c3168fc094acd5f6c73b64d25324309b7",
         "links": [
           {
             "url": "https://buzzheavier.com/zk2tu4aqpwy4",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -527,13 +631,17 @@
     "versions": [
       {
         "version": "1.9.13",
+        "any": "no",
+        "versioncode": "",
         "size": "6.1MB",
-        "sha1": "51c492bb9a5ad3c76d17207a9e022737d6b6c090",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "51c492bb9a5ad3c76d17207a9e022737d6b6c090",
         "links": [
           {
             "url": "https://buzzheavier.com/6eleykniyrqn",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -548,13 +656,17 @@
     "versions": [
       {
         "version": "2.1.6.5",
+        "any": "no",
+        "versioncode": "",
         "size": "18.2MB",
-        "sha1": "24631741f085d4ee06bec69f0d0a83fb67e7dfa0",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "24631741f085d4ee06bec69f0d0a83fb67e7dfa0",
         "links": [
           {
             "url": "https://buzzheavier.com/c7qbvbitv81a",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -568,13 +680,17 @@
     "versions": [
       {
         "version": "2026.13.2",
+        "any": "no",
+        "versioncode": "",
         "size": "30.5MB",
-        "sha1": "975fa23edef4e130d08ed78e98ee643b05433912",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "975fa23edef4e130d08ed78e98ee643b05433912",
         "links": [
           {
             "url": "https://buzzheavier.com/sjsjqxy6615p",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -588,13 +704,17 @@
     "versions": [
       {
         "version": "3.5.0",
+        "any": "no",
+        "versioncode": "",
         "size": "91.6MB",
-        "sha1": "eb147880f23bed869dc1bf4b83672af674f1b6fe",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "eb147880f23bed869dc1bf4b83672af674f1b6fe",
         "links": [
           {
             "url": "https://buzzheavier.com/6cy1h4z3zpg4",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -608,13 +728,17 @@
     "versions": [
       {
         "version": "9.3.0",
+        "any": "no",
+        "versioncode": "",
         "size": "127.0MB",
-        "sha1": "5c08173d78d30f6f92fc31f2d3d94e128ddef56d",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "5c08173d78d30f6f92fc31f2d3d94e128ddef56d",
         "links": [
           {
             "url": "https://buzzheavier.com/ck02pj4f7n8s",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -628,13 +752,17 @@
     "versions": [
       {
         "version": "4.6377",
+        "any": "no",
+        "versioncode": "",
         "size": "105.7MB",
-        "sha1": "df3e698be03812a45de5c3ad52c6bc5b9e5f0a57",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "df3e698be03812a45de5c3ad52c6bc5b9e5f0a57",
         "links": [
           {
             "url": "https://buzzheavier.com/djhd5mqj592c",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -649,13 +777,17 @@
     "versions": [
       {
         "version": "3.52.0i",
+        "any": "no",
+        "versioncode": "",
         "size": "119.3MB",
-        "sha1": "32c6f7fdfa02462d47c2b260ad433767f32c6053",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "32c6f7fdfa02462d47c2b260ad433767f32c6053",
         "links": [
           {
             "url": "https://buzzheavier.com/ti7kcc6vaehh",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -669,13 +801,17 @@
     "versions": [
       {
         "version": "16.0.19628.20008",
+        "any": "no",
+        "versioncode": "",
         "size": "66.9MB",
-        "sha1": "8149192fc48fd2b4023d2cba607eda787968863b",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "8149192fc48fd2b4023d2cba607eda787968863b",
         "links": [
           {
             "url": "https://buzzheavier.com/cbpyrwyd5xa8",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -689,21 +825,29 @@
     "versions": [
       {
         "version": "3.4.9",
+        "any": "no",
+        "versioncode": "",
         "size": "17.3MB",
-        "sha1": "9d5004545cf5f858cbb8f3e4777dc99c8f881fe2",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "9d5004545cf5f858cbb8f3e4777dc99c8f881fe2",
         "links": [
           {
             "url": "https://buzzheavier.com/umgfhp7ga15p",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       },
       {
         "version": "3.4.9",
+        "any": "no",
+        "versioncode": "",
         "size": "17.3MB",
-        "sha1": "9d5004545cf5f858cbb8f3e4777dc99c8f881fe2",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "9d5004545cf5f858cbb8f3e4777dc99c8f881fe2",
         "links": [
           {
             "url": "https://f-droid.org/archive/org.totschnig.myexpenses_575.apk",
@@ -721,13 +865,17 @@
     "versions": [
       {
         "version": "24.14.2",
+        "any": "no",
+        "versioncode": "",
         "size": "96.8MB",
-        "sha1": "014b4523b0e5847a10cd73ef81ba3de26d6625bf",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "014b4523b0e5847a10cd73ef81ba3de26d6625bf",
         "links": [
           {
             "url": "https://buzzheavier.com/uvpgn3k2fuwl",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -741,13 +889,17 @@
     "versions": [
       {
         "version": "2.333",
+        "any": "no",
+        "versioncode": "",
         "size": "3.0MB",
-        "sha1": "2b1adece64db5b3f80c9897e41227da9e9fb0a0a",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "2b1adece64db5b3f80c9897e41227da9e9fb0a0a",
         "links": [
           {
             "url": "https://buzzheavier.com/n3c5ux5gfrpn",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -761,13 +913,17 @@
     "versions": [
       {
         "version": "3.5.1",
+        "any": "no",
+        "versioncode": "",
         "size": "228.7MB",
-        "sha1": "531e25bc6dfc1be11c460f9ce254d8ac31070967",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "531e25bc6dfc1be11c460f9ce254d8ac31070967",
         "links": [
           {
             "url": "https://buzzheavier.com/rk9pv0i7bkcg",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -781,13 +937,17 @@
     "versions": [
       {
         "version": "26.2.1",
+        "any": "no",
+        "versioncode": "",
         "size": "109.5MB",
-        "sha1": "ba0d699b00981401ba41cf40cf33b25c4b1ece50",
         "type": "xapk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "ba0d699b00981401ba41cf40cf33b25c4b1ece50",
         "links": [
           {
             "url": "https://buzzheavier.com/m4ruzcb71sxf",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -801,13 +961,17 @@
     "versions": [
       {
         "version": "6.11.9",
+        "any": "no",
+        "versioncode": "",
         "size": "20.1MB",
-        "sha1": "fea9a02f303a9db82d0dd6812f0ed931f654d9fa",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "fea9a02f303a9db82d0dd6812f0ed931f654d9fa",
         "links": [
           {
             "url": "https://buzzheavier.com/5ocvw586n5ts",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -821,13 +985,17 @@
     "versions": [
       {
         "version": "2602.1",
+        "any": "no",
+        "versioncode": "",
         "size": "71.3MB",
-        "sha1": "8a29ae3913c29c671be8db54a9736665edfbd313",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "8a29ae3913c29c671be8db54a9736665edfbd313",
         "links": [
           {
             "url": "https://buzzheavier.com/r65qx4tzcoyt",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -841,13 +1009,17 @@
     "versions": [
       {
         "version": "7.4.10",
+        "any": "no",
+        "versioncode": "",
         "size": "59.1MB",
-        "sha1": "cc1cf209d21876cd62a389d2b58711086b4c77f9",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "cc1cf209d21876cd62a389d2b58711086b4c77f9",
         "links": [
           {
             "url": "https://buzzheavier.com/bjzdmd5x8vl6",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -861,13 +1033,17 @@
     "versions": [
       {
         "version": "8.47.1",
+        "any": "no",
+        "versioncode": "",
         "size": "13.1MB",
-        "sha1": "d8662cddac37529b342cb8214e19a010c5dfa956",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "d8662cddac37529b342cb8214e19a010c5dfa956",
         "links": [
           {
             "url": "https://buzzheavier.com/90iw8qn5isuc",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -881,13 +1057,17 @@
     "versions": [
       {
         "version": "6.6.2",
+        "any": "no",
+        "versioncode": "",
         "size": "21.6MB",
-        "sha1": "55a0cc4017040e600e090447bad421b249be8e25",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "55a0cc4017040e600e090447bad421b249be8e25",
         "links": [
           {
             "url": "https://buzzheavier.com/qznc64ytzu83",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -901,13 +1081,17 @@
     "versions": [
       {
         "version": "6.141.1",
+        "any": "no",
+        "versioncode": "",
         "size": "45.6MB",
-        "sha1": "b2145fb6d582f770a013ff968da96629acd594af",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "b2145fb6d582f770a013ff968da96629acd594af",
         "links": [
           {
             "url": "https://buzzheavier.com/g3cd9qgkl2d8",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -921,13 +1105,17 @@
     "versions": [
       {
         "version": "3.0.412.2947",
+        "any": "no",
+        "versioncode": "",
         "size": "60.9MB",
-        "sha1": "b89f642ea2672c14ef4620223d45d135d6a195b9",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "b89f642ea2672c14ef4620223d45d135d6a195b9",
         "links": [
           {
             "url": "https://buzzheavier.com/0lllssq8ieev",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -941,13 +1129,17 @@
     "versions": [
       {
         "version": "4.15.0",
+        "any": "no",
+        "versioncode": "",
         "size": "89.9MB",
-        "sha1": "5b8768575d88c2b67804d73283f9f69a93cee224",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "5b8768575d88c2b67804d73283f9f69a93cee224",
         "links": [
           {
             "url": "https://buzzheavier.com/spa089c5hy8o",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -961,13 +1153,17 @@
     "versions": [
       {
         "version": "5.17.21.0",
+        "any": "no",
+        "versioncode": "",
         "size": "5.17.21.0",
-        "sha1": "098ab42d78fba91d92e011573ae0c1b214a58161",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "098ab42d78fba91d92e011573ae0c1b214a58161",
         "links": [
           {
             "url": "https://buzzheavier.com/0xp0k4c6n6rz",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -981,13 +1177,17 @@
     "versions": [
       {
         "version": "26.1.2.0",
+        "any": "no",
+        "versioncode": "",
         "size": "198.5MB",
-        "sha1": "d2f51f4373b234fb03b4712785b7be754bff580a",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "d2f51f4373b234fb03b4712785b7be754bff580a",
         "links": [
           {
             "url": "https://buzzheavier.com/firafpkj575x",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1001,13 +1201,17 @@
     "versions": [
       {
         "version": "7.20.build131",
+        "any": "no",
+        "versioncode": "",
         "size": "6.1MB",
-        "sha1": "dadf32b0bff1ebcbe0ba8c234a0106e30e1fe4e2",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "dadf32b0bff1ebcbe0ba8c234a0106e30e1fe4e2",
         "links": [
           {
             "url": "https://buzzheavier.com/36a2jeswwp8s",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1021,13 +1225,17 @@
     "versions": [
       {
         "version": "2026.03.0",
+        "any": "no",
+        "versioncode": "",
         "size": "70.3MB",
-        "sha1": "a9be4dbb809fb43021c0b8c7f5e550f94d5bff36",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "a9be4dbb809fb43021c0b8c7f5e550f94d5bff36",
         "links": [
           {
             "url": "https://buzzheavier.com/llmllhojfuhw",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1043,14 +1251,18 @@
     "versions": [
       {
         "version": "13.0.46",
-        "size": "26.9MB",
-        "sha1": "83ee87934436b47cb5e594f14edfc7cdd3b14af9",
+        "any": "no",
+        "versioncode": "",
         "warning": "This app uses Pairip/Google Integrity to protect it from modification, so it is not possible to use AntiSplit M to convert it into an APK file without a patch to prevent the app from crashing. <br> (There isn't a patch have made for it yet.)",
+        "size": "26.9MB",
         "type": "xapk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "83ee87934436b47cb5e594f14edfc7cdd3b14af9",
         "links": [
           {
             "url": "https://buzzheavier.com/th0690gce08n",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1066,13 +1278,17 @@
     "versions": [
       {
         "version": "5.6.22",
+        "any": "no",
+        "versioncode": "",
         "size": "12.2MB",
-        "sha1": "a56498b8bd5c44bb1ac94da03b51998736ef085f",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "a56498b8bd5c44bb1ac94da03b51998736ef085f",
         "links": [
           {
             "url": "https://buzzheavier.com/fnz2etkcgau2",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1087,13 +1303,17 @@
     "versions": [
       {
         "version": "12.3.00.11",
+        "any": "no",
+        "versioncode": "",
         "size": "5.5MB ",
-        "sha1": "03470dee2cfb238f8a875d6b3f39ebe6dd4158f7",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "03470dee2cfb238f8a875d6b3f39ebe6dd4158f7",
         "links": [
           {
             "url": "https://buzzheavier.com/6eu5cmlzc4u6",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1107,13 +1327,17 @@
     "versions": [
       {
         "version": "5.0.2",
+        "any": "no",
+        "versioncode": "",
         "size": "34.8MB",
-        "sha1": "4c72c5aa3c36ba7018d3e5cd95da7aa9aa2d578f",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "4c72c5aa3c36ba7018d3e5cd95da7aa9aa2d578f",
         "links": [
           {
             "url": "https://buzzheavier.com/tsr0txvgvspz",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1128,13 +1352,17 @@
     "versions": [
       {
         "version": "7.4.4",
+        "any": "no",
+        "versioncode": "",
         "size": "32.9 MB",
-        "sha256": "b239716209301d0401e80927c7deaf60b4256fa8b26989b4e9983f4aed238d90",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha256": "b239716209301d0401e80927c7deaf60b4256fa8b26989b4e9983f4aed238d90",
         "links": [
           {
             "url": "https://github.com/cygnusx-1-org/Slide/releases/download/7.4.4/slide-7.4.4.apk",
-            "name": "GitHub Link"
+            "url-name": "GitHub Link"
           }
         ]
       }
@@ -1148,13 +1376,17 @@
     "versions": [
       {
         "version": "3.4.4",
+        "any": "no",
+        "versioncode": "",
         "size": "21.3MB",
-        "sha1": "28ed73c24ff9dff5aa2053cfec7c121ba25a6c93",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "28ed73c24ff9dff5aa2053cfec7c121ba25a6c93",
         "links": [
           {
             "url": "https://buzzheavier.com/m688jjmcrgx3",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1168,13 +1400,17 @@
     "versions": [
       {
         "version": "10.1.0",
+        "any": "no",
+        "versioncode": "",
         "size": "60.7MB ",
-        "sha1": "96c1cf9e48dd55b050cb8e7ae51b80a457b0d23d",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "96c1cf9e48dd55b050cb8e7ae51b80a457b0d23d",
         "links": [
           {
             "url": "https://buzzheavier.com/vx92oivk83qd",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1188,13 +1424,17 @@
     "versions": [
       {
         "version": "2025.05.27-release",
+        "any": "no",
+        "versioncode": "",
         "size": "65.7MB",
-        "sha1": "705b13a14cfbb571542de0a4b85da3bd6c394994",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "705b13a14cfbb571542de0a4b85da3bd6c394994",
         "links": [
           {
             "url": "https://buzzheavier.com/t9z9m9batvl2",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1208,13 +1448,17 @@
     "versions": [
       {
         "version": "1.8.2",
+        "any": "no",
+        "versioncode": "",
         "size": "84.6MB",
-        "sha1": "5a6cf81653c75bd47bc461b418da9324f65d7c35",
         "type": "xapk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "5a6cf81653c75bd47bc461b418da9324f65d7c35",
         "links": [
           {
             "url": "https://buzzheavier.com/rffz86kastzh",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1228,13 +1472,17 @@
     "versions": [
       {
         "version": "9.1.38.635",
+        "any": "no",
+        "versioncode": "",
         "size": "45.3MB",
-        "sha1": "58998c49f84c3b70da569cd9c870abfb9a0b4257",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "58998c49f84c3b70da569cd9c870abfb9a0b4257",
         "links": [
           {
             "url": "https://buzzheavier.com/5ic2c5xu050v",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1248,13 +1496,17 @@
     "versions": [
       {
         "version": "10.68.0",
+        "any": "no",
+        "versioncode": "",
         "size": "45.2MB",
-        "sha1": "7d7eaa6302cd29526fba516b1b0b08c7d900a16f",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "7d7eaa6302cd29526fba516b1b0b08c7d900a16f",
         "links": [
           {
             "url": "https://buzzheavier.com/gh1nshlvt1qd",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1268,13 +1520,17 @@
     "versions": [
       {
         "version": "456.10",
+        "any": "no",
+        "versioncode": "",
         "size": "145.9MB",
-        "sha1": "85c9ea415a2766a999847cb5ff6a260969fcba2a",
         "type": "xapk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "85c9ea415a2766a999847cb5ff6a260969fcba2a",
         "links": [
           {
             "url": "https://buzzheavier.com/ba6r5lk0u71m",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1288,13 +1544,17 @@
     "versions": [
       {
         "version": "5.2.9",
+        "any": "no",
+        "versioncode": "",
         "size": "158.8MB",
-        "sha1": "ce8db21ce276adfb382e3078773458f006ac1681",
         "type": "xapk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "ce8db21ce276adfb382e3078773458f006ac1681",
         "links": [
           {
             "url": "https://buzzheavier.com/w0docjpki3s8",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1308,13 +1568,17 @@
     "versions": [
       {
         "version": "v24.03.26",
+        "any": "no",
+        "versioncode": "",
         "size": "72.4MB",
-        "sha1": "c409d8d6a5a34b7064c6bb7ad127fb63fa6cf12f",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "c409d8d6a5a34b7064c6bb7ad127fb63fa6cf12f",
         "links": [
           {
             "url": "https://buzzheavier.com/p9twxa4yy6j2",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1331,13 +1595,17 @@
     "versions": [
       {
         "version": "v23.06.30-13:39",
+        "any": "no",
+        "versioncode": "",
         "size": "68.0MB",
-        "sha1": "c62613bd95345ff23930deb88f34f4dcc1bd89d0",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "c62613bd95345ff23930deb88f34f4dcc1bd89d0",
         "links": [
           {
             "url": "https://buzzheavier.com/gg8tiz1n05iu",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1351,13 +1619,17 @@
     "versions": [
       {
         "version": "382.0.0.51.85",
+        "any": "no",
+        "versioncode": "",
         "size": "65.2MB",
-        "sha1": "b4b1c6e4fea0d0129cbd2a391fd7bfd1fa47aa37",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "b4b1c6e4fea0d0129cbd2a391fd7bfd1fa47aa37",
         "links": [
           {
             "url": "https://buzzheavier.com/7zzpy3jcg6wc",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1371,13 +1643,17 @@
     "versions": [
       {
         "version": "8.0.5.0",
+        "any": "no",
+        "versioncode": "",
         "size": "51.1MB",
-        "sha1": "728add7e52e05bb22fdca4e6311d77888355afdd",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "728add7e52e05bb22fdca4e6311d77888355afdd",
         "links": [
           {
             "url": "https://buzzheavier.com/uj0kc3tjanhb",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1392,13 +1668,17 @@
     "versions": [
       {
         "version": "36.5.4",
+        "any": "no",
+        "versioncode": "",
         "size": "378.7MB",
-        "sha1": "da01c856cae31b9dfac0814316c6df6fa8995549",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "da01c856cae31b9dfac0814316c6df6fa8995549",
         "links": [
           {
             "url": "https://buzzheavier.com/a2n3hosc9pmy",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1412,13 +1692,17 @@
     "versions": [
       {
         "version": "1.1.1",
+        "any": "no",
+        "versioncode": "",
         "size": "39.2MB",
-        "sha1": "5ba30cb358684e1071c8a0b17ecc4ebab66d7420",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "5ba30cb358684e1071c8a0b17ecc4ebab66d7420",
         "links": [
           {
             "url": "https://buzzheavier.com/o6k8ia19tow9",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1432,13 +1716,17 @@
     "versions": [
       {
         "version": "5.10.1",
+        "any": "no",
+        "versioncode": "",
         "size": "14.6MB",
-        "sha1": "990fbfca6ffc7aaf9e276cdb5373d9c4b8f58e56",
         "type": "xapk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "990fbfca6ffc7aaf9e276cdb5373d9c4b8f58e56",
         "links": [
           {
             "url": "https://buzzheavier.com/7vzen44h2e0t",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1452,13 +1740,17 @@
     "versions": [
       {
         "version": "43.9.0.109",
+        "any": "no",
+        "versioncode": "",
         "size": "37.5MB",
-        "sha1": "eba382a246b6c408f3eb2b0955a317232486d84f",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "eba382a246b6c408f3eb2b0955a317232486d84f",
         "links": [
           {
             "url": "https://buzzheavier.com/cbdhvueay9ia",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1472,13 +1764,17 @@
     "versions": [
       {
         "version": "16.9.1",
+        "any": "no",
+        "versioncode": "",
         "size": "129.6MB",
-        "sha1": "54ba98a9d317ef0e9e5865d247faf0268d6070b9",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "54ba98a9d317ef0e9e5865d247faf0268d6070b9",
         "links": [
           {
             "url": "https://buzzheavier.com/idk0a2cfv7y3",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1493,13 +1789,17 @@
     "versions": [
       {
         "version": "10.86.0-release.0",
+        "any": "no",
+        "versioncode": "",
         "size": "91.3MB",
-        "sha1": "42e5edbd06c21fcd42152c0c1020ae7204bd56b1",
         "type": "apkm",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "42e5edbd06c21fcd42152c0c1020ae7204bd56b1",
         "links": [
           {
             "url": "https://buzzheavier.com/zdh76u0u3dq3",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1513,13 +1813,17 @@
     "versions": [
       {
         "version": "4.2.2",
+        "any": "no",
+        "versioncode": "",
         "size": "59.1MB",
-        "sha1": "d53a59983770081d67db216601fab02399e94f28",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "d53a59983770081d67db216601fab02399e94f28",
         "links": [
           {
             "url": "https://buzzheavier.com/30flhzrq6k7j",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1533,13 +1837,17 @@
     "versions": [
       {
         "version": "8.37.0",
+        "any": "no",
+        "versioncode": "",
         "size": "14.9MB",
-        "sha1": "b2633f6b4f17e172a378d810d19a8ca26cec7512",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "b2633f6b4f17e172a378d810d19a8ca26cec7512",
         "links": [
           {
             "url": "https://buzzheavier.com/eqituvy7s9f7",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1553,13 +1861,17 @@
     "versions": [
       {
         "version": "20.40.45",
+        "any": "no",
+        "versioncode": "",
         "size": "161.7MB ",
-        "sha1": "57615d731564be85905da2fda948491a22fc2118",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "57615d731564be85905da2fda948491a22fc2118",
         "links": [
           {
             "url": "https://buzzheavier.com/i3uffo53jgs8",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }
@@ -1573,13 +1885,17 @@
     "versions": [
       {
         "version": "8.40.54",
+        "any": "no",
+        "versioncode": "",
         "size": "63.0MB",
-        "sha1": "6335247b93f05cfdf6d6ea6fd42645439e829c49",
         "type": "apk",
+        "arch": "Universal",
+        "dpi": "",
+        "sha1": "6335247b93f05cfdf6d6ea6fd42645439e829c49",
         "links": [
           {
             "url": "https://buzzheavier.com/y8jpqgufb0b8",
-            "name": "Buzzheavier Link"
+            "url-name": "Buzzheavier Link"
           }
         ]
       }

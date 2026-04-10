@@ -114,9 +114,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             processedHashes: new Set()
         };
 
+        const filePromises = [];
         for (let i = 0; i < rawFileCount; i++) {
-            await processFile(files[i], state);
+            filePromises.push(processFile(files[i], state));
         }
+        await Promise.all(filePromises);
 
         if (timerInterval) clearInterval(timerInterval);
 
@@ -169,7 +171,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         try {
-            const arrayBuffer = await file.arrayBuffer();
+            const arrayBufferPromise = file.arrayBuffer();
+            const zipPromise = JSZip.loadAsync(file);
+
+            const arrayBuffer = await arrayBufferPromise;
             const hashBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
             const hashArray = Array.from(new Uint8Array(hashBuffer));
             const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
@@ -188,7 +193,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             const formatClass = `type-${ext === 'apkm' ? 'apkm' : (ext === 'xapk' ? 'xapk' : 'apk')}`;
 
-            const zip = await JSZip.loadAsync(file);
+            const zip = await zipPromise;
             
             let appName = 'Unknown App';
             let packageName = 'Unknown Package';
@@ -293,21 +298,20 @@ document.addEventListener('DOMContentLoaded', async () => {
                         versionCode = (ext === 'xapk' && xapkManifest && xapkManifest.version_code) ? xapkManifest.version_code : (result.versionCode || versionCode);
                         iconSrc = result.icon || iconSrc;
 
-                        const searchTarget = {};
-                        if (result.manifest) searchTarget.manifest = result.manifest;
-                        if (result.application) searchTarget.application = result.application;
-                        
-                        const resultStr = JSON.stringify(searchTarget);
+                        const strippedTarget = JSON.stringify({
+                            manifest: result.manifest,
+                            usesPermissions: result.usesPermissions
+                        });
 
-                        if (resultStr.includes('"anyDensity":false') || resultStr.includes('"anyDensity":"false"')) isAnyDensity = false;
+                        if (strippedTarget.includes('"anyDensity":false') || strippedTarget.includes('"anyDensity":"false"')) isAnyDensity = false;
 
-                        const manifestArchMatch = resultStr.match(/(?:^|[^a-z0-9])(arm64[_-]v8a|armeabi[_-]v7a|x86_64|x86)(?:[^a-z0-9]|$)/ig);
+                        const manifestArchMatch = strippedTarget.match(/(?:^|[^a-z0-9])(arm64[_-]v8a|armeabi[_-]v7a|x86_64|x86)(?:[^a-z0-9]|$)/ig);
                         if (manifestArchMatch) manifestArchMatch.forEach(m => archs.add(m.match(/(arm64[_-]v8a|armeabi[_-]v7a|x86_64|x86)/i)[0].toLowerCase()));
 
-                        const manifestDpiMatch = resultStr.match(/(?:^|[^a-z])(xxxhdpi|xxhdpi|xhdpi|hdpi|mdpi|ldpi|tvdpi)(?:[^a-z]|$)/ig);
+                        const manifestDpiMatch = strippedTarget.match(/(?:^|[^a-z])(xxxhdpi|xxhdpi|xhdpi|hdpi|mdpi|ldpi|tvdpi)(?:[^a-z]|$)/ig);
                         if (manifestDpiMatch) manifestDpiMatch.forEach(m => dpis.add(m.match(/(xxxhdpi|xxhdpi|xhdpi|hdpi|mdpi|ldpi|tvdpi)/i)[0].toLowerCase()));
 
-                        const densityNumMatch = resultStr.match(/(?:screenDensity|density)["']?\s*:\s*["']?(\d+)/ig);
+                        const densityNumMatch = strippedTarget.match(/(?:screenDensity|density)["']?\s*:\s*["']?(\d+)/ig);
                         if (densityNumMatch) densityNumMatch.forEach(m => dpis.add(m.match(/\d+/)[0]));
 
                     } catch (err) {}

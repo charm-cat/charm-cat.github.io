@@ -67,9 +67,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         let batchData = {}; 
+        let processedHashes = new Set(); 
 
         for (let i = 0; i < files.length; i++) {
-            await processFile(files[i], batchData);
+            await processFile(files[i], batchData, processedHashes);
         }
 
         const sortedBatch = Object.values(batchData).sort((a, b) => a.id.localeCompare(b.id));
@@ -81,16 +82,21 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (batchCard) {
                 updateBatchJsonCard(batchCard, sortedBatch);
             } else {
-                renderBatchJsonCard(sortedBatch);
+                renderBatchJsonCard(sortedBatch); 
             }
         } else if (batchCard) {
-            batchCard.remove();
+            batchCard.remove(); 
         }
 
         loading.style.display = 'none';
     }
 
-    async function processFile(file, batchData) {
+    function sanitizeString(str) {
+        if (!str) return undefined;
+        return str.replace(/<br\s*\/?>/gi, ' ').replace(/[\r\n\t]+/g, ' ').replace(/\s\s+/g, ' ').trim();
+    }
+
+    async function processFile(file, batchData, processedHashes) {
         const ext = file.name.split('.').pop().toLowerCase();
         const validExts = ['apk', 'apkm', 'xapk'];
         
@@ -100,6 +106,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         try {
+            const arrayBuffer = await file.arrayBuffer();
+            const hashBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+            if (processedHashes.has(hashHex)) {
+                return; 
+            }
+            processedHashes.add(hashHex);
+
             const rawSizeMB = (file.size / (1024 * 1024)).toFixed(1);
             const fileSizeMB = rawSizeMB + 'MB';
             
@@ -254,7 +270,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     isX86 = true; 
                     archWarningHTML = `
                         <div class="app-important" style="margin-bottom: 16px;">
-                            <strong>❗ Important:</strong><br><br> x86 architecture is not supported by ReVanced Manager.
+                            <strong>❗ Important:</strong> x86 architecture is not supported by ReVanced Manager.
                         </div>
                     `;
                 }
@@ -280,34 +296,49 @@ document.addEventListener('DOMContentLoaded', async () => {
                 finalDpiText = isAnyDensity ? 'nodpi' : 'nodpi';
             }
 
-            const arrayBuffer = await file.arrayBuffer();
-            const hashBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-
             let jsonSnippet = '';
+            let uiImportantMsgHTML = '';
+            let uiWarningMsgHTML = '';
 
             if (!isX86) {
                 const matchedApp = existingAppData.find(app => 
                     (app.packageName && app.packageName === packageName) || 
                     (app.secondaryPackageName && app.secondaryPackageName === packageName) ||
+                    (app.thirdPackageName && app.thirdPackageName === packageName) ||
                     (app.name && app.name.toLowerCase() === appName.toLowerCase())
                 );
                 
                 let jsonId = ""; 
+                let jsonName = appName;
                 let jsonIcon = `icons/unknown.png`;
+                let jsonPackageName = packageName;
+                let jsonSecondaryPackageName = undefined;
+                let jsonThirdPackageName = undefined;
+                let jsonImportant = undefined;
+
                 let jsonAny = "no";
+                let jsonWarning = undefined;
+                let jsonNote = undefined;
                 let jsonLinks = [{ "url": "", "url-name": "" }];
 
                 if (matchedApp) {
                     jsonId = matchedApp.id || "";
+                    jsonName = matchedApp.name || appName;
                     jsonIcon = matchedApp.icon || jsonIcon;
+                    jsonPackageName = matchedApp.packageName || packageName;
+                    jsonSecondaryPackageName = matchedApp.secondaryPackageName;
+                    jsonThirdPackageName = matchedApp.thirdPackageName;
+                    
+                    jsonImportant = sanitizeString(matchedApp.important);
                     
                     if (matchedApp.versions && matchedApp.versions.length > 0) {
-                        const matchedVersion = matchedApp.versions.find(v => v.version === versionName);
+                        const matchedVersion = matchedApp.versions.find(v => v.version === versionName) || matchedApp.versions[0];
                         
                         if (matchedVersion) {
                             jsonAny = matchedVersion.any || "no";
+                            jsonWarning = sanitizeString(matchedVersion.warning);
+                            jsonNote = sanitizeString(matchedVersion.note);
+
                             if (matchedVersion.links && matchedVersion.links.length > 0) {
                                 jsonLinks = matchedVersion.links.map(link => ({
                                     "url": link.url || "",
@@ -316,6 +347,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                             }
                         }
                     }
+
+                    if (jsonImportant) {
+                        uiImportantMsgHTML = `
+                            <div class="app-important" style="margin-bottom: 16px;">
+                                <strong>‼️ Important:</strong> ${jsonImportant}
+                            </div>
+                        `;
+                    }
+                    if (jsonWarning) {
+                        uiWarningMsgHTML = `
+                            <div class="version-warning" style="margin-bottom: 16px;">
+                                <strong>⚠️ Warning:</strong> ${jsonWarning}
+                            </div>
+                        `;
+                    }
+
                 } else if (packageName) {
                     jsonIcon = `icons/${packageName.replace(/\./g, '-')}.png`;
                 }
@@ -323,22 +370,30 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const versionObj = {
                     version: versionName,
                     any: jsonAny,
-                    versionCode: versionCode ? versionCode.toString() : "",
-                    size: fileSizeMB,
-                    type: ext,
-                    arch: finalArch,
-                    dpi: finalDpiText.replace('dpi', ''), 
-                    sha256: hashHex,
-                    links: jsonLinks
                 };
+                if (jsonWarning) versionObj.warning = jsonWarning;
+                if (jsonNote) versionObj.note = jsonNote;
+                
+                versionObj.versionCode = versionCode ? versionCode.toString() : "";
+                versionObj.size = fileSizeMB;
+                versionObj.type = ext;
+                versionObj.arch = finalArch;
+                versionObj.dpi = finalDpiText.replace('dpi', ''); 
+                versionObj.sha256 = hashHex;
+                versionObj.links = jsonLinks;
 
                 const generatedJsonData = {
                     id: jsonId,
-                    name: appName,
+                    name: jsonName,
                     icon: jsonIcon,
-                    packageName: packageName,
-                    versions: [ versionObj ]
+                    packageName: jsonPackageName
                 };
+                
+                if (jsonSecondaryPackageName) generatedJsonData.secondaryPackageName = jsonSecondaryPackageName;
+                if (jsonThirdPackageName) generatedJsonData.thirdPackageName = jsonThirdPackageName;
+                if (jsonImportant) generatedJsonData.important = jsonImportant;
+                
+                generatedJsonData.versions = [ versionObj ];
 
                 jsonSnippet = JSON.stringify(generatedJsonData, null, 2);
 
@@ -346,9 +401,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (!batchData[mapId]) {
                     batchData[mapId] = {
                         id: jsonId,
-                        name: appName,
+                        name: jsonName,
                         icon: jsonIcon,
-                        packageName: packageName,
+                        packageName: jsonPackageName,
+                        secondaryPackageName: jsonSecondaryPackageName,
+                        thirdPackageName: jsonThirdPackageName,
+                        important: jsonImportant,
                         versions: []
                     };
                 }
@@ -358,7 +416,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             renderSuccessCard({
                 appName, packageName, versionName, versionCode,
                 fileSizeMB, fileFormat, formatClass, finalArch, archWarningHTML,
-                finalDpiText, hashHex, iconSrc, jsonSnippet, isX86
+                finalDpiText, hashHex, iconSrc, jsonSnippet, isX86,
+                uiImportantMsgHTML, uiWarningMsgHTML
             });
 
         } catch (error) {
@@ -376,7 +435,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                 </div>
                 <div class="version-list show">
-                    <div class="json-block-wrapper" style="border-radius: 12px; margin-top: 8px; text-align: center; padding: 24px;">
+                    <button class="download-json-btn" disabled style="margin-bottom: 12px; background-color: var(--md-sys-color-surface-variant); color: var(--md-sys-color-on-surface-variant); border: none; padding: 8px 16px; border-radius: 8px; cursor: not-allowed; font-weight: bold; font-family: inherit; transition: all 0.2s ease;">⏳ Generating...</button>
+                    <div class="json-block-wrapper" style="border-radius: 12px; text-align: center; padding: 24px;">
                         <em>Processing files... Please wait.</em>
                     </div>
                 </div>
@@ -386,7 +446,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function updateBatchJsonCard(cardElement, batchArray) {
-        const batchSnippet = JSON.stringify(batchArray, null, 2);
+        const cleanBatchArray = batchArray.map(app => {
+            let cleanApp = { ...app };
+            if (!cleanApp.secondaryPackageName) delete cleanApp.secondaryPackageName;
+            if (!cleanApp.thirdPackageName) delete cleanApp.thirdPackageName;
+            if (!cleanApp.important) delete cleanApp.important;
+            return cleanApp;
+        });
+
+        const batchSnippet = JSON.stringify(cleanBatchArray, null, 2);
         cardElement.innerHTML = `
             <div class="app-header">
                 <div class="app-title" style="width: 100%;">
@@ -395,6 +463,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             </div>
             <div class="version-list show">
+                <button class="download-json-btn" onclick="downloadJsonFile(this, 'data.json')" style="margin-bottom: 12px; background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: inherit; transition: all 0.2s ease;">📥 Download JSON File</button>
                 <details class="json-details">
                     <summary>Show Aggregated JSON</summary>
                     <div class="json-block-wrapper" style="border-radius: 12px; margin-top: 8px;">
@@ -407,7 +476,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     function renderBatchJsonCard(batchArray) {
-        const batchSnippet = JSON.stringify(batchArray, null, 2);
+        const cleanBatchArray = batchArray.map(app => {
+            let cleanApp = { ...app };
+            if (!cleanApp.secondaryPackageName) delete cleanApp.secondaryPackageName;
+            if (!cleanApp.thirdPackageName) delete cleanApp.thirdPackageName;
+            if (!cleanApp.important) delete cleanApp.important;
+            return cleanApp;
+        });
+
+        const batchSnippet = JSON.stringify(cleanBatchArray, null, 2);
         const cardHTML = `
             <div id="batch-json-card" class="app-card" style="border: 2px solid var(--md-sys-color-tertiary); margin-bottom: 24px;">
                 <div class="app-header">
@@ -417,6 +494,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                 </div>
                 <div class="version-list show">
+                    <button class="download-json-btn" onclick="downloadJsonFile(this, 'aggregated_data.json')" style="margin-bottom: 12px; background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: inherit; transition: all 0.2s ease;">📥 Download JSON File</button>
                     <details class="json-details">
                         <summary>Show Aggregated JSON</summary>
                         <div class="json-block-wrapper" style="border-radius: 12px; margin-top: 8px;">
@@ -456,14 +534,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                 </div>
                 <div class="version-list show">
-                    ${data.archWarningHTML}
+                    ${data.uiImportantMsgHTML || ''}
+                    ${data.archWarningHTML || ''}
+                    ${data.uiWarningMsgHTML || ''}
                     <div class="version-item">
                         <div class="version-details">
                             <span class="version-number"><strong>Version:</strong> ${data.versionName} <span style="font-size: 0.9em; opacity: 0.8;">${data.versionCode ? `(${data.versionCode})` : ''}</span></span>
                             <span class="version-size"><strong>Size:</strong> ${data.fileSizeMB}</span>
+                            <span class="version-type"><strong>Format:</strong> <span class="${data.formatClass}">${data.fileFormat}</span></span>
                             <span class="version-architecture"><strong>Architecture:</strong> ${data.finalArch}</span>
                             <span class="version-dpi"><strong>Screen DPI:</strong> ${data.finalDpiText}</span>
-                            <span class="version-type"><strong>Type:</strong> <span class="${data.formatClass}">${data.fileFormat}</span></span>
                             <span class="version-hash" style="word-break: break-all;"><strong>SHA-256:</strong> <code>${data.hashHex}</code></span>
                         </div>
                     </div>
@@ -489,8 +569,35 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+window.downloadJsonFile = function(btn, filename) {
+    try {
+        const detailsContainer = btn.nextElementSibling;
+        const codeBlockText = detailsContainer.querySelector('.json-code').textContent;
+        
+        const blob = new Blob([codeBlockText], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '✅ Downloaded!';
+        btn.style.backgroundColor = 'var(--md-sys-color-secondary)';
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.backgroundColor = 'var(--md-sys-color-primary)';
+        }, 2000);
+    } catch (err) {
+        alert('Failed to download JSON file.');
+    }
+};
+
 window.copyJsonCode = function(btn) {
-    const codeBlock = btn.nextElementSibling.innerText;
+    const codeBlock = btn.nextElementSibling.textContent;
     navigator.clipboard.writeText(codeBlock).then(() => {
         const originalText = btn.textContent;
         btn.textContent = 'Copied!';

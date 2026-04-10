@@ -62,8 +62,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         resultsContainer.innerHTML = '';
         loading.style.display = 'block';
 
+        let timerInterval;
+        const batchStartTime = performance.now();
+
         if (files.length > 1) {
             renderLoadingBatchJsonCard(files.length);
+            
+            timerInterval = setInterval(() => {
+                const elapsed = performance.now() - batchStartTime;
+                const btn = document.getElementById('loading-timer-btn');
+                if (btn) {
+                    btn.textContent = `⏳ Generating... (${(elapsed / 1000).toFixed(1)}s)`;
+                }
+            }, 100);
         }
 
         let batchData = {}; 
@@ -73,6 +84,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             await processFile(files[i], batchData, processedHashes);
         }
 
+        if (timerInterval) clearInterval(timerInterval);
+
+        const batchEndTime = performance.now();
+        const batchTimeMs = batchEndTime - batchStartTime;
+        const batchTimeFormatted = batchTimeMs >= 1000 ? (batchTimeMs / 1000).toFixed(2) + 's' : Math.round(batchTimeMs) + 'ms';
+
         const sortedBatch = Object.values(batchData).sort((a, b) => a.id.localeCompare(b.id));
         const totalVersions = sortedBatch.reduce((sum, app) => sum + app.versions.length, 0);
 
@@ -80,9 +97,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         if (totalVersions > 1) {
             if (batchCard) {
-                updateBatchJsonCard(batchCard, sortedBatch);
+                updateBatchJsonCard(batchCard, sortedBatch, batchTimeFormatted);
             } else {
-                renderBatchJsonCard(sortedBatch); 
+                renderBatchJsonCard(sortedBatch, batchTimeFormatted); 
             }
         } else if (batchCard) {
             batchCard.remove(); 
@@ -97,6 +114,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function processFile(file, batchData, processedHashes) {
+        const appStartTime = performance.now();
+
         const ext = file.name.split('.').pop().toLowerCase();
         const validExts = ['apk', 'apkm', 'xapk'];
         
@@ -378,7 +397,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 versionObj.size = fileSizeMB;
                 versionObj.type = ext;
                 versionObj.arch = finalArch;
-                versionObj.dpi = finalDpiText.replace('dpi', ''); 
+                versionObj.dpi = finalDpiText; 
                 versionObj.sha256 = hashHex;
                 versionObj.links = jsonLinks;
 
@@ -413,11 +432,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                 batchData[mapId].versions.push(versionObj);
             }
 
+            const appEndTime = performance.now();
+            const appTimeMs = appEndTime - appStartTime;
+            const appTimeFormatted = appTimeMs >= 1000 ? (appTimeMs / 1000).toFixed(2) + 's' : Math.round(appTimeMs) + 'ms';
+
             renderSuccessCard({
                 appName, packageName, versionName, versionCode,
                 fileSizeMB, fileFormat, formatClass, finalArch, archWarningHTML,
                 finalDpiText, hashHex, iconSrc, jsonSnippet, isX86,
-                uiImportantMsgHTML, uiWarningMsgHTML
+                uiImportantMsgHTML, uiWarningMsgHTML, appTimeFormatted
             });
 
         } catch (error) {
@@ -435,7 +458,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                 </div>
                 <div class="version-list show">
-                    <button class="download-json-btn" disabled style="margin-bottom: 12px; background-color: var(--md-sys-color-surface-variant); color: var(--md-sys-color-on-surface-variant); border: none; padding: 8px 16px; border-radius: 8px; cursor: not-allowed; font-weight: bold; font-family: inherit; transition: all 0.2s ease;">⏳ Generating...</button>
+                    <button id="loading-timer-btn" disabled style="margin-bottom: 12px; background-color: var(--md-sys-color-surface-variant); color: var(--md-sys-color-on-surface-variant); border: none; padding: 8px 16px; border-radius: 8px; cursor: not-allowed; font-weight: bold; font-family: inherit; transition: all 0.2s ease;">⏳ Generating... (0.0s)</button>
                     <div class="json-block-wrapper" style="border-radius: 12px; text-align: center; padding: 24px;">
                         <em>Processing files... Please wait.</em>
                     </div>
@@ -445,7 +468,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         resultsContainer.insertAdjacentHTML('afterbegin', cardHTML);
     }
 
-    function updateBatchJsonCard(cardElement, batchArray) {
+    function updateBatchJsonCard(cardElement, batchArray, batchTimeFormatted) {
         const cleanBatchArray = batchArray.map(app => {
             let cleanApp = { ...app };
             if (!cleanApp.secondaryPackageName) delete cleanApp.secondaryPackageName;
@@ -463,9 +486,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             </div>
             <div class="version-list show">
-                <button class="download-json-btn" onclick="downloadJsonFile(this, 'data.json')" style="margin-bottom: 12px; background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: inherit; transition: all 0.2s ease;">📥 Download JSON File</button>
+                <button class="download-json-btn" onclick="downloadJsonFile(this, 'aggregated_data.json')" style="margin-bottom: 12px; background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: inherit; transition: all 0.2s ease;">📥 Download JSON File</button>
                 <details class="json-details">
-                    <summary>Show Aggregated JSON</summary>
+                    <summary>
+                        <span style="display: inline-flex; width: calc(100% - 20px); justify-content: space-between; align-items: center; vertical-align: middle;">
+                            <span style="text-decoration: underline;">Show Aggregated JSON</span>
+                            <span style="font-size: 0.9em; color: var(--md-sys-color-primary); font-weight: normal; text-decoration: none;">⏱️ Processed in ${batchTimeFormatted}</span>
+                        </span>
+                    </summary>
                     <div class="json-block-wrapper" style="border-radius: 12px; margin-top: 8px;">
                         <button class="copy-json-btn" onclick="copyJsonCode(this)">Copy All JSON</button>
                         <pre><code class="json-code">${batchSnippet}</code></pre>
@@ -475,7 +503,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         `;
     }
 
-    function renderBatchJsonCard(batchArray) {
+    function renderBatchJsonCard(batchArray, batchTimeFormatted) {
         const cleanBatchArray = batchArray.map(app => {
             let cleanApp = { ...app };
             if (!cleanApp.secondaryPackageName) delete cleanApp.secondaryPackageName;
@@ -496,7 +524,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="version-list show">
                     <button class="download-json-btn" onclick="downloadJsonFile(this, 'aggregated_data.json')" style="margin-bottom: 12px; background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: inherit; transition: all 0.2s ease;">📥 Download JSON File</button>
                     <details class="json-details">
-                        <summary>Show Aggregated JSON</summary>
+                        <summary>
+                            <span style="display: inline-flex; width: calc(100% - 20px); justify-content: space-between; align-items: center; vertical-align: middle;">
+                                <span style="text-decoration: underline;">Show Aggregated JSON</span>
+                                <span style="font-size: 0.9em; color: var(--md-sys-color-primary); font-weight: normal; text-decoration: none;">⏱️ Processed in ${batchTimeFormatted}</span>
+                            </span>
+                        </summary>
                         <div class="json-block-wrapper" style="border-radius: 12px; margin-top: 8px;">
                             <button class="copy-json-btn" onclick="copyJsonCode(this)">Copy All JSON</button>
                             <pre><code class="json-code">${batchSnippet}</code></pre>
@@ -514,7 +547,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         const jsonHTML = data.isX86 ? '' : `
             <details class="json-details">
-                <summary>Show JSON Output</summary>
+                <summary>
+                    <span style="display: inline-flex; width: calc(100% - 20px); justify-content: space-between; align-items: center; vertical-align: middle;">
+                        <span style="text-decoration: underline;">Show JSON Output</span>
+                        <span style="font-size: 0.9em; color: var(--md-sys-color-primary); font-weight: normal; text-decoration: none;">⏱️ Processed in ${data.appTimeFormatted}</span>
+                    </span>
+                </summary>
                 <div class="json-block-wrapper">
                     <button class="copy-json-btn" onclick="copyJsonCode(this)">Copy JSON</button>
                     <pre><code class="json-code">${data.jsonSnippet}</code></pre>

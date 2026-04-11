@@ -322,6 +322,7 @@ body.light-mode .type-xapk {
     white-space: nowrap; 
     text-decoration: none;
     transition: opacity 0.2s, text-decoration 0.2s;
+    word-break: break-all;
 }
 
 .version-count-link:hover {

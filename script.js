@@ -101,27 +101,17 @@ function setupSearchAndSort() {
     });
 
     searchInput.addEventListener('input', () => {
-        if (clearSearchBtn) {
-            if (searchInput.value.length > 0) {
-                clearSearchBtn.classList.add('show');
-            } else {
-                clearSearchBtn.classList.remove('show');
-            }
-        }
         updateDisplay();
     });
 
     if (clearSearchBtn) {
+        clearSearchBtn.classList.add('show');
+        
         clearSearchBtn.addEventListener('click', () => {
             searchInput.value = '';
-            clearSearchBtn.classList.remove('show');
             updateDisplay();
             searchInput.focus();
         });
-
-        if (searchInput.value.length > 0) {
-            clearSearchBtn.classList.add('show');
-        }
     }
 
     toggleAllBtn.addEventListener('click', () => {
@@ -142,30 +132,121 @@ function setupSearchAndSort() {
 
 function updateDisplay() {
     const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    const isPatchesPage = window.location.pathname.includes('patches'); 
+
+    const dpiMap = {
+        'ldpi': 120,
+        'mdpi': 160,
+        'tvdpi': 213,
+        'hdpi': 240,
+        'xhdpi': 320,
+        'xxhdpi': 480,
+        'xxxhdpi': 640
+    };
+
+    let targetDpiValue = null;
+    const searchWords = searchTerm.split(/\s+/); 
+    for (const word of searchWords) {
+        if (dpiMap[word] !== undefined) {
+            targetDpiValue = dpiMap[word];
+            break;
+        }
+    }
 
     let filteredApps = allApps.filter(app => {
         const nameMatch = app.name.toLowerCase().includes(searchTerm);
-        const packageMatch = app.packageName && app.packageName.toLowerCase().includes(searchTerm);
-        const secPackageMatch = app.secondaryPackageName && app.secondaryPackageName.toLowerCase().includes(searchTerm);
-        const thirdPackageMatch = app.thirdPackageName && app.thirdPackageName.toLowerCase().includes(searchTerm); 
+        const packageMatch = (app.packageName && app.packageName.toLowerCase().includes(searchTerm)) ||
+                             (app.secondaryPackageName && app.secondaryPackageName.toLowerCase().includes(searchTerm)) ||
+                             (app.thirdPackageName && app.thirdPackageName.toLowerCase().includes(searchTerm));
+
+        let versionMatch = false;
+        let versionCodeMatch = false;
+        let archMatch = false;
+        let dpiMatch = false;
+        let typeMatch = false;
+
+        if (app.versions) {
+            app.versions.forEach(ver => {
+                if (ver.version && ver.version.toLowerCase().includes(searchTerm)) versionMatch = true;
+                if (ver.versionCode && ver.versionCode.toString().toLowerCase().includes(searchTerm)) versionCodeMatch = true;
+                
+                if (ver.links && Array.isArray(ver.links)) {
+                    ver.links.forEach(linkObj => {
+                        if (typeof linkObj === 'object') {
+                            let providers = [];
+                            if (linkObj['github-url']) providers.push('github');
+                            if (linkObj['buzzheavier-url']) providers.push('buzzheavier');
+                            if (linkObj['fdroid-url']) {
+                                providers.push('fdroid');
+                                providers.push('f-droid'); 
+                            }
+                            
+                            if (providers.some(p => p.includes(searchTerm))) {
+                                versionMatch = true;
+                            }
+                        }
+                    });
+                }
+                
+                if (!isPatchesPage) {
+                    if (ver.arch && ver.arch.toLowerCase().includes(searchTerm)) archMatch = true;
+                    
+                    if (ver.dpi) {
+                        const verDpiLower = ver.dpi.toString().toLowerCase();
+                        
+                        if (verDpiLower.includes(searchTerm)) {
+                            dpiMatch = true;
+                        } 
+                        else if (targetDpiValue !== null) {
+                            const numbers = verDpiLower.match(/\d+/g);
+                            if (numbers && numbers.length > 0) {
+                                const minDpi = parseInt(numbers[0], 10);
+                                const maxDpi = numbers.length > 1 ? parseInt(numbers[1], 10) : minDpi;
+                                
+                                if (targetDpiValue >= minDpi && targetDpiValue <= maxDpi) {
+                                    dpiMatch = true;
+                                }
+                            }
+                        }
+                    }
+                    
+                    if (ver.type) {
+                        const typeLower = ver.type.toLowerCase();
+                        let displayType = typeLower;
+                        
+                        if (typeLower === 'apkm') displayType = 'apk(m)';
+                        else if (typeLower === 'xapk') displayType = '(x)apk';
+                        
+                        if (typeLower.includes(searchTerm) || displayType.includes(searchTerm)) {
+                            typeMatch = true;
+                        }
+                    }
+                }
+            });
+        }
+
+        let patchMatch = false;
+        if (isPatchesPage && app.patches) {
+            patchMatch = app.patches.some(patch => {
+                const pName = typeof patch === 'string' ? patch : patch.name;
+                const pDesc = typeof patch === 'object' && patch.description ? patch.description : '';
+                const pSupp = typeof patch === 'object' && patch.supported ? patch.supported : '';
+                const pDef = typeof patch === 'object' && patch.default ? 'picked by default' : '';
+                const pConf = typeof patch === 'object' && patch.configurable ? 'configurable' : '';
+                
+                return pName.toLowerCase().includes(searchTerm) || 
+                       pDesc.toLowerCase().includes(searchTerm) || 
+                       pSupp.toLowerCase().includes(searchTerm) ||
+                       pDef.includes(searchTerm) ||
+                       pConf.includes(searchTerm);
+            });
+        }
         
-        const versionMatch = app.versions && app.versions.some(ver => ver.version.toLowerCase().includes(searchTerm));
-        
-        const patchMatch = app.patches && app.patches.some(patch => {
-            const pName = typeof patch === 'string' ? patch : patch.name;
-            const pDesc = typeof patch === 'object' && patch.description ? patch.description : '';
-            const pSupp = typeof patch === 'object' && patch.supported ? patch.supported : '';
-            const pDef = typeof patch === 'object' && patch.default ? 'picked by default' : '';
-            const pConf = typeof patch === 'object' && patch.configurable ? 'configurable' : '';
-            
-            return pName.toLowerCase().includes(searchTerm) || 
-                   pDesc.toLowerCase().includes(searchTerm) || 
-                   pSupp.toLowerCase().includes(searchTerm) ||
-                   pDef.includes(searchTerm) ||
-                   pConf.includes(searchTerm);
-        });
-        
-        return nameMatch || packageMatch || secPackageMatch || thirdPackageMatch || versionMatch || patchMatch;
+        if (isPatchesPage) {
+            return nameMatch || packageMatch || versionMatch || versionCodeMatch || patchMatch;
+        } else {
+            return nameMatch || packageMatch || versionMatch || versionCodeMatch || archMatch || dpiMatch || typeMatch;
+        }
     });
 
     filteredApps.sort((a, b) => {
@@ -192,6 +273,34 @@ function renderApps(appsToDisplay) {
 
     const isPatchesPage = window.location.pathname.includes('patches');
 
+    let countDisplay = document.getElementById('app-count-badge');
+    if (!countDisplay) {
+        const searchWrapper = document.querySelector('.search-input-wrapper');
+        const searchInput = document.getElementById('search-input');
+        
+        if (searchWrapper && searchInput) {
+            searchWrapper.style.position = 'relative';
+            
+            searchInput.style.paddingRight = '110px'; 
+            
+            countDisplay = document.createElement('span');
+            countDisplay.id = 'app-count-badge';
+            countDisplay.style.position = 'absolute';
+            countDisplay.style.right = '55px'; 
+            countDisplay.style.top = '50%';
+            countDisplay.style.transform = 'translateY(-50%)';
+            countDisplay.style.fontSize = '0.85em';
+            countDisplay.style.opacity = '0.6';
+            countDisplay.style.pointerEvents = 'none'; 
+            
+            searchWrapper.appendChild(countDisplay);
+        }
+    }
+    
+    if (countDisplay) {
+        countDisplay.textContent = `(${appsToDisplay.length} app${appsToDisplay.length === 1 ? ')' : 's)'}`;
+    }
+
     if (appsToDisplay.length === 0) {
         appListContainer.innerHTML = '<p style="text-align:center;">No apps or patches found.</p>';
         return;
@@ -209,11 +318,20 @@ function renderApps(appsToDisplay) {
             if (app.versions && app.versions.length > 0) {
                 app.versions.forEach(ver => {
                     let buttonsHTML = '';
+                    
                     if (ver.links && ver.links.length > 0) {
-                        ver.links.forEach((linkItem, index) => {
-                            let linkUrl = typeof linkItem === 'string' ? linkItem : linkItem.url;
-                            let linkText = typeof linkItem === 'object' && linkItem['url-name'] ? linkItem['url-name'] : (linkItem.name ? linkItem.name : (ver.links.length === 1 ? 'Download' : `Mirror ${index + 1}`));
-                            buttonsHTML += `<a href="${linkUrl}" class="download-btn" target="_blank">${linkText}</a>`;
+                        ver.links.forEach((linkItem) => {
+                            if (typeof linkItem === 'object') {
+                                if (linkItem['github-url']) {
+                                    buttonsHTML += `<a href="${linkItem['github-url']}" class="download-btn" target="_blank">GitHub</a>`;
+                                }
+                                if (linkItem['buzzheavier-url']) {
+                                    buttonsHTML += `<a href="${linkItem['buzzheavier-url']}" class="download-btn" target="_blank">Buzzheavier</a>`;
+                                }
+                                if (linkItem['fdroid-url']) {
+                                    buttonsHTML += `<a href="${linkItem['fdroid-url']}" class="download-btn" target="_blank">F-Droid</a>`;
+                                }
+                            }
                         });
                     }
                     
@@ -356,7 +474,7 @@ function renderApps(appsToDisplay) {
         card.innerHTML = `
             <div class="app-header" onclick="toggleVersions(this)">
                 <div class="app-header-left">
-                    <img src="${app.icon}" alt="${app.name} icon" class="app-icon" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22><rect width=%2264%22 height=%2264%22 fill=%22%23263340%22/><text x=%2232%22 y=%2236%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23C4C7C5%22 text-anchor=%22middle%22>?</text></svg>'">
+                    <img src="${app.icon}" alt="${app.name} icon" class="app-icon" onerror="this.src='icons/missing.png'">
                     <div class="app-title">
                         <h2>${app.name}</h2>
                         ${packageHTML}

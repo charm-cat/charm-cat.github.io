@@ -280,7 +280,6 @@ function renderApps(appsToDisplay) {
         
         if (searchWrapper && searchInput) {
             searchWrapper.style.position = 'relative';
-            
             searchInput.style.paddingRight = '110px'; 
             
             countDisplay = document.createElement('span');
@@ -320,17 +319,19 @@ function renderApps(appsToDisplay) {
                     let buttonsHTML = '';
                     
                     if (ver.links && ver.links.length > 0) {
-                        ver.links.forEach((linkItem) => {
-                            if (typeof linkItem === 'object') {
-                                if (linkItem['github-url']) {
-                                    buttonsHTML += `<a href="${linkItem['github-url']}" class="download-btn" target="_blank">GitHub</a>`;
-                                }
-                                if (linkItem['buzzheavier-url']) {
-                                    buttonsHTML += `<a href="${linkItem['buzzheavier-url']}" class="download-btn" target="_blank">Buzzheavier</a>`;
-                                }
-                                if (linkItem['fdroid-url']) {
-                                    buttonsHTML += `<a href="${linkItem['fdroid-url']}" class="download-btn" target="_blank">F-Droid</a>`;
-                                }
+                        ver.links.forEach((linkItem, index) => {
+                            let linkUrl = typeof linkItem === 'string' ? linkItem : linkItem.url;
+                            
+                            if (!linkUrl && typeof linkItem === 'object') {
+                                if (linkItem['github-url']) linkUrl = linkItem['github-url'];
+                                else if (linkItem['buzzheavier-url']) linkUrl = linkItem['buzzheavier-url'];
+                                else if (linkItem['fdroid-url']) linkUrl = linkItem['fdroid-url'];
+                            }
+
+                            let linkText = typeof linkItem === 'object' && linkItem['url-name'] ? linkItem['url-name'] : (linkItem.name ? linkItem.name : (ver.links.length === 1 ? 'Download' : `Mirror ${index + 1}`));
+                            
+                            if (linkUrl) {
+                                buttonsHTML += `<a href="${linkUrl}" class="download-btn" target="_blank">${linkText}</a>`;
                             }
                         });
                     }
@@ -474,7 +475,7 @@ function renderApps(appsToDisplay) {
         card.innerHTML = `
             <div class="app-header" onclick="toggleVersions(this)">
                 <div class="app-header-left">
-                    <img src="${app.icon}" alt="${app.name} icon" class="app-icon" onerror="this.src='icons/missing.png'">
+                    <img src="${app.icon}" alt="${app.name} icon" class="app-icon" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22><rect width=%2264%22 height=%2264%22 fill=%22%23263340%22/><text x=%2232%22 y=%2236%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23C4C7C5%22 text-anchor=%22middle%22>?</text></svg>'">
                     <div class="app-title">
                         <h2>${app.name}</h2>
                         ${packageHTML}

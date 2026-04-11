@@ -7,7 +7,7 @@
     "versions": [
       {
         "version": "2.6.3",
-        "any": "no",
+        "any": "yes",
         "versionCode": "57",
         "size": "49.3MB",
         "type": "apk",
@@ -55,7 +55,7 @@
     "versions": [
       {
         "version": "5.1.0",
-        "any": "no",
+        "any": "yes",
         "versionCode": "75",
         "size": "54.5MB",
         "type": "xapk",
@@ -81,7 +81,7 @@
     "versions": [
       {
         "version": "6.1.4",
-        "any": "no",
+        "any": "yes",
         "versionCode": "183",
         "size": "16.9MB",
         "type": "apk",
@@ -105,7 +105,7 @@
     "versions": [
       {
         "version": "3.3.4",
-        "any": "no",
+        "any": "yes",
         "versionCode": "220474",
         "size": "13.1MB",
         "type": "apk",
@@ -130,7 +130,7 @@
     "versions": [
       {
         "version": "1.12.12",
-        "any": "no",
+        "any": "yes",
         "versionCode": "210011212",
         "size": "15.9MB",
         "type": "apk",
@@ -154,7 +154,7 @@
     "versions": [
       {
         "version": "1.7.23",
-        "any": "no",
+        "any": "yes",
         "versionCode": "198",
         "size": "12.8MB",
         "type": "xapk",
@@ -202,7 +202,7 @@
     "versions": [
       {
         "version": "3.104.0",
-        "any": "no",
+        "any": "yes",
         "versionCode": "1088",
         "size": "90.7MB",
         "type": "apkm",
@@ -226,7 +226,7 @@
     "versions": [
       {
         "version": "26.4.0+rc4-2026.03.25",
-        "any": "no",
+        "any": "yes",
         "versionCode": "177445989",
         "size": "48.0MB",
         "type": "apkm",
@@ -298,7 +298,7 @@
     "versions": [
       {
         "version": "555.0.0.0.43",
-        "any": "no",
+        "any": "yes",
         "versionCode": "341003503",
         "size": "132.1MB",
         "type": "apk",
@@ -322,7 +322,7 @@
     "versions": [
       {
         "version": "4.0.5",
-        "any": "no",
+        "any": "yes",
         "versionCode": "310",
         "size": "17.2MB",
         "type": "apk",
@@ -346,7 +346,7 @@
     "versions": [
       {
         "version": "228.16264.20260326",
-        "any": "no",
+        "any": "yes",
         "versionCode": "16264",
         "size": "26.4MB",
         "type": "apkm",
@@ -370,7 +370,7 @@
     "versions": [
       {
         "version": "9.4.1",
-        "any": "no",
+        "any": "yes",
         "versionCode": "405177",
         "size": "50.8MB",
         "type": "apkm",
@@ -418,7 +418,7 @@
     "versions": [
       {
         "version": "7.69.0.890655694",
-        "any": "no",
+        "any": "yes",
         "versionCode": "51478068",
         "size": "204.7MB",
         "type": "apk",
@@ -443,7 +443,7 @@
     "versions": [
       {
         "version": "4.2.20260307.885964187",
-        "any": "no",
+        "any": "yes",
         "versionCode": "42391913",
         "size": "47.7MB",
         "type": "apkm",
@@ -467,7 +467,7 @@
     "versions": [
       {
         "version": "2.8.5",
-        "any": "no",
+        "any": "yes",
         "versionCode": "122",
         "size": "3.5MB",
         "type": "apk",
@@ -515,7 +515,7 @@
     "versions": [
       {
         "version": "5.3.0",
-        "any": "no",
+        "any": "yes",
         "versionCode": "2026012001",
         "size": "75.6MB",
         "type": "apk",
@@ -542,7 +542,7 @@
     "versions": [
       {
         "version": "8.1.4",
-        "any": "no",
+        "any": "yes",
         "versionCode": "213",
         "size": "16.4MB",
         "type": "apk",
@@ -570,7 +570,7 @@
     "versions": [
       {
         "version": "6.12.7",
-        "any": "no",
+        "any": "yes",
         "versionCode": "5070375",
         "size": "33.7MB",
         "type": "apk",
@@ -618,7 +618,7 @@
     "versions": [
       {
         "version": "1.9.13",
-        "any": "no",
+        "any": "yes",
         "versionCode": "307",
         "size": "6.1MB",
         "type": "apk",
@@ -643,7 +643,7 @@
     "versions": [
       {
         "version": "2.1.6.5",
-        "any": "no",
+        "any": "yes",
         "versionCode": "500",
         "size": "18.2MB",
         "type": "apk",
@@ -667,7 +667,7 @@
     "versions": [
       {
         "version": "2026.13.2",
-        "any": "no",
+        "any": "yes",
         "versionCode": "2026130203",
         "size": "30.5MB",
         "type": "apkm",
@@ -691,7 +691,7 @@
     "versions": [
       {
         "version": "3.5.0",
-        "any": "no",
+        "any": "yes",
         "versionCode": "491",
         "size": "91.6MB",
         "type": "apkm",
@@ -764,7 +764,7 @@
     "versions": [
       {
         "version": "3.52.0i",
-        "any": "no",
+        "any": "yes",
         "versionCode": "352000",
         "size": "119.3MB",
         "type": "apkm",
@@ -788,7 +788,7 @@
     "versions": [
       {
         "version": "16.0.19628.20008",
-        "any": "no",
+        "any": "yes",
         "versionCode": "2004969699",
         "size": "66.9MB",
         "type": "apk",
@@ -864,7 +864,7 @@
     "versions": [
       {
         "version": "2.333",
-        "any": "no",
+        "any": "yes",
         "versionCode": "2025100401",
         "size": "3.0MB",
         "type": "apk",
@@ -888,7 +888,7 @@
     "versions": [
       {
         "version": "3.5.1",
-        "any": "no",
+        "any": "yes",
         "versionCode": "3050106",
         "size": "228.7MB",
         "type": "apkm",
@@ -912,7 +912,7 @@
     "versions": [
       {
         "version": "26.2.1",
-        "any": "no",
+        "any": "yes",
         "versionCode": "210086",
         "size": "109.5MB",
         "type": "xapk",
@@ -936,7 +936,7 @@
     "versions": [
       {
         "version": "6.11.9-mobile",
-        "any": "no",
+        "any": "yes",
         "versionCode": "5000139",
         "size": "20.1MB",
         "type": "apkm",
@@ -960,7 +960,7 @@
     "versions": [
       {
         "version": "2602.1",
-        "any": "no",
+        "any": "yes",
         "versionCode": "26021013",
         "size": "71.3MB",
         "type": "apk",
@@ -984,7 +984,7 @@
     "versions": [
       {
         "version": "7.4.10",
-        "any": "no",
+        "any": "yes",
         "versionCode": "124070410",
         "size": "59.1MB",
         "type": "apkm",
@@ -1008,7 +1008,7 @@
     "versions": [
       {
         "version": "8.47.1",
-        "any": "no",
+        "any": "yes",
         "versionCode": "70001015",
         "size": "13.1MB",
         "type": "apkm",
@@ -1176,7 +1176,7 @@
     "versions": [
       {
         "version": "7.20.build131",
-        "any": "no",
+        "any": "yes",
         "versionCode": "131",
         "size": "6.1MB",
         "type": "apkm",
@@ -1226,7 +1226,7 @@
     "versions": [
       {
         "version": "13.0.46",
-        "any": "no",
+        "any": "yes",
         "warning": "This app uses Pairip/Google Integrity to protect it from modification, so it is not possible to use AntiSplit M to convert it into an APK file without a patch to prevent the app from crashing. (There isn't a patch have made for it yet.)",
         "versionCode": "756",
         "size": "26.9MB",
@@ -1253,7 +1253,7 @@
     "versions": [
       {
         "version": "5.6.22",
-        "any": "no",
+        "any": "yes",
         "versionCode": "4622",
         "size": "12.2MB",
         "type": "apk",
@@ -1302,7 +1302,7 @@
     "versions": [
       {
         "version": "5.0.2",
-        "any": "no",
+        "any": "yes",
         "versionCode": "15870",
         "size": "34.8MB",
         "type": "apkm",
@@ -1328,7 +1328,7 @@
     "versions": [
       {
         "version": "7.4.4",
-        "any": "no",
+        "any": "yes",
         "versionCode": "744",
         "size": "32.9MB",
         "type": "apk",
@@ -1356,7 +1356,7 @@
     "versions": [
       {
         "version": "3.4.4",
-        "any": "no",
+        "any": "yes",
         "versionCode": "304042",
         "size": "21.3MB",
         "type": "apkm",
@@ -1428,7 +1428,7 @@
     "versions": [
       {
         "version": "1.8.2",
-        "any": "no",
+        "any": "yes",
         "versionCode": "2025092443",
         "size": "84.6MB",
         "type": "xapk",
@@ -1452,7 +1452,7 @@
     "versions": [
       {
         "version": "9.1.38.635",
-        "any": "no",
+        "any": "yes",
         "versionCode": "140251485",
         "size": "45.3MB",
         "type": "apkm",
@@ -1476,7 +1476,7 @@
     "versions": [
       {
         "version": "10.68.0",
-        "any": "no",
+        "any": "yes",
         "versionCode": "1212",
         "size": "45.2MB",
         "type": "apkm",
@@ -1500,7 +1500,7 @@
     "versions": [
       {
         "version": "456.10",
-        "any": "no",
+        "any": "yes",
         "versionCode": "12397026",
         "size": "145.9MB",
         "type": "xapk",
@@ -1548,7 +1548,7 @@
     "versions": [
       {
         "version": "v24.03.26-1456",
-        "any": "no",
+        "any": "yes",
         "versionCode": "122",
         "size": "72.4MB",
         "type": "apk",
@@ -1575,7 +1575,7 @@
     "versions": [
       {
         "version": "v23.06.30-1339",
-        "any": "no",
+        "any": "yes",
         "versionCode": "23033",
         "size": "68.0MB",
         "type": "apk",
@@ -1623,7 +1623,7 @@
     "versions": [
       {
         "version": "8.0.5.0",
-        "any": "no",
+        "any": "yes",
         "versionCode": "8050",
         "size": "51.1MB",
         "type": "apkm",
@@ -1696,7 +1696,7 @@
     "versions": [
       {
         "version": "5.10.1",
-        "any": "no",
+        "any": "yes",
         "versionCode": "200005365",
         "size": "14.6MB",
         "type": "xapk",
@@ -1720,7 +1720,7 @@
     "versions": [
       {
         "version": "43.9.0.109",
-        "any": "no",
+        "any": "yes",
         "versionCode": "1430900109",
         "size": "37.5MB",
         "type": "apkm",
@@ -1817,7 +1817,7 @@
     "versions": [
       {
         "version": "8.37.0",
-        "any": "no",
+        "any": "yes",
         "versionCode": "611818",
         "size": "14.9MB",
         "type": "apk",

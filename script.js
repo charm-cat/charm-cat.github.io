@@ -66,6 +66,7 @@ function setupSearchAndSort() {
     const sortPatchBtn = document.getElementById('sort-patch-btn');
     const toggleAllBtn = document.getElementById('toggle-all-btn');
     const clearSearchBtn = document.getElementById('clear-search-btn');
+    const sortPackageBtn = document.getElementById('sort-package-btn');
 
     sortDropdownBtn.addEventListener('click', (e) => {
         e.stopPropagation(); 
@@ -85,6 +86,7 @@ function setupSearchAndSort() {
         sortNameBtn.textContent = currentSort.isAsc ? 'Z-A' : 'A-Z';
         sortDropdownBtn.textContent = `Sort: ${currentSort.isAsc ? 'A-Z' : 'Z-A'} ▼`;
         sortPatchBtn.textContent = 'Patches Increasing';
+        sortPackageBtn.textContent = 'Package A-Z'; 
         
         updateDisplay();
     });
@@ -96,6 +98,19 @@ function setupSearchAndSort() {
         sortPatchBtn.textContent = currentSort.isAsc ? 'Patches Decreasing' : 'Patches Increasing';
         sortDropdownBtn.textContent = `Sort: ${currentSort.isAsc ? 'Patches Increasing' : 'Patches Decreasing'} ▼`;
         sortNameBtn.textContent = 'Z-A';
+        sortPackageBtn.textContent = 'Package A-Z'; 
+        
+        updateDisplay();
+    });
+
+    sortPackageBtn.addEventListener('click', () => {
+        currentSort.type = 'package';
+        currentSort.isAsc = sortPackageBtn.textContent === 'Package A-Z';
+
+        sortPackageBtn.textContent = currentSort.isAsc ? 'Package Z-A' : 'Package A-Z';
+        sortDropdownBtn.textContent = `Sort: ${currentSort.isAsc ? 'Package A-Z' : 'Package Z-A'} ▼`;
+        sortNameBtn.textContent = 'Z-A';
+        sortPatchBtn.textContent = 'Patches Increasing';
         
         updateDisplay();
     });
@@ -255,6 +270,12 @@ function updateDisplay() {
             const nameB = b.name.toLowerCase();
             if (nameA < nameB) return currentSort.isAsc ? -1 : 1;
             if (nameA > nameB) return currentSort.isAsc ? 1 : -1;
+            return 0;
+        } else if (currentSort.type === 'package') { 
+            const packA = (a.packageName || '').toLowerCase();
+            const packB = (b.packageName || '').toLowerCase();
+            if (packA < packB) return currentSort.isAsc ? -1 : 1;
+            if (packA > packB) return currentSort.isAsc ? 1 : -1;
             return 0;
         } else {
             const patchA = Number(a.patchCount) || 0;

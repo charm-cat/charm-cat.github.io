@@ -241,7 +241,6 @@ function renderApps(appsToDisplay) {
                         typeHTML = `<span class="version-type"><strong>Type:</strong> <span class="${typeClass}">${typeText}</span></span>`;
                     }
 
-                    const sha1HTML = ver.sha1 ? `<span class="version-hash"><strong>SHA-1:</strong> <code>${ver.sha1}</code></span>` : '';
                     const sha256HTML = ver.sha256 ? `<span class="version-hash"><strong>SHA-256:</strong> <code>${ver.sha256}</code></span>` : '';
                     
                     const warningHTML = ver.warning ? `<div class="version-warning"><strong>⚠️ Warning:</strong><br><br>${ver.warning}</div>` : '';
@@ -259,7 +258,6 @@ function renderApps(appsToDisplay) {
                                 ${archHTML}
                                 ${dpiHTML}
                                 ${typeHTML}
-                                ${sha1HTML}
                                 ${sha256HTML}
                             </div>
                             <div class="button-group">

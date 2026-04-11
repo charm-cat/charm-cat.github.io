@@ -446,7 +446,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 if (lowerName.includes('buzzheavier')) {
                                     hasBuzzheavier = true;
                                     jsonLinks.push({
-                                        "url": (matchedVersion && (matchedVersion.sha256 === hashHex || matchedVersion.sha1 === hashHex)) ? lUrl : "",
+                                        "url": (matchedVersion && (matchedVersion.sha256 === hashHex)) ? lUrl : "",
                                         "url-name": lName
                                     });
                                 } else {

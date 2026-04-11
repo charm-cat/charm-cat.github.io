@@ -357,8 +357,21 @@ function renderApps(appsToDisplay) {
                         });
                     }
                     
-                    const sizeHTML = ver.size ? `<span class="version-size"><strong>Size:</strong> ${ver.size}</span>` : '';
-                    const archHTML = ver.arch ? `<span class="version-architecture"><strong>Architecture:</strong> ${ver.arch}</span>` : '';
+                   const sizeHTML = ver.size ? `<span class="version-size"><strong>Size:</strong> ${ver.size}</span>` : '';
+
+                    let archStyle = '';
+                    if (ver.arch) {
+                        const archLower = ver.arch.toLowerCase();
+                        if (archLower === 'universal') {
+                            archStyle = 'color: #4CAF50; font-weight: bold;'; 
+                        } else if (archLower === 'arm64-v8a') {
+                            archStyle = 'color: #FFC107; font-weight: bold;'; 
+                        } else if (archLower === 'armeabi-v7a') {
+                            archStyle = 'color: #FF5252; font-weight: bold;';
+                        }
+                    }
+
+                    const archHTML = ver.arch ? `<span class="version-architecture"><strong>Architecture:</strong> <span style="${archStyle}">${ver.arch}</span></span>` : '';
                     const dpiHTML = ver.dpi ? `<span class="version-dpi"><strong>Screen DPI:</strong> ${ver.dpi}</span>` : '';
                     
                     let typeHTML = '';

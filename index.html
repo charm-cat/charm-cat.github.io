@@ -16,7 +16,7 @@
 
     <main class="container">
 
-        <div class="app-card" id="app-microg" style="border: 2px solid var(--md-sys-color-primary); margin-bottom: 32px;">
+        <div class="app-card" id="app-charm" style="border: 2px solid var(--md-sys-color-primary); margin-bottom: 32px;">
             <div class="app-header" onclick="toggleVersions(this)">
                 <div class="app-header-left">
                     <img class="app-icon" src="icons/charm.png">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="app-header-right">
-                    <button class="share-btn" onclick="copyAppLink(event, 'microg')" title="Copy Link" aria-label="Copy Link">🔗</button>
+                    <button class="share-btn" onclick="copyAppLink(event, 'charm')" title="Copy Link" aria-label="Copy Link">🔗</button>
                     <button class="expand-btn">▼</button>
                 </div>
             </div>
@@ -66,9 +66,16 @@
                 </div>
             </div>
             <div class="version-list">
+                <div class="app-important">
+                    <strong>‼️ Important:</strong><br><br> <b>MicroG</b> is required to sign into your Google Account on patched apps like <b>YouTube</b>, <b>YouTube Music</b>, <b>Google News</b> and <b>Google Photos</b>.<br>
+                </div>
                 <div class="app-warning">
-                    <strong>⚠️ Warning:</strong><br><br> MicroG is required to sign into your Google Account on patched apps like YouTube and YouTube Music.<br>
-                    <b>For rooted devices:</b><br> If you choose the <b>"Mount"</b> option, you do not need to install MicroG, but make sure to untick the <b>"GmsCore support"</b> patch.
+                    <strong>⚠️ Warning:</strong><br><br>
+                    <b>For rooted devices:</b><br> If you choose the <b>"Mount"</b> option, you do not need to install <b>MicroG</b>, but make sure to untick the <b>"GmsCore support"</b> patch.
+                </div>
+                <div class="version-note">
+                    <strong>ℹ️ Note:</strong><br><br>
+                    <b>ReVanced</b> fork of <b>GmsCore</b>/<b>MicroG</b> GitHub repo is available here: <a href="https://github.com/ReVanced/GmsCore">https://github.com/ReVanced/GmsCore</a>
                 </div>
                 <div class="version-item">
                     <div class="version-note">
@@ -110,8 +117,8 @@
                 <button class="control-btn" id="sort-dropdown-btn">Sort: A-Z ▼</button>
                 <div class="dropdown-content" id="sort-dropdown-content">
                     <button id="sort-name-btn" class="dropdown-item">Z-A</button>
-                    <button id="sort-patch-btn" class="dropdown-item">Patches Increasing</button>
                     <button id="sort-package-btn" class="dropdown-item">Package A-Z</button>
+                    <button id="sort-patch-btn" class="dropdown-item">Patches Increasing</button>
                 </div>
             </div>
 

@@ -86,7 +86,7 @@ function setupSearchAndSort() {
         sortNameBtn.textContent = currentSort.isAsc ? 'Z-A' : 'A-Z';
         sortDropdownBtn.textContent = `Sort: ${currentSort.isAsc ? 'A-Z' : 'Z-A'} ▼`;
         sortPatchBtn.textContent = 'Patches Increasing';
-        sortPackageBtn.textContent = 'Package A-Z'; 
+        if (sortPackageBtn) sortPackageBtn.textContent = 'Package A-Z';
         
         updateDisplay();
     });
@@ -98,22 +98,24 @@ function setupSearchAndSort() {
         sortPatchBtn.textContent = currentSort.isAsc ? 'Patches Decreasing' : 'Patches Increasing';
         sortDropdownBtn.textContent = `Sort: ${currentSort.isAsc ? 'Patches Increasing' : 'Patches Decreasing'} ▼`;
         sortNameBtn.textContent = 'Z-A';
-        sortPackageBtn.textContent = 'Package A-Z'; 
+        if (sortPackageBtn) sortPackageBtn.textContent = 'Package A-Z';
         
         updateDisplay();
     });
 
-    sortPackageBtn.addEventListener('click', () => {
-        currentSort.type = 'package';
-        currentSort.isAsc = sortPackageBtn.textContent === 'Package A-Z';
+    if (sortPackageBtn) {
+        sortPackageBtn.addEventListener('click', () => {
+            currentSort.type = 'package';
+            currentSort.isAsc = sortPackageBtn.textContent === 'Package A-Z';
 
-        sortPackageBtn.textContent = currentSort.isAsc ? 'Package Z-A' : 'Package A-Z';
-        sortDropdownBtn.textContent = `Sort: ${currentSort.isAsc ? 'Package A-Z' : 'Package Z-A'} ▼`;
-        sortNameBtn.textContent = 'Z-A';
-        sortPatchBtn.textContent = 'Patches Increasing';
-        
-        updateDisplay();
-    });
+            sortPackageBtn.textContent = currentSort.isAsc ? 'Package Z-A' : 'Package A-Z';
+            sortDropdownBtn.textContent = `Sort: ${currentSort.isAsc ? 'Package A-Z' : 'Package Z-A'} ▼`;
+            sortNameBtn.textContent = 'Z-A';
+            sortPatchBtn.textContent = 'Patches Increasing';
+            
+            updateDisplay();
+        });
+    }
 
     searchInput.addEventListener('input', () => {
         updateDisplay();

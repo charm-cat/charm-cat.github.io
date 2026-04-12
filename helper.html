@@ -27,6 +27,13 @@
                 <p style="font-size: 0.8em; opacity: 0.7; margin-top: 8px;">Supports multiple APK, APKM, and XAPK files.</p>
                 <p style="font-size: 0.8em; opacity: 0.7">File analysis is done entirely locally in your browser.</p>
                 <p style="color: red; margin-top: 24px;">!!! DO NOT SWITCH TABS WHILE THE FILES ARE BEING UPLOADED !!!</p>
+
+                <div class="checkbox-container" onclick="event.stopPropagation()">
+                    <label style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 24px; font-size: 0.9em; cursor: pointer; color: var(--md-sys-color-on-surface-variant);">
+                        <input type="checkbox" id="include-all-data-chk" style="cursor: pointer; width: 16px; height: 16px; accent-color: var(--md-sys-color-primary);">
+                        Include <a href="https://charm-cat.github.io/data.json" style="color: var(--md-sys-color-primary);">data.json</a>
+                    </label>
+                </div>
             </div>
         </div>
 

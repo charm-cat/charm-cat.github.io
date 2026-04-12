@@ -517,7 +517,7 @@ function renderApps(appsToDisplay) {
         card.innerHTML = `
             <div class="app-header" onclick="toggleVersions(this)">
                 <div class="app-header-left">
-                    <img src="${app.icon}" alt="${app.name} icon" class="app-icon" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22><rect width=%2264%22 height=%2264%22 fill=%22%23263340%22/><text x=%2232%22 y=%2236%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%23C4C7C5%22 text-anchor=%22middle%22>?</text></svg>'">
+                    <img src="${app.icon}" alt="${app.name} icon" class="app-icon" onerror="this.src='icons/missing.png'">
                     <div class="app-title">
                         <h2>${app.name}</h2>
                         ${packageHTML}

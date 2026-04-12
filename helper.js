@@ -79,6 +79,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         fileInput.value = ''; 
     });
 
+    function sortVersionsDescending(versionsArray) {
+        return versionsArray.sort((a, b) => {
+            const codeA = parseInt(a.versionCode);
+            const codeB = parseInt(b.versionCode);
+            
+            if (!isNaN(codeA) && !isNaN(codeB) && codeA !== codeB) {
+                return codeB - codeA; 
+            }
+
+            const v1 = a.version || "";
+            const v2 = b.version || "";
+            
+            const partsA = String(v1).replace(/[^0-9.]/g, '').split('.').map(x => parseInt(x, 10) || 0);
+            const partsB = String(v2).replace(/[^0-9.]/g, '').split('.').map(x => parseInt(x, 10) || 0);
+            
+            const len = Math.max(partsA.length, partsB.length);
+            for (let i = 0; i < len; i++) {
+                const numA = partsA[i] || 0;
+                const numB = partsB[i] || 0;
+                if (numA > numB) return -1;
+                if (numA < numB) return 1;
+            }
+            
+            return 0;
+        });
+    }
+
     async function handleFiles(files) {
         if (files.length === 0) return;
 
@@ -96,7 +123,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const batchStartTime = performance.now();
         const rawFileCount = files.length;
 
-        if (rawFileCount > 1) {
+        const includeAllData = document.getElementById('include-all-data-chk') && document.getElementById('include-all-data-chk').checked;
+
+        if (rawFileCount > 1 || includeAllData) {
             document.getElementById('batch-card-container').innerHTML = getLoadingBatchJsonCardHTML();
             
             timerInterval = setInterval(() => {
@@ -126,15 +155,67 @@ document.addEventListener('DOMContentLoaded', async () => {
         const batchTimeMs = batchEndTime - batchStartTime;
         const batchTimeFormatted = batchTimeMs >= 1000 ? (batchTimeMs / 1000).toFixed(2) + 's' : Math.round(batchTimeMs) + 'ms';
 
-        const sortedBatch = Object.values(state.batchData).sort((a, b) => a.id.localeCompare(b.id));
+        let finalBatchData = [];
+
+        if (includeAllData && existingAppData && existingAppData.length > 0) {
+            let mergedAppsMap = new Map();
+            
+            existingAppData.forEach(app => {
+                const key = app.id || app.packageName;
+                mergedAppsMap.set(key, JSON.parse(JSON.stringify(app))); 
+            });
+
+            Object.values(state.batchData).forEach(newApp => {
+                const existingKey = Array.from(mergedAppsMap.keys()).find(key => {
+                    const existing = mergedAppsMap.get(key);
+                    return (existing.id && existing.id === newApp.id) || 
+                           (existing.packageName && existing.packageName === newApp.packageName) ||
+                           (existing.name && existing.name.toLowerCase() === newApp.name.toLowerCase());
+                });
+
+                if (existingKey) {
+                    let combinedApp = { ...mergedAppsMap.get(existingKey), ...newApp };
+                    combinedApp.versions = newApp.versions; 
+                    mergedAppsMap.set(existingKey, combinedApp); 
+                } else {
+                    mergedAppsMap.set(newApp.id || newApp.packageName, newApp); 
+                }
+            });
+
+            finalBatchData = Array.from(mergedAppsMap.values());
+        } else {
+            finalBatchData = Object.values(state.batchData);
+        }
+
+        const sortedBatch = finalBatchData.sort((a, b) => {
+            const idA = a.id || a.name || "";
+            const idB = b.id || b.name || "";
+            return idA.localeCompare(idB);
+        });
+
+        sortedBatch.forEach(app => {
+            if (app.versions && Array.isArray(app.versions)) {
+                sortVersionsDescending(app.versions);
+            }
+        });
         
         const batchCardContainer = document.getElementById('batch-card-container');
-        if (state.validCount > 1) {
-            batchCardContainer.innerHTML = getBatchJsonCardHTML(sortedBatch, batchTimeFormatted, state.validCount);
+        if (state.validCount > 1 || (state.validCount > 0 && includeAllData)) {
+            batchCardContainer.innerHTML = getBatchJsonCardHTML(sortedBatch, batchTimeFormatted, state.validCount, includeAllData);
             batchCardContainer.style.marginBottom = '24px';
         } else {
             batchCardContainer.innerHTML = ''; 
         }
+
+        const processedApps = Object.values(state.batchData).sort((a, b) => {
+            const idA = a.id || a.name || "";
+            const idB = b.id || b.name || "";
+            return idA.localeCompare(idB);
+        });
+
+        processedApps.forEach(app => {
+            renderSuccessCardFromApp(app);
+        });
 
         const errorContainer = document.getElementById('error-cards-container');
         const successContainer = document.getElementById('success-cards-container');
@@ -160,8 +241,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function processFile(file, state) {
-        const appStartTime = performance.now();
-
         const ext = file.name.split('.').pop().toLowerCase();
         const validExts = ['apk', 'apkm', 'xapk'];
         
@@ -179,20 +258,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             const hashArray = Array.from(new Uint8Array(hashBuffer));
             const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
-            if (state.processedHashes.has(hashHex)) {
-                return; 
-            }
+            if (state.processedHashes.has(hashHex)) return; 
             state.processedHashes.add(hashHex);
 
             const rawSizeMB = (file.size / (1024 * 1024)).toFixed(1);
             const fileSizeMB = rawSizeMB + 'MB';
             
-            let fileFormat = ext.toUpperCase();
-            if (ext === 'apkm') fileFormat = 'APK(M)';
-            else if (ext === 'xapk') fileFormat = '(X)APK';
-            
-            const formatClass = `type-${ext === 'apkm' ? 'apkm' : (ext === 'xapk' ? 'xapk' : 'apk')}`;
-
             const zip = await zipPromise;
             
             let appName = 'Unknown App';
@@ -344,7 +415,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             let displayArchs = [];
-            let archWarningHTML = '';
             let isX86 = false; 
 
             if (hasArm64 || hasArm32) {
@@ -356,14 +426,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             } else {
                 if (hasX86) displayArchs.push('x86');
                 if (hasX86_64) displayArchs.push('x86_64');
-                if (hasX86 || hasX86_64) {
-                    isX86 = true; 
-                    archWarningHTML = `
-                        <div class="app-important" style="margin-bottom: 16px;">
-                            <strong>❗ Important:</strong> x86 architecture is not supported by ReVanced Manager.
-                        </div>
-                    `;
-                }
+                if (hasX86 || hasX86_64) isX86 = true; 
             }
 
             let finalArch = displayArchs.join(', ');
@@ -388,195 +451,223 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             state.validCount++;
 
-            let jsonSnippet = '';
-            let uiImportantMsgHTML = '';
-            let uiWarningMsgHTML = '';
+            const matchedApp = existingAppData.find(app => 
+                (app.packageName && app.packageName === packageName) || 
+                (app.secondaryPackageName && app.secondaryPackageName === packageName) ||
+                (app.thirdPackageName && app.thirdPackageName === packageName) ||
+                (app.name && app.name.toLowerCase() === appName.toLowerCase())
+            );
 
-            if (!isX86) {
-                const matchedApp = existingAppData.find(app => 
-                    (app.packageName && app.packageName === packageName) || 
-                    (app.secondaryPackageName && app.secondaryPackageName === packageName) ||
-                    (app.thirdPackageName && app.thirdPackageName === packageName) ||
-                    (app.name && app.name.toLowerCase() === appName.toLowerCase())
-                );
-                
-                let jsonId = ""; 
-                let jsonName = appName;
-                let jsonIcon = `icons/unknown.png`;
-                let jsonPackageName = packageName;
-                let jsonSecondaryPackageName = undefined;
-                let jsonThirdPackageName = undefined;
-                let jsonImportant = undefined;
-                let jsonRedirectUri = undefined;
+            let jsonId = ""; 
+            let jsonName = appName;
+            let jsonIcon = `icons/unknown.png`;
+            let jsonPackageName = packageName;
+            let jsonSecondaryPackageName = undefined;
+            let jsonThirdPackageName = undefined;
+            let jsonImportant = undefined;
+            let jsonRedirectUri = undefined;
 
-                let jsonAny = "no";
-                let jsonWarning = undefined;
-                let jsonNote = undefined;
-                let jsonLinks = [];
-                let preservedVersions = [];
+            let jsonAny = "no";
+            let jsonWarning = undefined;
+            let jsonNote = undefined;
+            let jsonLinks = [];
+            let preservedVersions = [];
+            let existingVersion = null;
 
-                if (matchedApp) {
-                    jsonId = matchedApp.id || "";
-                    jsonName = matchedApp.name || appName;
+            if (matchedApp) {
+                jsonId = matchedApp.id || "";
+                jsonName = matchedApp.name || appName;
+                appName = jsonName; 
+                jsonIcon = matchedApp.icon || jsonIcon;
+                jsonPackageName = matchedApp.packageName || packageName;
+                jsonSecondaryPackageName = matchedApp.secondaryPackageName;
+                jsonThirdPackageName = matchedApp.thirdPackageName;
+                jsonImportant = sanitizeString(matchedApp.important);
+                jsonRedirectUri = sanitizeString(matchedApp.redirectUri);
+
+                if (matchedApp.versions && matchedApp.versions.length > 0) {
+                    existingVersion = matchedApp.versions.find(v => v.sha256 === hashHex);
                     
-                    appName = jsonName; 
-                    
-                    jsonIcon = matchedApp.icon || jsonIcon;
-                    jsonPackageName = matchedApp.packageName || packageName;
-                    jsonSecondaryPackageName = matchedApp.secondaryPackageName;
-                    jsonThirdPackageName = matchedApp.thirdPackageName;
-                    
-                    jsonImportant = sanitizeString(matchedApp.important);
-                    jsonRedirectUri = sanitizeString(matchedApp.redirectUri);
-                    
-                    if (matchedApp.versions && matchedApp.versions.length > 0) {
-                        const matchedVersion = matchedApp.versions.find(v => v.version === versionName);
-                        const templateVersion = matchedVersion || matchedApp.versions[0];
-                        
+                    matchedApp.versions.forEach(v => {
+                        if (v.sha256 !== hashHex) {
+                            preservedVersions.push(v);
+                        }
+                    });
+
+                    if (!existingVersion) {
+                        const templateVersion = matchedApp.versions[0];
                         jsonAny = templateVersion.any || "no";
                         jsonWarning = sanitizeString(templateVersion.warning);
                         jsonNote = sanitizeString(templateVersion.note);
 
                         if (templateVersion.links && templateVersion.links.length > 0) {
                             let hasBuzzheavier = false;
-                            
                             templateVersion.links.forEach(link => {
                                 const lName = link["url-name"] || link.name || "";
-                                
-                                let lUrl = link.url || link["buzzheavier-url"] || link["github-url"] || link["fdroid-url"] || "";
-                                
-                                const urlToKeep = (matchedVersion && (matchedVersion.sha256 === hashHex)) ? lUrl : "";
-                                
                                 const lowerName = lName.toLowerCase();
                                 
                                 if (lowerName.includes('buzzheavier')) {
                                     hasBuzzheavier = true;
-                                    jsonLinks.push({
-                                        "buzzheavier-url": urlToKeep,
-                                        "url-name": lName
-                                    });
+                                    jsonLinks.push({ "buzzheavier-url": "", "url-name": lName });
                                 } else if (lowerName.includes('github')) {
-                                    jsonLinks.push({
-                                        "github-url": urlToKeep,
-                                        "url-name": lName
-                                    });
+                                    jsonLinks.push({ "github-url": "", "url-name": lName });
                                 } else if (lowerName.includes('f-droid') || lowerName.includes('fdroid')) {
-                                    jsonLinks.push({
-                                        "fdroid-url": urlToKeep,
-                                        "url-name": lName
-                                    });
+                                    jsonLinks.push({ "fdroid-url": "", "url-name": lName });
                                 } else {
-                                    jsonLinks.push({
-                                        "url": urlToKeep,
-                                        "url-name": lName
-                                    });
+                                    jsonLinks.push({ "url": "", "url-name": lName });
                                 }
                             });
-
-                            if (!hasBuzzheavier) {
-                                jsonLinks.unshift({ "buzzheavier-url": "", "url-name": "Buzzheavier Link" });
-                            }
+                            if (!hasBuzzheavier) jsonLinks.unshift({ "buzzheavier-url": "", "url-name": "Buzzheavier Link" });
                         } else {
                             jsonLinks = [{ "buzzheavier-url": "", "url-name": "Buzzheavier Link" }];
                         }
-
-                        matchedApp.versions.forEach(v => {
-                            if (v.version !== versionName) {
-                                preservedVersions.push(v);
-                            }
-                        });
                     }
-
-                    if (jsonLinks.length === 0) {
-                        jsonLinks = [{ "buzzheavier-url": "", "url-name": "Buzzheavier Link" }];
-                    }
-
-                    if (jsonImportant) {
-                        uiImportantMsgHTML = `
-                            <div class="app-important" style="margin-bottom: 16px;">
-                                <strong>‼️ Important:</strong> ${jsonImportant}
-                            </div>
-                        `;
-                    }
-                    if (jsonWarning) {
-                        uiWarningMsgHTML = `
-                            <div class="version-warning" style="margin-bottom: 16px;">
-                                <strong>⚠️ Warning:</strong> ${jsonWarning}
-                            </div>
-                        `;
-                    }
-
-                } else {
-                    if (packageName !== 'Unknown Package') {
-                        jsonIcon = `icons/${packageName.replace(/\./g, '-')}.png`;
-                    }
-                    jsonLinks = [{ "buzzheavier-url": "", "url-name": "Buzzheavier Link" }];
                 }
+            }
 
-                const versionObj = {
+            if (!matchedApp || (matchedApp && !matchedApp.versions) || (matchedApp && matchedApp.versions && jsonLinks.length === 0 && !existingVersion)) {
+                if (packageName !== 'Unknown Package') {
+                    jsonIcon = `icons/${packageName.replace(/\./g, '-')}.png`;
+                }
+                jsonLinks = [{ "buzzheavier-url": "", "url-name": "Buzzheavier Link" }];
+            }
+
+            let versionObj;
+            if (existingVersion) {
+                versionObj = JSON.parse(JSON.stringify(existingVersion));
+            } else {
+                versionObj = {
                     version: versionName,
                     any: jsonAny,
+                    versionCode: versionCode ? versionCode.toString() : "", 
+                    size: fileSizeMB,
+                    type: ext,
+                    arch: finalArch,
+                    dpi: finalDpiText,
+                    sha256: hashHex,
+                    links: jsonLinks
                 };
                 if (jsonWarning) versionObj.warning = jsonWarning;
                 if (jsonNote) versionObj.note = jsonNote;
-                
-                versionObj.versionCode = versionCode ? versionCode.toString() : "";
-                versionObj.size = fileSizeMB;
-                versionObj.type = ext;
-                versionObj.arch = finalArch;
-                versionObj.dpi = finalDpiText; 
-                versionObj.sha256 = hashHex;
-                versionObj.links = jsonLinks; 
+            }
 
-                const generatedJsonData = {
+            versionObj._isX86 = isX86;
+
+            let mapId = jsonId || packageName || appName;
+            if (!state.batchData[mapId]) {
+                state.batchData[mapId] = {
                     id: jsonId,
                     name: jsonName,
                     icon: jsonIcon,
-                    packageName: jsonPackageName
+                    packageName: jsonPackageName,
+                    secondaryPackageName: jsonSecondaryPackageName,
+                    thirdPackageName: jsonThirdPackageName,
+                    important: jsonImportant,
+                    redirectUri: jsonRedirectUri,
+                    versions: JSON.parse(JSON.stringify(preservedVersions))
                 };
-                
-                if (jsonSecondaryPackageName) generatedJsonData.secondaryPackageName = jsonSecondaryPackageName;
-                if (jsonThirdPackageName) generatedJsonData.thirdPackageName = jsonThirdPackageName;
-                if (jsonImportant) generatedJsonData.important = jsonImportant;
-                if (jsonRedirectUri) generatedJsonData.redirectUri = jsonRedirectUri;
-                
-                generatedJsonData.versions = [ versionObj, ...preservedVersions ];
-
-                jsonSnippet = JSON.stringify(generatedJsonData, null, 2);
-
-                let mapId = jsonId || packageName || appName;
-                if (!state.batchData[mapId]) {
-                    state.batchData[mapId] = {
-                        id: jsonId,
-                        name: jsonName,
-                        icon: jsonIcon,
-                        packageName: jsonPackageName,
-                        secondaryPackageName: jsonSecondaryPackageName,
-                        thirdPackageName: jsonThirdPackageName,
-                        important: jsonImportant,
-                        redirectUri: jsonRedirectUri,
-                        versions: []
-                    };
-                    state.batchData[mapId].versions.push(...preservedVersions);
-                }
-                
-                state.batchData[mapId].versions.unshift(versionObj);
             }
-
-            const appEndTime = performance.now();
-            const appTimeMs = appEndTime - appStartTime;
-            const appTimeFormatted = appTimeMs >= 1000 ? (appTimeMs / 1000).toFixed(2) + 's' : Math.round(appTimeMs) + 'ms';
-
-            renderSuccessCard({
-                appName, packageName, versionName, versionCode,
-                fileSizeMB, fileFormat, formatClass, finalArch, archWarningHTML,
-                finalDpiText, hashHex, iconSrc, jsonSnippet, isX86,
-                uiImportantMsgHTML, uiWarningMsgHTML, appTimeFormatted
-            });
+            
+            const alreadyInBatch = state.batchData[mapId].versions.some(v => v.sha256 === hashHex);
+            if (!alreadyInBatch) {
+                state.batchData[mapId].versions.push(versionObj);
+                sortVersionsDescending(state.batchData[mapId].versions);
+            }
 
         } catch (error) {
             renderErrorCard(file.name, 'Error processing file: ' + error.message);
         }
+    }
+
+    function renderSuccessCardFromApp(app) {
+       const defaultIcon = "icons/missing.png";
+        
+        const importantHTML = app.important ? `
+            <div class="app-important" style="margin-bottom: 16px;">
+                <strong>‼️ Important:</strong> ${app.important}
+            </div>
+        ` : '';
+
+        const hasX86 = app.versions.some(v => v._isX86);
+        const archWarningHTML = hasX86 ? `
+            <div class="app-important" style="margin-bottom: 16px;">
+                <strong>❗ Important:</strong> x86 architecture is not supported by ReVanced Manager. (x86 versions will be stripped from JSON output).
+            </div>
+        ` : '';
+
+        let versionsHTML = '';
+        app.versions.forEach(ver => {
+            let typeClass = `type-${ver.type === 'apkm' ? 'apkm' : (ver.type === 'xapk' ? 'xapk' : 'apk')}`;
+            let fileFormat = ver.type ? ver.type.toUpperCase() : 'APK';
+            if (ver.type === 'apkm') fileFormat = 'APK(M)';
+            else if (ver.type === 'xapk') fileFormat = '(X)APK';
+
+            const warningHTML = ver.warning ? `<div class="version-warning" style="margin-bottom: 16px;"><strong>⚠️ Warning:</strong> ${ver.warning}</div>` : '';
+            const noteHTML = ver.note ? `<div class="version-note" style="margin-bottom: 16px;"><strong>ℹ️ Note:</strong> ${ver.note}</div>` : '';
+            const x86Badge = ver._isX86 ? `<span style="color: #FF5252; font-weight: bold; margin-left: 8px;">(x86 - UNSUPPORTED)</span>` : '';
+
+            versionsHTML += `
+                ${warningHTML}
+                ${noteHTML}
+                <div class="version-item" style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--md-sys-color-outline-variant);">
+                    <div class="version-details">
+                        <span class="version-number"><strong>Version:</strong> ${ver.version} <span style="font-size: 0.9em; opacity: 0.8;">${ver.versionCode ? `(${ver.versionCode})` : ''}</span>${x86Badge}</span>
+                        <span class="version-size"><strong>Size:</strong> ${ver.size}</span>
+                        <span class="version-type"><strong>Format:</strong> <span class="${typeClass}">${fileFormat}</span></span>
+                        <span class="version-architecture"><strong>Architecture:</strong> ${ver.arch}</span>
+                        <span class="version-dpi"><strong>Screen DPI:</strong> ${ver.dpi}</span>
+                        <span class="version-hash" style="word-break: break-all;"><strong>SHA-256:</strong> <code>${ver.sha256}</code></span>
+                    </div>
+                </div>
+            `;
+        });
+
+        let cleanApp = { ...app };
+        if (!cleanApp.secondaryPackageName) delete cleanApp.secondaryPackageName;
+        if (!cleanApp.thirdPackageName) delete cleanApp.thirdPackageName;
+        if (!cleanApp.important) delete cleanApp.important;
+        if (!cleanApp.redirectUri) delete cleanApp.redirectUri;
+        
+        cleanApp.versions = cleanApp.versions.filter(v => !v._isX86).map(v => {
+            let cleanV = { ...v };
+            delete cleanV._isX86;
+            return cleanV;
+        });
+
+        const jsonHTML = cleanApp.versions.length === 0 ? '' : `
+            <details class="json-details" style="margin-top: 16px;">
+                <summary>
+                    <div class="json-summary-content">
+                        <span class="summary-title">Show JSON Output for ${app.name}</span>
+                    </div>
+                </summary>
+                <div class="json-block-wrapper">
+                    <button class="copy-json-btn" onclick="copyJsonCode(this)">Copy JSON</button>
+                    <pre><code class="json-code">${escapeHTML(JSON.stringify(cleanApp, null, 2))}</code></pre>
+                </div>
+            </details>
+        `;
+
+        const cardHTML = `
+            <div class="app-card">
+                <div class="app-header">
+                    <div class="app-header-left">
+                        <img class="app-icon" src="${app.icon || defaultIcon}" onerror="this.src='${defaultIcon}'">
+                        <div class="app-title">
+                            <h2>${app.name}</h2>
+                            <div class="package-name">${app.packageName}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="version-list show">
+                    ${importantHTML}
+                    ${archWarningHTML}
+                    ${versionsHTML}
+                    ${jsonHTML}
+                </div>
+            </div>
+        `;
+        document.getElementById('success-cards-container').insertAdjacentHTML('beforeend', cardHTML);
     }
 
     function getLoadingBatchJsonCardHTML() {
@@ -598,23 +689,34 @@ document.addEventListener('DOMContentLoaded', async () => {
         `;
     }
 
-    function getBatchJsonCardHTML(batchArray, batchTimeFormatted, totalFiles) {
+    function getBatchJsonCardHTML(batchArray, batchTimeFormatted, totalFiles, isCompleteData) {
         const cleanBatchArray = batchArray.map(app => {
             let cleanApp = { ...app };
             if (!cleanApp.secondaryPackageName) delete cleanApp.secondaryPackageName;
             if (!cleanApp.thirdPackageName) delete cleanApp.thirdPackageName;
             if (!cleanApp.important) delete cleanApp.important;
             if (!cleanApp.redirectUri) delete cleanApp.redirectUri;
+            
+            cleanApp.versions = cleanApp.versions.filter(v => !v._isX86).map(v => {
+                let cleanV = { ...v };
+                delete cleanV._isX86;
+                return cleanV;
+            });
             return cleanApp;
-        });
+        }).filter(app => app.versions && app.versions.length > 0);
 
         const batchSnippet = JSON.stringify(cleanBatchArray, null, 2);
+        
+        const descriptionText = isCompleteData 
+            ? "Contains the entirety of data.json, safely merged and updated with the new files. (x86 files stripped)." 
+            : "Contains all valid non-x86 files processed in this batch, grouped by app and sorted A-Z.";
+
         return `
             <div class="app-card" style="border: 2px solid var(--md-sys-color-tertiary);">
                 <div class="app-header">
                     <div class="app-title" style="width: 100%;">
                         <h2 style="color: var(--md-sys-color-tertiary);">Aggregated JSON Output</h2>
-                        <div class="package-name">Contains all non-x86 files processed in this batch, grouped by app and sorted A-Z.</div>
+                        <div class="package-name">${descriptionText}</div>
                     </div>
                 </div>
                 <div class="version-list show">
@@ -624,8 +726,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <div class="json-summary-content">
                                 <span class="summary-title">Show Aggregated JSON</span>
                                 <span class="batch-stats">
-                                    <span>📁 ${totalFiles} Files</span>
-                                    <span>⏱️ Processed in ${batchTimeFormatted}</span>
+                                    <span>📁 ${totalFiles} Files processed</span>
+                                    <span>⏱️ Finished in ${batchTimeFormatted}</span>
                                 </span>
                             </div>
                         </summary>
@@ -637,59 +739,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             </div>
         `;
-    }
-
-    function renderSuccessCard(data) {
-        const svgString = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="64" height="64" fill="#263340"/><text x="32" y="36" font-family="sans-serif" font-size="24" fill="#C4C7C5" text-anchor="middle">?</text></svg>`;
-        const defaultIcon = `data:image/svg+xml,${encodeURIComponent(svgString)}`;
-        
-        const jsonHTML = data.isX86 ? '' : `
-            <details class="json-details">
-                <summary>
-                    <div class="json-summary-content">
-                        <span class="summary-title">Show JSON Output</span>
-                        <span class="batch-stats">
-                            <span>⏱️ Processed in ${data.appTimeFormatted}</span>
-                        </span>
-                    </div>
-                </summary>
-                <div class="json-block-wrapper">
-                    <button class="copy-json-btn" onclick="copyJsonCode(this)">Copy JSON</button>
-                    <pre><code class="json-code">${escapeHTML(data.jsonSnippet)}</code></pre>
-                </div>
-            </details>
-        `;
-
-        const cardHTML = `
-            <div class="app-card">
-                <div class="app-header">
-                    <div class="app-header-left">
-                        <img class="app-icon" src="${data.iconSrc || defaultIcon}" onerror="this.src='${defaultIcon}'">
-                        <div class="app-title">
-                            <h2>${data.appName}</h2>
-                            <div class="package-name">${data.packageName}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="version-list show">
-                    ${data.uiImportantMsgHTML || ''}
-                    ${data.archWarningHTML || ''}
-                    ${data.uiWarningMsgHTML || ''}
-                    <div class="version-item">
-                        <div class="version-details">
-                            <span class="version-number"><strong>Version:</strong> ${data.versionName} <span style="font-size: 0.9em; opacity: 0.8;">${data.versionCode ? `(${data.versionCode})` : ''}</span></span>
-                            <span class="version-size"><strong>Size:</strong> ${data.fileSizeMB}</span>
-                            <span class="version-type"><strong>Format:</strong> <span class="${data.formatClass}">${data.fileFormat}</span></span>
-                            <span class="version-architecture"><strong>Architecture:</strong> ${data.finalArch}</span>
-                            <span class="version-dpi"><strong>Screen DPI:</strong> ${data.finalDpiText}</span>
-                            <span class="version-hash" style="word-break: break-all;"><strong>SHA-256:</strong> <code>${data.hashHex}</code></span>
-                        </div>
-                    </div>
-                    ${jsonHTML}
-                </div>
-            </div>
-        `;
-        document.getElementById('success-cards-container').insertAdjacentHTML('beforeend', cardHTML);
     }
 
     function renderErrorCard(fileName, errorMessage) {

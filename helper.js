@@ -407,6 +407,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 let jsonSecondaryPackageName = undefined;
                 let jsonThirdPackageName = undefined;
                 let jsonImportant = undefined;
+                let jsonRedirectUri = undefined;
 
                 let jsonAny = "no";
                 let jsonWarning = undefined;
@@ -426,6 +427,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     jsonThirdPackageName = matchedApp.thirdPackageName;
                     
                     jsonImportant = sanitizeString(matchedApp.important);
+                    jsonRedirectUri = sanitizeString(matchedApp.redirectUri);
                     
                     if (matchedApp.versions && matchedApp.versions.length > 0) {
                         const matchedVersion = matchedApp.versions.find(v => v.version === versionName);
@@ -440,28 +442,42 @@ document.addEventListener('DOMContentLoaded', async () => {
                             
                             templateVersion.links.forEach(link => {
                                 const lName = link["url-name"] || link.name || "";
-                                const lUrl = link.url || "";
+                                
+                                let lUrl = link.url || link["buzzheavier-url"] || link["github-url"] || link["fdroid-url"] || "";
+                                
+                                const urlToKeep = (matchedVersion && (matchedVersion.sha256 === hashHex)) ? lUrl : "";
+                                
                                 const lowerName = lName.toLowerCase();
                                 
                                 if (lowerName.includes('buzzheavier')) {
                                     hasBuzzheavier = true;
                                     jsonLinks.push({
-                                        "url": (matchedVersion && (matchedVersion.sha256 === hashHex)) ? lUrl : "",
+                                        "buzzheavier-url": urlToKeep,
+                                        "url-name": lName
+                                    });
+                                } else if (lowerName.includes('github')) {
+                                    jsonLinks.push({
+                                        "github-url": urlToKeep,
+                                        "url-name": lName
+                                    });
+                                } else if (lowerName.includes('f-droid') || lowerName.includes('fdroid')) {
+                                    jsonLinks.push({
+                                        "fdroid-url": urlToKeep,
                                         "url-name": lName
                                     });
                                 } else {
                                     jsonLinks.push({
-                                        "url": lUrl,
+                                        "url": urlToKeep,
                                         "url-name": lName
                                     });
                                 }
                             });
 
                             if (!hasBuzzheavier) {
-                                jsonLinks.unshift({ "url": "", "url-name": "Buzzheavier Link" });
+                                jsonLinks.unshift({ "buzzheavier-url": "", "url-name": "Buzzheavier Link" });
                             }
                         } else {
-                            jsonLinks = [{ "url": "", "url-name": "Buzzheavier Link" }];
+                            jsonLinks = [{ "buzzheavier-url": "", "url-name": "Buzzheavier Link" }];
                         }
 
                         matchedApp.versions.forEach(v => {
@@ -472,7 +488,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
 
                     if (jsonLinks.length === 0) {
-                        jsonLinks = [{ "url": "", "url-name": "Buzzheavier Link" }];
+                        jsonLinks = [{ "buzzheavier-url": "", "url-name": "Buzzheavier Link" }];
                     }
 
                     if (jsonImportant) {
@@ -494,7 +510,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (packageName !== 'Unknown Package') {
                         jsonIcon = `icons/${packageName.replace(/\./g, '-')}.png`;
                     }
-                    jsonLinks = [{ "url": "", "url-name": "Buzzheavier Link" }];
+                    jsonLinks = [{ "buzzheavier-url": "", "url-name": "Buzzheavier Link" }];
                 }
 
                 const versionObj = {
@@ -504,7 +520,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (jsonWarning) versionObj.warning = jsonWarning;
                 if (jsonNote) versionObj.note = jsonNote;
                 
-                versionObj.versioncode = versionCode ? versionCode.toString() : "";
+                versionObj.versionCode = versionCode ? versionCode.toString() : "";
                 versionObj.size = fileSizeMB;
                 versionObj.type = ext;
                 versionObj.arch = finalArch;
@@ -522,6 +538,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (jsonSecondaryPackageName) generatedJsonData.secondaryPackageName = jsonSecondaryPackageName;
                 if (jsonThirdPackageName) generatedJsonData.thirdPackageName = jsonThirdPackageName;
                 if (jsonImportant) generatedJsonData.important = jsonImportant;
+                if (jsonRedirectUri) generatedJsonData.redirectUri = jsonRedirectUri;
                 
                 generatedJsonData.versions = [ versionObj, ...preservedVersions ];
 
@@ -537,6 +554,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         secondaryPackageName: jsonSecondaryPackageName,
                         thirdPackageName: jsonThirdPackageName,
                         important: jsonImportant,
+                        redirectUri: jsonRedirectUri,
                         versions: []
                     };
                     state.batchData[mapId].versions.push(...preservedVersions);
@@ -586,6 +604,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!cleanApp.secondaryPackageName) delete cleanApp.secondaryPackageName;
             if (!cleanApp.thirdPackageName) delete cleanApp.thirdPackageName;
             if (!cleanApp.important) delete cleanApp.important;
+            if (!cleanApp.redirectUri) delete cleanApp.redirectUri;
             return cleanApp;
         });
 

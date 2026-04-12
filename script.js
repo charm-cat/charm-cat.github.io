@@ -478,9 +478,15 @@ function renderApps(appsToDisplay) {
         const expandClass = isExpanded ? 'open' : '';
         const showClass = isExpanded ? 'show' : '';
 
-        const importantHTML = app.important ? `
+        let importantText = app.important;
+        
+        if (app.redirectUri) {
+            importantText = `You need to create a client ID from <a href='https://reddit.com/prefs/apps'>https://reddit.com/prefs/apps</a>.<br> Click on 'installed app', and type '<b>${app.redirectUri}</b>' in the redirect URI area. <br> <br> Creating new applications now result in status:500 error message. <br> Deleting older applications to create new ones no longer work. <br> Creating a new account to create new applications no longer work.`;
+        }
+
+        const importantHTML = importantText ? `
             <div class="app-important">
-                <strong>‼️ Important:</strong><br><br>${app.important}
+                <strong>‼️ Important:</strong><br><br>${importantText}
             </div>
         ` : '';
 
